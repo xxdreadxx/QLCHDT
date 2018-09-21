@@ -51,14 +51,14 @@
             this.chk1 = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnAddClose = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnAdd = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnClose = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.rdDungSai = new System.Windows.Forms.RadioButton();
             this.rd1 = new System.Windows.Forms.RadioButton();
             this.rdn = new System.Windows.Forms.RadioButton();
@@ -172,6 +172,10 @@
             // 
             this.cbMucDo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMucDo.FormattingEnabled = true;
+            this.cbMucDo.Items.AddRange(new object[] {
+            "Dễ",
+            "Trung bình",
+            "Khó"});
             this.cbMucDo.Location = new System.Drawing.Point(111, 354);
             this.cbMucDo.Name = "cbMucDo";
             this.cbMucDo.Size = new System.Drawing.Size(150, 24);
@@ -226,6 +230,7 @@
             this.chk4.Size = new System.Drawing.Size(15, 14);
             this.chk4.TabIndex = 19;
             this.chk4.UseVisualStyleBackColor = true;
+            this.chk4.CheckedChanged += new System.EventHandler(this.chk4_CheckedChanged);
             // 
             // chk3
             // 
@@ -235,6 +240,7 @@
             this.chk3.Size = new System.Drawing.Size(15, 14);
             this.chk3.TabIndex = 18;
             this.chk3.UseVisualStyleBackColor = true;
+            this.chk3.CheckedChanged += new System.EventHandler(this.chk3_CheckedChanged);
             // 
             // chk2
             // 
@@ -244,6 +250,7 @@
             this.chk2.Size = new System.Drawing.Size(15, 14);
             this.chk2.TabIndex = 17;
             this.chk2.UseVisualStyleBackColor = true;
+            this.chk2.CheckedChanged += new System.EventHandler(this.chk2_CheckedChanged);
             // 
             // chk1
             // 
@@ -253,6 +260,7 @@
             this.chk1.Size = new System.Drawing.Size(15, 14);
             this.chk1.TabIndex = 16;
             this.chk1.UseVisualStyleBackColor = true;
+            this.chk1.CheckedChanged += new System.EventHandler(this.chk1_CheckedChanged);
             // 
             // label10
             // 
@@ -278,34 +286,6 @@
             this.btnAdd,
             this.btnClose});
             this.barManager1.MaxItemId = 3;
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(643, 65);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 396);
-            this.barDockControlBottom.Size = new System.Drawing.Size(643, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 65);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 331);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(643, 65);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 331);
             // 
             // bar1
             // 
@@ -345,6 +325,35 @@
             this.btnClose.ImageUri.Uri = "Close";
             this.btnClose.MinSize = new System.Drawing.Size(90, 0);
             this.btnClose.Name = "btnClose";
+            this.btnClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClose_ItemClick);
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(634, 65);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 396);
+            this.barDockControlBottom.Size = new System.Drawing.Size(634, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 65);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 331);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(634, 65);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 331);
             // 
             // rdDungSai
             // 
@@ -368,6 +377,7 @@
             this.rd1.TabStop = true;
             this.rd1.Text = "1 đáp án đúng";
             this.rd1.UseVisualStyleBackColor = true;
+            this.rd1.CheckedChanged += new System.EventHandler(this.rd1_CheckedChanged);
             // 
             // rdn
             // 
@@ -379,12 +389,13 @@
             this.rdn.TabStop = true;
             this.rdn.Text = "Nhiều đáp án đúng";
             this.rdn.UseVisualStyleBackColor = true;
+            this.rdn.CheckedChanged += new System.EventHandler(this.rdn_CheckedChanged);
             // 
             // frmCauHoi_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 396);
+            this.ClientSize = new System.Drawing.Size(634, 396);
             this.Controls.Add(this.rdn);
             this.Controls.Add(this.rd1);
             this.Controls.Add(this.rdDungSai);
@@ -401,6 +412,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCauHoi_Add";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm câu hỏi";
             this.Load += new System.EventHandler(this.frmCauHoi_Add_Load);
             this.groupBox1.ResumeLayout(false);
