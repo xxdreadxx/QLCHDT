@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLCH" Class="dbQLCHDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=QLCH;Integrated Security=True" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="QLCHConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account_Info" Member="Account_Infos">
+    <Type Name="Account_Info">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Account" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CapDayHoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Accounts" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Quyen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CauHoi" Member="CauHois">
+    <Type Name="CauHoi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Khoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Mon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ViTriDapAnDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MucDo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Account" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChiTiet_CauHoi" Member="ChiTiet_CauHois">
+    <Type Name="ChiTiet_CauHoi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_CauHoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DapAn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ViTriDapAn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhoiHoc" Member="KhoiHocs">
+    <Type Name="KhoiHoc">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Khoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoCauHoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MonHoc" Member="MonHocs">
+    <Type Name="MonHoc">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenMonHoc" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SoCauHoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TyLeCauHoi" Member="TyLeCauHois">
+    <Type Name="TyLeCauHoi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_Mon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Muc1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Muc2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Muc3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
