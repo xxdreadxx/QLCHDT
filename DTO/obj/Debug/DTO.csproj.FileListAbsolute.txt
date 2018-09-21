@@ -1,0 +1,6 @@
+D:\My Work\New folder\QLCHDT\DTO\bin\Debug\DTO.dll.config
+D:\My Work\New folder\QLCHDT\DTO\bin\Debug\DTO.dll
+D:\My Work\New folder\QLCHDT\DTO\bin\Debug\DTO.pdb
+D:\My Work\New folder\QLCHDT\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\My Work\New folder\QLCHDT\DTO\obj\Debug\DTO.dll
+D:\My Work\New folder\QLCHDT\DTO\obj\Debug\DTO.pdb
