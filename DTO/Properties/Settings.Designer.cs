@@ -32,5 +32,16 @@ namespace DTO.Properties {
                 return ((string)(this["QLCHConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.212;Initial Catalog=QLCH;Persist Security Info=True;User ID" +
+            "=sa")]
+        public string QLCHConnectionString1 {
+            get {
+                return ((string)(this["QLCHConnectionString1"]));
+            }
+        }
     }
 }

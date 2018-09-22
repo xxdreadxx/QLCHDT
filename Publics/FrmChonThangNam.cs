@@ -7,18 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
 
-namespace QLCH.Forms
+namespace Publics
 {
-    public partial class FrmTaoDeThi : Form
+    public partial class FrmChonThangNam : Form
     {
-        public int Thang;
-        public int Nam;
-        public FrmTaoDeThi()
+        public FrmChonThangNam()
         {
             InitializeComponent();
         }
-
     }
 }
