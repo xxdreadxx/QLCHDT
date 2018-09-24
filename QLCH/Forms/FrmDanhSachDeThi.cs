@@ -40,7 +40,6 @@ namespace QLCH.Forms
             frm.thang = tuThang;
             frm.nam = tuNam;
             frm.ShowDialog();
-                
         }
     }
 }

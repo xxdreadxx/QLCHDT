@@ -57,13 +57,19 @@ namespace DTO
     partial void InsertLoaiCauHoi(LoaiCauHoi instance);
     partial void UpdateLoaiCauHoi(LoaiCauHoi instance);
     partial void DeleteLoaiCauHoi(LoaiCauHoi instance);
+    partial void InsertLoaiDeThi(LoaiDeThi instance);
+    partial void UpdateLoaiDeThi(LoaiDeThi instance);
+    partial void DeleteLoaiDeThi(LoaiDeThi instance);
+    partial void InsertLog(Log instance);
+    partial void UpdateLog(Log instance);
+    partial void DeleteLog(Log instance);
     partial void InsertMonHoc(MonHoc instance);
     partial void UpdateMonHoc(MonHoc instance);
     partial void DeleteMonHoc(MonHoc instance);
     #endregion
 		
 		public dbQLCHDataContext() : 
-				base(global::DTO.Properties.Settings.Default.QLCHConnectionString1, mappingSource)
+				base(global::DTO.Properties.Settings.Default.QLCHConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -161,6 +167,22 @@ namespace DTO
 			get
 			{
 				return this.GetTable<LoaiCauHoi>();
+			}
+		}
+		
+		public System.Data.Linq.Table<LoaiDeThi> LoaiDeThis
+		{
+			get
+			{
+				return this.GetTable<LoaiDeThi>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Log> Logs
+		{
+			get
+			{
+				return this.GetTable<Log>();
 			}
 		}
 		
@@ -801,8 +823,6 @@ namespace DTO
 		
 		private string _ID;
 		
-		private string _ID_Khoi;
-		
 		private string _ID_Mon;
 		
 		private string _ID_LoaiCauHoi;
@@ -829,8 +849,6 @@ namespace DTO
     partial void OnCreated();
     partial void OnIDChanging(string value);
     partial void OnIDChanged();
-    partial void OnID_KhoiChanging(string value);
-    partial void OnID_KhoiChanged();
     partial void OnID_MonChanging(string value);
     partial void OnID_MonChanged();
     partial void OnID_LoaiCauHoiChanging(string value);
@@ -874,26 +892,6 @@ namespace DTO
 					this._ID = value;
 					this.SendPropertyChanged("ID");
 					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Khoi", DbType="NVarChar(100)")]
-		public string ID_Khoi
-		{
-			get
-			{
-				return this._ID_Khoi;
-			}
-			set
-			{
-				if ((this._ID_Khoi != value))
-				{
-					this.OnID_KhoiChanging(value);
-					this.SendPropertyChanging();
-					this._ID_Khoi = value;
-					this.SendPropertyChanged("ID_Khoi");
-					this.OnID_KhoiChanged();
 				}
 			}
 		}
@@ -1941,9 +1939,13 @@ namespace DTO
 		
 		private string _ID_CauHoi;
 		
-		private string _DapAn;
+		private string _DapAn1;
 		
-		private System.Nullable<int> _ID_DapAnDung;
+		private string _DapAn2;
+		
+		private string _DapAn3;
+		
+		private string _DapAn4;
 		
 		private System.Nullable<bool> _InUsed;
 		
@@ -1959,10 +1961,14 @@ namespace DTO
     partial void OnID_DeThiChanged();
     partial void OnID_CauHoiChanging(string value);
     partial void OnID_CauHoiChanged();
-    partial void OnDapAnChanging(string value);
-    partial void OnDapAnChanged();
-    partial void OnID_DapAnDungChanging(System.Nullable<int> value);
-    partial void OnID_DapAnDungChanged();
+    partial void OnDapAn1Changing(string value);
+    partial void OnDapAn1Changed();
+    partial void OnDapAn2Changing(string value);
+    partial void OnDapAn2Changed();
+    partial void OnDapAn3Changing(string value);
+    partial void OnDapAn3Changed();
+    partial void OnDapAn4Changing(string value);
+    partial void OnDapAn4Changed();
     partial void OnInUsedChanging(System.Nullable<bool> value);
     partial void OnInUsedChanged();
     partial void OnIsDeleteChanging(System.Nullable<bool> value);
@@ -2034,42 +2040,82 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DapAn", DbType="NVarChar(50)")]
-		public string DapAn
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DapAn1", DbType="NVarChar(50)")]
+		public string DapAn1
 		{
 			get
 			{
-				return this._DapAn;
+				return this._DapAn1;
 			}
 			set
 			{
-				if ((this._DapAn != value))
+				if ((this._DapAn1 != value))
 				{
-					this.OnDapAnChanging(value);
+					this.OnDapAn1Changing(value);
 					this.SendPropertyChanging();
-					this._DapAn = value;
-					this.SendPropertyChanged("DapAn");
-					this.OnDapAnChanged();
+					this._DapAn1 = value;
+					this.SendPropertyChanged("DapAn1");
+					this.OnDapAn1Changed();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_DapAnDung", DbType="Int")]
-		public System.Nullable<int> ID_DapAnDung
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DapAn2", DbType="NVarChar(50)")]
+		public string DapAn2
 		{
 			get
 			{
-				return this._ID_DapAnDung;
+				return this._DapAn2;
 			}
 			set
 			{
-				if ((this._ID_DapAnDung != value))
+				if ((this._DapAn2 != value))
 				{
-					this.OnID_DapAnDungChanging(value);
+					this.OnDapAn2Changing(value);
 					this.SendPropertyChanging();
-					this._ID_DapAnDung = value;
-					this.SendPropertyChanged("ID_DapAnDung");
-					this.OnID_DapAnDungChanged();
+					this._DapAn2 = value;
+					this.SendPropertyChanged("DapAn2");
+					this.OnDapAn2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DapAn3", DbType="NVarChar(50)")]
+		public string DapAn3
+		{
+			get
+			{
+				return this._DapAn3;
+			}
+			set
+			{
+				if ((this._DapAn3 != value))
+				{
+					this.OnDapAn3Changing(value);
+					this.SendPropertyChanging();
+					this._DapAn3 = value;
+					this.SendPropertyChanged("DapAn3");
+					this.OnDapAn3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DapAn4", DbType="NVarChar(50)")]
+		public string DapAn4
+		{
+			get
+			{
+				return this._DapAn4;
+			}
+			set
+			{
+				if ((this._DapAn4 != value))
+				{
+					this.OnDapAn4Changing(value);
+					this.SendPropertyChanging();
+					this._DapAn4 = value;
+					this.SendPropertyChanged("DapAn4");
+					this.OnDapAn4Changed();
 				}
 			}
 		}
@@ -2317,6 +2363,418 @@ namespace DTO
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LoaiDeThi")]
+	public partial class LoaiDeThi : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ID;
+		
+		private string _MaLoai;
+		
+		private string _TenLoai;
+		
+		private System.Nullable<int> _ThoiGian;
+		
+		private System.Nullable<decimal> _TiLeCauDe;
+		
+		private System.Nullable<decimal> _TiLeCauKho;
+		
+		private System.Nullable<decimal> _TiLeCauTB;
+		
+		private System.Nullable<bool> _InUsed;
+		
+		private System.Nullable<bool> _IsDeleted;
+		
+		private System.Nullable<int> _TongSoCau;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(string value);
+    partial void OnIDChanged();
+    partial void OnMaLoaiChanging(string value);
+    partial void OnMaLoaiChanged();
+    partial void OnTenLoaiChanging(string value);
+    partial void OnTenLoaiChanged();
+    partial void OnThoiGianChanging(System.Nullable<int> value);
+    partial void OnThoiGianChanged();
+    partial void OnTiLeCauDeChanging(System.Nullable<decimal> value);
+    partial void OnTiLeCauDeChanged();
+    partial void OnTiLeCauKhoChanging(System.Nullable<decimal> value);
+    partial void OnTiLeCauKhoChanged();
+    partial void OnTiLeCauTBChanging(System.Nullable<decimal> value);
+    partial void OnTiLeCauTBChanged();
+    partial void OnInUsedChanging(System.Nullable<bool> value);
+    partial void OnInUsedChanged();
+    partial void OnIsDeletedChanging(System.Nullable<bool> value);
+    partial void OnIsDeletedChanged();
+    partial void OnTongSoCauChanging(System.Nullable<int> value);
+    partial void OnTongSoCauChanged();
+    #endregion
+		
+		public LoaiDeThi()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="NVarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoai", DbType="NVarChar(100)")]
+		public string MaLoai
+		{
+			get
+			{
+				return this._MaLoai;
+			}
+			set
+			{
+				if ((this._MaLoai != value))
+				{
+					this.OnMaLoaiChanging(value);
+					this.SendPropertyChanging();
+					this._MaLoai = value;
+					this.SendPropertyChanged("MaLoai");
+					this.OnMaLoaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenLoai", DbType="NVarChar(1000)")]
+		public string TenLoai
+		{
+			get
+			{
+				return this._TenLoai;
+			}
+			set
+			{
+				if ((this._TenLoai != value))
+				{
+					this.OnTenLoaiChanging(value);
+					this.SendPropertyChanging();
+					this._TenLoai = value;
+					this.SendPropertyChanged("TenLoai");
+					this.OnTenLoaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGian", DbType="Int")]
+		public System.Nullable<int> ThoiGian
+		{
+			get
+			{
+				return this._ThoiGian;
+			}
+			set
+			{
+				if ((this._ThoiGian != value))
+				{
+					this.OnThoiGianChanging(value);
+					this.SendPropertyChanging();
+					this._ThoiGian = value;
+					this.SendPropertyChanged("ThoiGian");
+					this.OnThoiGianChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TiLeCauDe", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> TiLeCauDe
+		{
+			get
+			{
+				return this._TiLeCauDe;
+			}
+			set
+			{
+				if ((this._TiLeCauDe != value))
+				{
+					this.OnTiLeCauDeChanging(value);
+					this.SendPropertyChanging();
+					this._TiLeCauDe = value;
+					this.SendPropertyChanged("TiLeCauDe");
+					this.OnTiLeCauDeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TiLeCauKho", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> TiLeCauKho
+		{
+			get
+			{
+				return this._TiLeCauKho;
+			}
+			set
+			{
+				if ((this._TiLeCauKho != value))
+				{
+					this.OnTiLeCauKhoChanging(value);
+					this.SendPropertyChanging();
+					this._TiLeCauKho = value;
+					this.SendPropertyChanged("TiLeCauKho");
+					this.OnTiLeCauKhoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TiLeCauTB", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> TiLeCauTB
+		{
+			get
+			{
+				return this._TiLeCauTB;
+			}
+			set
+			{
+				if ((this._TiLeCauTB != value))
+				{
+					this.OnTiLeCauTBChanging(value);
+					this.SendPropertyChanging();
+					this._TiLeCauTB = value;
+					this.SendPropertyChanged("TiLeCauTB");
+					this.OnTiLeCauTBChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InUsed", DbType="Bit")]
+		public System.Nullable<bool> InUsed
+		{
+			get
+			{
+				return this._InUsed;
+			}
+			set
+			{
+				if ((this._InUsed != value))
+				{
+					this.OnInUsedChanging(value);
+					this.SendPropertyChanging();
+					this._InUsed = value;
+					this.SendPropertyChanged("InUsed");
+					this.OnInUsedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsDeleted", DbType="Bit")]
+		public System.Nullable<bool> IsDeleted
+		{
+			get
+			{
+				return this._IsDeleted;
+			}
+			set
+			{
+				if ((this._IsDeleted != value))
+				{
+					this.OnIsDeletedChanging(value);
+					this.SendPropertyChanging();
+					this._IsDeleted = value;
+					this.SendPropertyChanged("IsDeleted");
+					this.OnIsDeletedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongSoCau", DbType="Int")]
+		public System.Nullable<int> TongSoCau
+		{
+			get
+			{
+				return this._TongSoCau;
+			}
+			set
+			{
+				if ((this._TongSoCau != value))
+				{
+					this.OnTongSoCauChanging(value);
+					this.SendPropertyChanging();
+					this._TongSoCau = value;
+					this.SendPropertyChanged("TongSoCau");
+					this.OnTongSoCauChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[Log]")]
+	public partial class Log : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ID;
+		
+		private string _UserName;
+		
+		private string _Log_Content;
+		
+		private System.Nullable<System.DateTime> _CreatedDate;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(string value);
+    partial void OnIDChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnLog_ContentChanging(string value);
+    partial void OnLog_ContentChanged();
+    partial void OnCreatedDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedDateChanged();
+    #endregion
+		
+		public Log()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="NVarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(50)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this.OnUserNameChanging(value);
+					this.SendPropertyChanging();
+					this._UserName = value;
+					this.SendPropertyChanged("UserName");
+					this.OnUserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Log_Content", DbType="NVarChar(MAX)")]
+		public string Log_Content
+		{
+			get
+			{
+				return this._Log_Content;
+			}
+			set
+			{
+				if ((this._Log_Content != value))
+				{
+					this.OnLog_ContentChanging(value);
+					this.SendPropertyChanging();
+					this._Log_Content = value;
+					this.SendPropertyChanged("Log_Content");
+					this.OnLog_ContentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreatedDate
+		{
+			get
+			{
+				return this._CreatedDate;
+			}
+			set
+			{
+				if ((this._CreatedDate != value))
+				{
+					this.OnCreatedDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreatedDate = value;
+					this.SendPropertyChanged("CreatedDate");
+					this.OnCreatedDateChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MonHoc")]
 	public partial class MonHoc : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2329,13 +2787,15 @@ namespace DTO
 		
 		private string _TenMonHoc;
 		
+		private string _MaMonHoc;
+		
 		private System.Nullable<int> _SoCauHoi;
 		
-		private System.Nullable<bool> _IsDeleted;
+		private System.Nullable<System.DateTime> _CreateDate;
 		
 		private System.Nullable<bool> _InUsed;
 		
-		private string _MaMonHoc;
+		private System.Nullable<bool> _IsDeleted;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2347,14 +2807,16 @@ namespace DTO
     partial void OnKhoiChanged();
     partial void OnTenMonHocChanging(string value);
     partial void OnTenMonHocChanged();
-    partial void OnSoCauHoiChanging(System.Nullable<int> value);
-    partial void OnSoCauHoiChanged();
-    partial void OnIsDeletedChanging(System.Nullable<bool> value);
-    partial void OnIsDeletedChanged();
-    partial void OnInUsedChanging(System.Nullable<bool> value);
-    partial void OnInUsedChanged();
     partial void OnMaMonHocChanging(string value);
     partial void OnMaMonHocChanged();
+    partial void OnSoCauHoiChanging(System.Nullable<int> value);
+    partial void OnSoCauHoiChanged();
+    partial void OnCreateDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreateDateChanged();
+    partial void OnInUsedChanging(System.Nullable<bool> value);
+    partial void OnInUsedChanged();
+    partial void OnIsDeletedChanging(System.Nullable<bool> value);
+    partial void OnIsDeletedChanged();
     #endregion
 		
 		public MonHoc()
@@ -2422,6 +2884,26 @@ namespace DTO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaMonHoc", DbType="NVarChar(100)")]
+		public string MaMonHoc
+		{
+			get
+			{
+				return this._MaMonHoc;
+			}
+			set
+			{
+				if ((this._MaMonHoc != value))
+				{
+					this.OnMaMonHocChanging(value);
+					this.SendPropertyChanging();
+					this._MaMonHoc = value;
+					this.SendPropertyChanged("MaMonHoc");
+					this.OnMaMonHocChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoCauHoi", DbType="Int")]
 		public System.Nullable<int> SoCauHoi
 		{
@@ -2442,22 +2924,22 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsDeleted", DbType="Bit")]
-		public System.Nullable<bool> IsDeleted
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateDate", DbType="Date")]
+		public System.Nullable<System.DateTime> CreateDate
 		{
 			get
 			{
-				return this._IsDeleted;
+				return this._CreateDate;
 			}
 			set
 			{
-				if ((this._IsDeleted != value))
+				if ((this._CreateDate != value))
 				{
-					this.OnIsDeletedChanging(value);
+					this.OnCreateDateChanging(value);
 					this.SendPropertyChanging();
-					this._IsDeleted = value;
-					this.SendPropertyChanged("IsDeleted");
-					this.OnIsDeletedChanged();
+					this._CreateDate = value;
+					this.SendPropertyChanged("CreateDate");
+					this.OnCreateDateChanged();
 				}
 			}
 		}
@@ -2482,22 +2964,22 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaMonHoc", DbType="NVarChar(100)")]
-		public string MaMonHoc
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsDeleted", DbType="Bit")]
+		public System.Nullable<bool> IsDeleted
 		{
 			get
 			{
-				return this._MaMonHoc;
+				return this._IsDeleted;
 			}
 			set
 			{
-				if ((this._MaMonHoc != value))
+				if ((this._IsDeleted != value))
 				{
-					this.OnMaMonHocChanging(value);
+					this.OnIsDeletedChanging(value);
 					this.SendPropertyChanging();
-					this._MaMonHoc = value;
-					this.SendPropertyChanged("MaMonHoc");
-					this.OnMaMonHocChanged();
+					this._IsDeleted = value;
+					this.SendPropertyChanged("IsDeleted");
+					this.OnIsDeletedChanged();
 				}
 			}
 		}

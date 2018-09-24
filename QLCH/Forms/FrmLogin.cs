@@ -59,5 +59,10 @@ namespace QLCH.Forms
                 btnHuy_Click(sender, e);
             }
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

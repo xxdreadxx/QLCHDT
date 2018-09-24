@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\My Work\New folder\QLCHDT\Publics\bin\Debug\Publics.dll
 D:\My Work\New folder\QLCHDT\Publics\bin\Debug\Publics.pdb
 D:\My Work\New folder\QLCHDT\Publics\obj\Debug\Publics.dll
@@ -42,3 +43,10 @@ D:\My Work\New folder\QLCHDT\Publics\obj\Debug\Publics.FrmChonNgayThang.resource
 D:\My Work\New folder\QLCHDT\Publics\obj\Debug\Publics.FrmChonNgayThangNam.resources
 D:\My Work\New folder\QLCHDT\Publics\obj\Debug\Publics.csproj.GenerateResource.Cache
 D:\My Work\New folder\QLCHDT\Publics\obj\Debug\Publics.dll.licenses
+=======
+E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\bin\Debug\Publics.dll
+E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\bin\Debug\Publics.pdb
+E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\obj\Debug\Publics.dll
+E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\obj\Debug\Publics.pdb
+E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\obj\Debug\Publics.csprojResolveAssemblyReference.cache
+>>>>>>> dbda6f6070862296abdf0e9938635442a164926a
