@@ -23,6 +23,7 @@ namespace QLCH.Forms
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
+            //12345567
         }
     }
 }
