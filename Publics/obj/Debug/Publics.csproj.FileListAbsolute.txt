@@ -1,0 +1,5 @@
+D:\My Work\New folder\QLCHDT\Publics\bin\Debug\Publics.dll
+D:\My Work\New folder\QLCHDT\Publics\bin\Debug\Publics.pdb
+D:\My Work\New folder\QLCHDT\Publics\obj\Debug\Publics.dll
+D:\My Work\New folder\QLCHDT\Publics\obj\Debug\Publics.pdb
+D:\My Work\New folder\QLCHDT\Publics\obj\Debug\Publics.csprojResolveAssemblyReference.cache

@@ -121,4 +121,26 @@
       <Column Name="MaMonHoc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
+  <Function Name="dbo.TaoBaiThiNgauNhien" Method="TaoBaiThiNgauNhien">
+    <Parameter Name="ID_LoaiBaiThi" Parameter="iD_LoaiBaiThi" Type="System.String" DbType="NVarChar(1)" />
+    <Parameter Name="ID_MonHoc" Parameter="iD_MonHoc" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ID_Acc" Parameter="iD_Acc" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MaDe" Parameter="maDe" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TuBai" Parameter="tuBai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DenBai" Parameter="denBai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TongSoCau" Parameter="tongSoCau" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SLCauDe" Parameter="sLCauDe" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SLCauTB" Parameter="sLCauTB" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SLCauKho" Parameter="sLCauKho" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsCreateAuto" Parameter="isCreateAuto" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TieuDeBaiThi" Parameter="tieuDeBaiThi" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NguoiTao" Parameter="nguoiTao" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="NguoikyDuyet" Parameter="nguoikyDuyet" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="GiaoVien1" Parameter="giaoVien1" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="GiaoVien2" Parameter="giaoVien2" Type="System.String" DbType="NVarChar(1000)" />
+    <Parameter Name="GhiChu" Parameter="ghiChu" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="tuNgay" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tuThang" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tuNam" Type="System.Int32" DbType="Int" />
+  </Function>
 </Database>

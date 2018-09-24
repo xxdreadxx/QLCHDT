@@ -171,6 +171,32 @@ namespace DTO
 				return this.GetTable<MonHoc>();
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.TaoBaiThiNgauNhien")]
+		public void TaoBaiThiNgauNhien(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_LoaiBaiThi", DbType="NVarChar(1)")] string iD_LoaiBaiThi, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_MonHoc", DbType="NVarChar(100)")] string iD_MonHoc, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_Acc", DbType="NVarChar(100)")] string iD_Acc, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaDe", DbType="NVarChar(100)")] string maDe, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuBai", DbType="Int")] System.Nullable<int> tuBai, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenBai", DbType="Int")] System.Nullable<int> denBai, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TongSoCau", DbType="Int")] System.Nullable<int> tongSoCau, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="SLCauDe", DbType="Int")] System.Nullable<int> sLCauDe, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="SLCauTB", DbType="Int")] System.Nullable<int> sLCauTB, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="SLCauKho", DbType="Int")] System.Nullable<int> sLCauKho, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsCreateAuto", DbType="Bit")] System.Nullable<bool> isCreateAuto, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TieuDeBaiThi", DbType="NVarChar(MAX)")] string tieuDeBaiThi, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="NguoiTao", DbType="NVarChar(1000)")] string nguoiTao, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="NguoikyDuyet", DbType="NVarChar(1000)")] string nguoikyDuyet, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="GiaoVien1", DbType="NVarChar(1000)")] string giaoVien1, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="GiaoVien2", DbType="NVarChar(1000)")] string giaoVien2, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="GhiChu", DbType="NVarChar(MAX)")] string ghiChu, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tuNgay, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tuThang, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tuNam)
+		{
+			this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_LoaiBaiThi, iD_MonHoc, iD_Acc, maDe, tuBai, denBai, tongSoCau, sLCauDe, sLCauTB, sLCauKho, isCreateAuto, tieuDeBaiThi, nguoiTao, nguoikyDuyet, giaoVien1, giaoVien2, ghiChu, tuNgay, tuThang, tuNam);
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Account_Info")]

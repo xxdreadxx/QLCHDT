@@ -11,10 +11,16 @@ namespace DAL
     {
         static dbQLCHDataContext db = new dbQLCHDataContext();
         //Lấy tất cả đề thi theo ngày tháng
-       public  List<DeThi> getAllListTestByCreateDate(int Thang, int Nam)
+       public  List<DeThi> getAllListTestByCreateDate(int tuNgay,int Tuthang, int tuNam,int denNgay, int denThang,int denNam)
         {
             List<DeThi> lstDeThi = new List<DeThi>();
-            lstDeThi = db.DeThis.Where(p => p.InUsed == true && p.CreatedDate.Value.Month == Thang && p.CreatedDate.Value.Year == Nam).ToList();
+            lstDeThi = db.DeThis.Where(p => p.InUsed == true 
+            && p.CreatedDate.Value.Day >= tuNgay
+            && p.CreatedDate.Value.Day <= denNgay
+            && p.CreatedDate.Value.Month >= Tuthang 
+            && p.CreatedDate.Value.Month <= denThang
+            && p.CreatedDate.Value.Year >= tuNam
+            && p.CreatedDate.Value.Year <= denNam).ToList();
             return lstDeThi;
         }
         //Lấy tất cả đề thi theo ngày tháng và mã môn học
@@ -43,6 +49,11 @@ namespace DAL
             lstDeThi = db.DeThi_ChiTiets.Where(p => p.ID_DeThi == idDeThi && p.InUsed==true).ToList();
             return lstDeThi;
         }
+        public void CreateAutoTest(string idLoaiBaiThi, string idMonHoc, string idAccount, string maDe, int tuBai, int denBai, int tongSoCau, int slCauDe, int slCauTB, int slCauKho, bool isCreateAuto, string tieuDeBaiThi, string nguoiTao, string nguoiKyDuyet, string gV1, string gV2, string ghiChu,int tuNgay, int tuThang, int tuNam)
+        {
+            db.TaoBaiThiNgauNhien(idLoaiBaiThi, idMonHoc, idAccount, maDe, tuBai, denBai, tongSoCau, slCauDe, slCauTB, slCauKho, isCreateAuto, tieuDeBaiThi, nguoiTao, nguoiKyDuyet, gV1, gV2, ghiChu,tuNgay,tuThang,tuNam);
+        }
+
 
     }
 }
