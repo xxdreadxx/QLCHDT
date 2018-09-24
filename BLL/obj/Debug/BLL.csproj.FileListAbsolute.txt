@@ -1,0 +1,9 @@
+E:\Krystal_File\App\codeQLCH\QLCHDT\BLL\bin\Debug\BLL.dll
+E:\Krystal_File\App\codeQLCH\QLCHDT\BLL\bin\Debug\BLL.pdb
+E:\Krystal_File\App\codeQLCH\QLCHDT\BLL\bin\Debug\DAL.dll
+E:\Krystal_File\App\codeQLCH\QLCHDT\BLL\bin\Debug\DTO.dll
+E:\Krystal_File\App\codeQLCH\QLCHDT\BLL\bin\Debug\DAL.pdb
+E:\Krystal_File\App\codeQLCH\QLCHDT\BLL\bin\Debug\DTO.pdb
+E:\Krystal_File\App\codeQLCH\QLCHDT\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\Krystal_File\App\codeQLCH\QLCHDT\BLL\obj\Debug\BLL.dll
+E:\Krystal_File\App\codeQLCH\QLCHDT\BLL\obj\Debug\BLL.pdb

@@ -37,11 +37,15 @@
             this.btnQLMonHoc = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnQLNguoiDung = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnHeThong = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.btnDangXuat = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.btnThoat = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -58,8 +62,10 @@
             this.btnQLCauHoi,
             this.btnQLMonHoc,
             this.btnQLNguoiDung,
-            this.btnHeThong});
-            this.barManager1.MaxItemId = 5;
+            this.btnHeThong,
+            this.btnDangXuat,
+            this.btnThoat});
+            this.barManager1.MaxItemId = 8;
             // 
             // bar1
             // 
@@ -72,7 +78,9 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnQLCauHoi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnQLMonHoc, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnQLNguoiDung, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnHeThong, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnHeThong, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDangXuat),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DrawDragBorder = false;
             this.bar1.OptionsBar.UseWholeRow = true;
@@ -83,13 +91,16 @@
             this.btnQLDeThi.Caption = "Quản lý đề thi";
             this.btnQLDeThi.Glyph = ((System.Drawing.Image)(resources.GetObject("btnQLDeThi.Glyph")));
             this.btnQLDeThi.Id = 0;
+            this.btnQLDeThi.MinSize = new System.Drawing.Size(85, 0);
             this.btnQLDeThi.Name = "btnQLDeThi";
+            this.btnQLDeThi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLDeThi_ItemClick);
             // 
             // btnQLCauHoi
             // 
             this.btnQLCauHoi.Caption = "Quản lý câu hỏi";
             this.btnQLCauHoi.Glyph = ((System.Drawing.Image)(resources.GetObject("btnQLCauHoi.Glyph")));
             this.btnQLCauHoi.Id = 1;
+            this.btnQLCauHoi.MinSize = new System.Drawing.Size(85, 0);
             this.btnQLCauHoi.Name = "btnQLCauHoi";
             this.btnQLCauHoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLCauHoi_ItemClick);
             // 
@@ -98,13 +109,16 @@
             this.btnQLMonHoc.Caption = "Quản lý môn học";
             this.btnQLMonHoc.Glyph = ((System.Drawing.Image)(resources.GetObject("btnQLMonHoc.Glyph")));
             this.btnQLMonHoc.Id = 2;
+            this.btnQLMonHoc.MinSize = new System.Drawing.Size(85, 0);
             this.btnQLMonHoc.Name = "btnQLMonHoc";
+            this.btnQLMonHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLMonHoc_ItemClick);
             // 
             // btnQLNguoiDung
             // 
-            this.btnQLNguoiDung.Caption = "Quản lý người dùng";
+            this.btnQLNguoiDung.Caption = "QL người dùng";
             this.btnQLNguoiDung.Glyph = ((System.Drawing.Image)(resources.GetObject("btnQLNguoiDung.Glyph")));
             this.btnQLNguoiDung.Id = 3;
+            this.btnQLNguoiDung.MinSize = new System.Drawing.Size(85, 0);
             this.btnQLNguoiDung.Name = "btnQLNguoiDung";
             // 
             // btnHeThong
@@ -112,7 +126,26 @@
             this.btnHeThong.Caption = "Hệ thống";
             this.btnHeThong.Glyph = ((System.Drawing.Image)(resources.GetObject("btnHeThong.Glyph")));
             this.btnHeThong.Id = 4;
+            this.btnHeThong.MinSize = new System.Drawing.Size(85, 0);
             this.btnHeThong.Name = "btnHeThong";
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Caption = "Đăng xuất";
+            this.btnDangXuat.Id = 6;
+            this.btnDangXuat.ImageUri.Uri = "Reset";
+            this.btnDangXuat.MinSize = new System.Drawing.Size(85, 0);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Caption = "Thoát";
+            this.btnThoat.Id = 7;
+            this.btnThoat.ImageUri.Uri = "Close";
+            this.btnThoat.MinSize = new System.Drawing.Size(85, 0);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -142,6 +175,16 @@
             this.barDockControlRight.Location = new System.Drawing.Point(738, 65);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 355);
             // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.AppearancePage.HeaderActive.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xtraTabbedMdiManager1.AppearancePage.HeaderActive.ForeColor = System.Drawing.Color.Red;
+            this.xtraTabbedMdiManager1.AppearancePage.HeaderActive.Options.UseFont = true;
+            this.xtraTabbedMdiManager1.AppearancePage.HeaderActive.Options.UseForeColor = true;
+            this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
+            this.xtraTabbedMdiManager1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,11 +196,14 @@
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.KeyPreview = true;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PHẦN MỀM TẠO ĐỀ THI TRẮC NGHIỆM";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +222,8 @@
         private DevExpress.XtraBars.BarLargeButtonItem btnQLMonHoc;
         private DevExpress.XtraBars.BarLargeButtonItem btnQLNguoiDung;
         private DevExpress.XtraBars.BarLargeButtonItem btnHeThong;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarLargeButtonItem btnDangXuat;
+        private DevExpress.XtraBars.BarLargeButtonItem btnThoat;
     }
 }

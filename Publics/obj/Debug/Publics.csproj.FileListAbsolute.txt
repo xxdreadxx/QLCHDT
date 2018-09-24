@@ -1,0 +1,5 @@
+E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\bin\Debug\Publics.dll
+E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\bin\Debug\Publics.pdb
+E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\obj\Debug\Publics.dll
+E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\obj\Debug\Publics.pdb
+E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\obj\Debug\Publics.csprojResolveAssemblyReference.cache

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLCH" Class="dbQLCHDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.212;Initial Catalog=QLCH;Persist Security Info=True;User ID=sa" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="QLCHConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.212;Initial Catalog=QLCH;Persist Security Info=True;User ID=sa" SettingsObjectName="DTO.Properties.Settings" SettingsPropertyName="QLCHConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Account_Info" Member="Account_Infos">
     <Type Name="Account_Info">
       <Column Name="ID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -35,7 +35,6 @@
   <Table Name="dbo.CauHoi" Member="CauHois">
     <Type Name="CauHoi">
       <Column Name="ID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ID_Khoi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="ID_Mon" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="ID_LoaiCauHoi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
@@ -94,8 +93,10 @@
       <Column Name="ID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ID_DeThi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="ID_CauHoi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="DapAn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ID_DapAnDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DapAn1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DapAn2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DapAn3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DapAn4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
@@ -110,15 +111,38 @@
       <Column Name="MaLoai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.LoaiDeThi" Member="LoaiDeThis">
+    <Type Name="LoaiDeThi">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaLoai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="ThoiGian" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TiLeCauDe" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TiLeCauKho" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TiLeCauTB" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TongSoCau" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Log]" Member="Logs">
+    <Type Name="Log">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Log_Content" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.MonHoc" Member="MonHocs">
     <Type Name="MonHoc">
       <Column Name="ID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Khoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TenMonHoc" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="SoCauHoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="MaMonHoc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SoCauHoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

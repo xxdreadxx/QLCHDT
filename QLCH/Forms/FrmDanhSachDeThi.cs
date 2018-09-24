@@ -33,7 +33,6 @@ namespace QLCH.Forms
             frm.Thang = Thang;
             frm.Nam = Nam;
             frm.ShowDialog();
-                
         }
     }
 }

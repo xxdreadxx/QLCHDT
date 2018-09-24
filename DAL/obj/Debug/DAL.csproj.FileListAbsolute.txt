@@ -1,0 +1,7 @@
+E:\Krystal_File\App\codeQLCH\QLCHDT\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\Krystal_File\App\codeQLCH\QLCHDT\DAL\bin\Debug\DAL.dll
+E:\Krystal_File\App\codeQLCH\QLCHDT\DAL\bin\Debug\DAL.pdb
+E:\Krystal_File\App\codeQLCH\QLCHDT\DAL\bin\Debug\DTO.dll
+E:\Krystal_File\App\codeQLCH\QLCHDT\DAL\bin\Debug\DTO.pdb
+E:\Krystal_File\App\codeQLCH\QLCHDT\DAL\obj\Debug\DAL.dll
+E:\Krystal_File\App\codeQLCH\QLCHDT\DAL\obj\Debug\DAL.pdb
