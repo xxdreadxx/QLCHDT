@@ -33,8 +33,8 @@ namespace QLCH.Forms
 
         private void btnTaoDeThi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmChonNgayThangNam frmThangNam = new FrmChonNgayThangNam();
-            frmThangNam.typeChon = 
+            FrmChonNgayThang frmThangNam = new FrmChonNgayThang();
+            
             FrmTaoDeThi frm = new FrmTaoDeThi();
             frm.ngay = tuNgay;
             frm.thang = tuThang;

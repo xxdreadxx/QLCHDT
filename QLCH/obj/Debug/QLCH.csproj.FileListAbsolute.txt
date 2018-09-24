@@ -153,3 +153,5 @@ D:\My Work\New folder\QLCHDT\QLCH\bin\Debug\de\DevExpress.Office.v16.1.Core.reso
 D:\My Work\New folder\QLCHDT\QLCH\bin\Debug\es\DevExpress.Office.v16.1.Core.resources.dll
 D:\My Work\New folder\QLCHDT\QLCH\bin\Debug\ja\DevExpress.Office.v16.1.Core.resources.dll
 D:\My Work\New folder\QLCHDT\QLCH\bin\Debug\ru\DevExpress.Office.v16.1.Core.resources.dll
+D:\My Work\New folder\QLCHDT\QLCH\bin\Debug\Publics.dll
+D:\My Work\New folder\QLCHDT\QLCH\bin\Debug\Publics.pdb
