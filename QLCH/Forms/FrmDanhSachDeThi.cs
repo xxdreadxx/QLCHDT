@@ -33,13 +33,21 @@ namespace QLCH.Forms
 
         private void btnTaoDeThi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmChonNgayThang frmThangNam = new FrmChonNgayThang();
-            
-            FrmTaoDeThi frm = new FrmTaoDeThi();
-            frm.ngay = tuNgay;
-            frm.thang = tuThang;
-            frm.nam = tuNam;
-            frm.ShowDialog();
+            FrmChonNgayThang frmTN = new FrmChonNgayThang();
+            frmTN.ShowDialog();
+            if (frmTN.ngay.ToString() == null && frmTN.thang.ToString() == null && frmTN.nam.ToString() == null)
+            {
+                return;
+            }
+            else
+            {
+                FrmTaoDeThi frm = new FrmTaoDeThi();
+                frm.ngay = tuNgay;
+                frm.thang = tuThang;
+                frm.nam = tuNam;
+                frm.ShowDialog();
+            }
+           
         }
     }
 }

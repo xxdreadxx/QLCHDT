@@ -12,6 +12,7 @@ namespace Publics
 {
     public partial class FrmChonNgayThang : Form
     {
+        public int ngay;
         public int thang;
         public int nam;
         public FrmChonNgayThang()
@@ -21,6 +22,7 @@ namespace Publics
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
+            ngay = int.Parse(txtNgay.Text);
             thang = int.Parse(txtThang.Text);
             nam = int.Parse(txtNam.Text);
             this.Close();

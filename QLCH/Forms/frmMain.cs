@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Publics;
 
 namespace QLCH.Forms
 {
@@ -23,15 +24,30 @@ namespace QLCH.Forms
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
-            //12345567
         }
 
         private void btnQLDeThi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmDanhSachDeThi frm = new FrmDanhSachDeThi();
-            frm.MdiParent = this;
-            frm.WindowState = FormWindowState.Maximized;
-            frm.Show();
+            FrmChonNgayThangNam frmNTN = new FrmChonNgayThangNam();
+            frmNTN.ShowDialog();
+            if (frmNTN.tuNgay.ToString() == null && frmNTN.tuThang.ToString() == null && frmNTN.tuNam.ToString() == null)
+            {
+                return;
+            }
+            else
+            {
+                FrmDanhSachDeThi frm = new FrmDanhSachDeThi();
+                frm.tuNgay = frmNTN.tuNgay;
+                frm.tuThang = frmNTN.tuThang;
+                frm.tuNam = frmNTN.tuNam;
+                frm.denNgay = frmNTN.denNgay;
+                frm.denThang = frmNTN.denThang;
+                frm.denNam = frmNTN.denNam;
+                frm.MdiParent = this;
+                frm.WindowState = FormWindowState.Maximized;
+                frm.Show();
+            }
+           
         }
 
         private void btnQLMonHoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

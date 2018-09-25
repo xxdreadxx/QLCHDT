@@ -50,3 +50,4 @@ E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\obj\Debug\Publics.dll
 E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\obj\Debug\Publics.pdb
 E:\Krystal_File\App\codeQLCH\QLCHDT\Publics\obj\Debug\Publics.csprojResolveAssemblyReference.cache
 >>>>>>> dbda6f6070862296abdf0e9938635442a164926a
+D:\My Work\New folder\QLCHDT\Publics\obj\Debug\Publics.csprojResolveAssemblyReference.cache

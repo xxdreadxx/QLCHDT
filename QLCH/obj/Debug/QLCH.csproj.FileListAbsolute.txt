@@ -261,3 +261,5 @@ E:\Krystal_File\App\codeQLCH\QLCHDT\QLCH\bin\Debug\ja\DevExpress.Office.v16.1.Co
 E:\Krystal_File\App\codeQLCH\QLCHDT\QLCH\bin\Debug\ru\DevExpress.Office.v16.1.Core.resources.dll
 E:\Krystal_File\App\codeQLCH\QLCHDT\QLCH\bin\Debug\DAL.pdb
 >>>>>>> dbda6f6070862296abdf0e9938635442a164926a
+D:\My Work\New folder\QLCHDT\QLCH\obj\Debug\QLCH.Forms.frmMonHoc.resources
+D:\My Work\New folder\QLCHDT\QLCH\obj\Debug\QLCH.Forms.frmMonHoc_Add.resources
