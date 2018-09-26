@@ -15,3 +15,4 @@ E:\Krystal_File\App\codeQLCH\QLCHDT1\DTO\bin\Debug\DTO.pdb
 E:\Krystal_File\App\codeQLCH\QLCHDT1\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 E:\Krystal_File\App\codeQLCH\QLCHDT1\DTO\obj\Debug\DTO.dll
 E:\Krystal_File\App\codeQLCH\QLCHDT1\DTO\obj\Debug\DTO.pdb
+E:\Krystal_File\App\codeQLCH\QLCHDT\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache

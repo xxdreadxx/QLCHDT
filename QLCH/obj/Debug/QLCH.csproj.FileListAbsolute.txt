@@ -322,3 +322,5 @@ E:\Krystal_File\App\codeQLCH\QLCHDT1\QLCH\obj\Debug\QLCH.Forms.FrmTaoDeThi.resou
 E:\Krystal_File\App\codeQLCH\QLCHDT1\QLCH\obj\Debug\QLCH.Properties.Resources.resources
 E:\Krystal_File\App\codeQLCH\QLCHDT1\QLCH\obj\Debug\QLCH.csproj.GenerateResource.Cache
 E:\Krystal_File\App\codeQLCH\QLCHDT1\QLCH\obj\Debug\QLCH.exe.licenses
+E:\Krystal_File\App\codeQLCH\QLCHDT\QLCH\obj\Debug\QLCH.Forms.FrmChuongBai.resources
+E:\Krystal_File\App\codeQLCH\QLCHDT\QLCH\obj\Debug\QLCH.Forms.FrmChuongBai_Add.resources

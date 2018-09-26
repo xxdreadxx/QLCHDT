@@ -90,7 +90,7 @@
             this.btnHuyBo.Location = new System.Drawing.Point(221, 271);
             this.btnHuyBo.Name = "btnHuyBo";
             this.btnHuyBo.Size = new System.Drawing.Size(206, 26);
-            this.btnHuyBo.TabIndex = 11;
+            this.btnHuyBo.TabIndex = 5;
             this.btnHuyBo.Text = "Hủy bỏ";
             this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
             // 
@@ -118,7 +118,9 @@
             this.txtDenNam3.Name = "txtDenNam3";
             this.txtDenNam3.Properties.Mask.EditMask = "d";
             this.txtDenNam3.Size = new System.Drawing.Size(126, 20);
-            this.txtDenNam3.TabIndex = 2;
+            this.txtDenNam3.TabIndex = 1;
+            this.txtDenNam3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDenNam3_KeyPress);
+            this.txtDenNam3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDenNam3_KeyUp);
             // 
             // txtTuNam3
             // 
@@ -126,7 +128,9 @@
             this.txtTuNam3.Name = "txtTuNam3";
             this.txtTuNam3.Properties.Mask.EditMask = "d";
             this.txtTuNam3.Size = new System.Drawing.Size(135, 20);
-            this.txtTuNam3.TabIndex = 2;
+            this.txtTuNam3.TabIndex = 0;
+            this.txtTuNam3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTuNam3_KeyPress);
+            this.txtTuNam3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTuNam3_KeyUp);
             // 
             // panelControl3
             // 
@@ -137,7 +141,7 @@
             this.panelControl3.Location = new System.Drawing.Point(13, 204);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(414, 51);
-            this.panelControl3.TabIndex = 8;
+            this.panelControl3.TabIndex = 3;
             // 
             // labelControl5
             // 
@@ -181,7 +185,9 @@
             this.txtDenNam2.Name = "txtDenNam2";
             this.txtDenNam2.Properties.Mask.EditMask = "d";
             this.txtDenNam2.Size = new System.Drawing.Size(47, 20);
-            this.txtDenNam2.TabIndex = 2;
+            this.txtDenNam2.TabIndex = 3;
+            this.txtDenNam2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDenNam2_KeyPress);
+            this.txtDenNam2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDenNam2_KeyUp);
             // 
             // txtTuNam2
             // 
@@ -189,7 +195,9 @@
             this.txtTuNam2.Name = "txtTuNam2";
             this.txtTuNam2.Properties.Mask.EditMask = "d";
             this.txtTuNam2.Size = new System.Drawing.Size(47, 20);
-            this.txtTuNam2.TabIndex = 2;
+            this.txtTuNam2.TabIndex = 1;
+            this.txtTuNam2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTuNam2_KeyPress);
+            this.txtTuNam2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTuNam2_KeyUp);
             // 
             // txtDenThang2
             // 
@@ -198,6 +206,8 @@
             this.txtDenThang2.Properties.Mask.EditMask = "d";
             this.txtDenThang2.Size = new System.Drawing.Size(47, 20);
             this.txtDenThang2.TabIndex = 2;
+            this.txtDenThang2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDenThang2_KeyPress);
+            this.txtDenThang2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDenThang2_KeyUp);
             // 
             // txtTuThang2
             // 
@@ -205,7 +215,9 @@
             this.txtTuThang2.Name = "txtTuThang2";
             this.txtTuThang2.Properties.Mask.EditMask = "d";
             this.txtTuThang2.Size = new System.Drawing.Size(47, 20);
-            this.txtTuThang2.TabIndex = 2;
+            this.txtTuThang2.TabIndex = 0;
+            this.txtTuThang2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTuThang2_KeyPress);
+            this.txtTuThang2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTuThang2_KeyUp);
             // 
             // btnDongY
             // 
@@ -214,7 +226,7 @@
             this.btnDongY.Location = new System.Drawing.Point(13, 271);
             this.btnDongY.Name = "btnDongY";
             this.btnDongY.Size = new System.Drawing.Size(202, 26);
-            this.btnDongY.TabIndex = 12;
+            this.btnDongY.TabIndex = 4;
             this.btnDongY.Text = "Đồng ý";
             this.btnDongY.Click += new System.EventHandler(this.btnDongY_Click);
             // 
@@ -231,7 +243,7 @@
             this.panelControl2.Location = new System.Drawing.Point(13, 118);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(414, 51);
-            this.panelControl2.TabIndex = 9;
+            this.panelControl2.TabIndex = 1;
             // 
             // labelControl11
             // 
@@ -266,7 +278,9 @@
             this.txtDenNam1.Name = "txtDenNam1";
             this.txtDenNam1.Properties.Mask.EditMask = "d";
             this.txtDenNam1.Size = new System.Drawing.Size(33, 20);
-            this.txtDenNam1.TabIndex = 2;
+            this.txtDenNam1.TabIndex = 5;
+            this.txtDenNam1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDenNam1_KeyPress);
+            this.txtDenNam1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDenNam1_KeyUp);
             // 
             // txtTuNam1
             // 
@@ -275,6 +289,8 @@
             this.txtTuNam1.Properties.Mask.EditMask = "d";
             this.txtTuNam1.Size = new System.Drawing.Size(33, 20);
             this.txtTuNam1.TabIndex = 2;
+            this.txtTuNam1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTuNam1_KeyPress);
+            this.txtTuNam1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTuNam1_KeyUp);
             // 
             // txtDenThang1
             // 
@@ -282,7 +298,9 @@
             this.txtDenThang1.Name = "txtDenThang1";
             this.txtDenThang1.Properties.Mask.EditMask = "d";
             this.txtDenThang1.Size = new System.Drawing.Size(33, 20);
-            this.txtDenThang1.TabIndex = 2;
+            this.txtDenThang1.TabIndex = 4;
+            this.txtDenThang1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDenThang1_KeyPress);
+            this.txtDenThang1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDenThang1_KeyUp);
             // 
             // txtDenNgay
             // 
@@ -290,7 +308,9 @@
             this.txtDenNgay.Name = "txtDenNgay";
             this.txtDenNgay.Properties.Mask.EditMask = "d";
             this.txtDenNgay.Size = new System.Drawing.Size(33, 20);
-            this.txtDenNgay.TabIndex = 2;
+            this.txtDenNgay.TabIndex = 3;
+            this.txtDenNgay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDenNgay_KeyPress);
+            this.txtDenNgay.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDenNgay_KeyUp);
             // 
             // txtTuThang1
             // 
@@ -298,7 +318,9 @@
             this.txtTuThang1.Name = "txtTuThang1";
             this.txtTuThang1.Properties.Mask.EditMask = "d";
             this.txtTuThang1.Size = new System.Drawing.Size(33, 20);
-            this.txtTuThang1.TabIndex = 2;
+            this.txtTuThang1.TabIndex = 1;
+            this.txtTuThang1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTuThang1_KeyPress);
+            this.txtTuThang1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTuThang1_KeyUp);
             // 
             // ckdChonTheoNam
             // 
@@ -308,9 +330,8 @@
             this.ckdChonTheoNam.Properties.Appearance.Options.UseFont = true;
             this.ckdChonTheoNam.Properties.Caption = "Chọn theo năm";
             this.ckdChonTheoNam.Size = new System.Drawing.Size(179, 19);
-            this.ckdChonTheoNam.TabIndex = 5;
+            this.ckdChonTheoNam.TabIndex = 2;
             this.ckdChonTheoNam.CheckedChanged += new System.EventHandler(this.ckdChonTheoNam_CheckedChanged);
-            //this.ckdChonTheoNam.Click += new System.EventHandler(this.ckdChonTheoNam_Click);
             // 
             // labelControl12
             // 
@@ -347,7 +368,7 @@
             this.panelControl1.Location = new System.Drawing.Point(13, 36);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(414, 51);
-            this.panelControl1.TabIndex = 10;
+            this.panelControl1.TabIndex = 0;
             // 
             // labelControl7
             // 
@@ -364,7 +385,9 @@
             this.txtTuNgay.Name = "txtTuNgay";
             this.txtTuNgay.Properties.Mask.EditMask = "d";
             this.txtTuNgay.Size = new System.Drawing.Size(33, 20);
-            this.txtTuNgay.TabIndex = 2;
+            this.txtTuNgay.TabIndex = 0;
+            this.txtTuNgay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTuNgay_KeyPress);
+            this.txtTuNgay.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTuNgay_KeyUp);
             // 
             // ckdChonTheoThang
             // 
@@ -374,9 +397,8 @@
             this.ckdChonTheoThang.Properties.Appearance.Options.UseFont = true;
             this.ckdChonTheoThang.Properties.Caption = "Chọn theo tháng";
             this.ckdChonTheoThang.Size = new System.Drawing.Size(179, 19);
-            this.ckdChonTheoThang.TabIndex = 6;
+            this.ckdChonTheoThang.TabIndex = 1;
             this.ckdChonTheoThang.CheckedChanged += new System.EventHandler(this.ckdChonTheoThang_CheckedChanged);
-            //this.ckdChonTheoThang.Click += new System.EventHandler(this.ckdChonTheoThang_Click);
             // 
             // ckdChonTheoNgay
             // 
@@ -386,7 +408,7 @@
             this.ckdChonTheoNgay.Properties.Appearance.Options.UseFont = true;
             this.ckdChonTheoNgay.Properties.Caption = "Chọn theo ngày";
             this.ckdChonTheoNgay.Size = new System.Drawing.Size(179, 19);
-            this.ckdChonTheoNgay.TabIndex = 7;
+            this.ckdChonTheoNgay.TabIndex = 0;
             this.ckdChonTheoNgay.CheckedChanged += new System.EventHandler(this.ckdChonTheoNgay_CheckedChanged);
             // 
             // FrmChonNgayThangNam
@@ -403,6 +425,7 @@
             this.Controls.Add(this.ckdChonTheoThang);
             this.Controls.Add(this.ckdChonTheoNgay);
             this.Name = "FrmChonNgayThangNam";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chọn thời gian";
             this.Load += new System.EventHandler(this.FrmChonNgayThangNam_Load);
