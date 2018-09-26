@@ -222,8 +222,8 @@ namespace DTO
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_MonHoc", DbType="NVarChar(100)")] string iD_MonHoc, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_Acc", DbType="NVarChar(100)")] string iD_Acc, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaDe", DbType="NVarChar(100)")] string maDe, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuBai", DbType="Int")] System.Nullable<int> tuBai, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenBai", DbType="Int")] System.Nullable<int> denBai, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tuIDBai, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> denIDBai, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TongSoCau", DbType="Int")] System.Nullable<int> tongSoCau, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="SLCauDe", DbType="Int")] System.Nullable<int> sLCauDe, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="SLCauTB", DbType="Int")] System.Nullable<int> sLCauTB, 
@@ -239,7 +239,7 @@ namespace DTO
 					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tuThang, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tuNam)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_LoaiBaiThi, iD_MonHoc, iD_Acc, maDe, tuBai, denBai, tongSoCau, sLCauDe, sLCauTB, sLCauKho, isCreateAuto, tieuDeBaiThi, nguoiTao, nguoikyDuyet, giaoVien1, giaoVien2, ghiChu, tuNgay, tuThang, tuNam);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_LoaiBaiThi, iD_MonHoc, iD_Acc, maDe, tuIDBai, denIDBai, tongSoCau, sLCauDe, sLCauTB, sLCauKho, isCreateAuto, tieuDeBaiThi, nguoiTao, nguoikyDuyet, giaoVien1, giaoVien2, ghiChu, tuNgay, tuThang, tuNam);
 			return ((int)(result.ReturnValue));
 		}
 	}

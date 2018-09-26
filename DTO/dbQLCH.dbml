@@ -171,8 +171,8 @@
     <Parameter Name="ID_MonHoc" Parameter="iD_MonHoc" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="ID_Acc" Parameter="iD_Acc" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="MaDe" Parameter="maDe" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="TuBai" Parameter="tuBai" Type="System.Int32" DbType="Int" />
-    <Parameter Name="DenBai" Parameter="denBai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tuIDBai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="denIDBai" Type="System.Int32" DbType="Int" />
     <Parameter Name="TongSoCau" Parameter="tongSoCau" Type="System.Int32" DbType="Int" />
     <Parameter Name="SLCauDe" Parameter="sLCauDe" Type="System.Int32" DbType="Int" />
     <Parameter Name="SLCauTB" Parameter="sLCauTB" Type="System.Int32" DbType="Int" />
