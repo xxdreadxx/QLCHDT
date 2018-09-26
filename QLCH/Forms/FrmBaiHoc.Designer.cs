@@ -32,14 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBaiHoc));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnThemMoi = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnSuaDoi = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnXoa = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnDong = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.grdData = new DevExpress.XtraGrid.GridControl();
             this.grvData = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grdcolID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,6 +85,39 @@
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
             // 
+            // btnThemMoi
+            // 
+            this.btnThemMoi.Caption = "Thêm mới ";
+            this.btnThemMoi.Glyph = ((System.Drawing.Image)(resources.GetObject("btnThemMoi.Glyph")));
+            this.btnThemMoi.Id = 0;
+            this.btnThemMoi.Name = "btnThemMoi";
+            this.btnThemMoi.Size = new System.Drawing.Size(70, 20);
+            this.btnThemMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThemMoi_ItemClick);
+            // 
+            // btnSuaDoi
+            // 
+            this.btnSuaDoi.Caption = "Sửa đổi";
+            this.btnSuaDoi.Glyph = ((System.Drawing.Image)(resources.GetObject("btnSuaDoi.Glyph")));
+            this.btnSuaDoi.Id = 1;
+            this.btnSuaDoi.Name = "btnSuaDoi";
+            this.btnSuaDoi.Size = new System.Drawing.Size(70, 20);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Caption = "Xóa";
+            this.btnXoa.Glyph = ((System.Drawing.Image)(resources.GetObject("btnXoa.Glyph")));
+            this.btnXoa.Id = 2;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(70, 20);
+            // 
+            // btnDong
+            // 
+            this.btnDong.Caption = "Đóng";
+            this.btnDong.Glyph = ((System.Drawing.Image)(resources.GetObject("btnDong.Glyph")));
+            this.btnDong.Id = 3;
+            this.btnDong.Name = "btnDong";
+            this.btnDong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDong_ItemClick);
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -112,34 +145,6 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(715, 56);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 408);
-            // 
-            // btnThemMoi
-            // 
-            this.btnThemMoi.Caption = "Thêm mới ";
-            this.btnThemMoi.Glyph = ((System.Drawing.Image)(resources.GetObject("btnThemMoi.Glyph")));
-            this.btnThemMoi.Id = 0;
-            this.btnThemMoi.Name = "btnThemMoi";
-            // 
-            // btnSuaDoi
-            // 
-            this.btnSuaDoi.Caption = "Sửa đổi";
-            this.btnSuaDoi.Glyph = ((System.Drawing.Image)(resources.GetObject("btnSuaDoi.Glyph")));
-            this.btnSuaDoi.Id = 1;
-            this.btnSuaDoi.Name = "btnSuaDoi";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Caption = "Xóa";
-            this.btnXoa.Glyph = ((System.Drawing.Image)(resources.GetObject("btnXoa.Glyph")));
-            this.btnXoa.Id = 2;
-            this.btnXoa.Name = "btnXoa";
-            // 
-            // btnDong
-            // 
-            this.btnDong.Caption = "Đóng";
-            this.btnDong.Glyph = ((System.Drawing.Image)(resources.GetObject("btnDong.Glyph")));
-            this.btnDong.Id = 3;
-            this.btnDong.Name = "btnDong";
             // 
             // grdData
             // 
@@ -170,6 +175,7 @@
             this.grvData.GridControl = this.grdData;
             this.grvData.Name = "grvData";
             this.grvData.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.grvData.OptionsView.ShowGroupPanel = false;
             // 
             // grdcolID
             // 
@@ -211,6 +217,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.KeyPreview = true;
             this.Name = "FrmBaiHoc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBaiHoc";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmBaiHoc_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

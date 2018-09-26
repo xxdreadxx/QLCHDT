@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMonHoc));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnAdd = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -82,10 +81,10 @@
             this.bar1.DockRow = 0;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnAdd, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnAdd),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnCopy, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnDuyet, true),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDel, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDel, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnClose, true)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DrawDragBorder = false;
@@ -95,8 +94,8 @@
             // btnAdd
             // 
             this.btnAdd.Caption = "Thêm mới";
-            this.btnAdd.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdd.Glyph")));
             this.btnAdd.Id = 0;
+            this.btnAdd.ImageUri.Uri = "Add";
             this.btnAdd.MinSize = new System.Drawing.Size(65, 0);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdd_ItemClick);
@@ -122,8 +121,8 @@
             // btnDel
             // 
             this.btnDel.Caption = "Xóa";
-            this.btnDel.Glyph = ((System.Drawing.Image)(resources.GetObject("btnDel.Glyph")));
             this.btnDel.Id = 3;
+            this.btnDel.ImageUri.Uri = "Delete";
             this.btnDel.MinSize = new System.Drawing.Size(65, 0);
             this.btnDel.Name = "btnDel";
             this.btnDel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDel_ItemClick);
@@ -179,12 +178,6 @@
             // grdMonHoc
             // 
             this.grdMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMonHoc.EmbeddedNavigator.Buttons.Append.Visible = false;
-            this.grdMonHoc.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
-            this.grdMonHoc.EmbeddedNavigator.Buttons.Edit.Visible = false;
-            this.grdMonHoc.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
-            this.grdMonHoc.EmbeddedNavigator.Buttons.Remove.Visible = false;
-            this.grdMonHoc.EmbeddedNavigator.TextStringFormat = "Bản ghi thứ {0} của {1}";
             this.grdMonHoc.Location = new System.Drawing.Point(2, 20);
             this.grdMonHoc.MainView = this.grvMonHoc;
             this.grdMonHoc.MenuManager = this.barManager1;
@@ -208,7 +201,6 @@
             this.grvMonHoc.GridControl = this.grdMonHoc;
             this.grvMonHoc.Name = "grvMonHoc";
             this.grvMonHoc.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
-            this.grvMonHoc.OptionsView.ShowGroupPanel = false;
             // 
             // grdcolKhoi
             // 

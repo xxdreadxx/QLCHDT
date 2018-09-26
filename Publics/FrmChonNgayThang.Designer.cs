@@ -102,7 +102,6 @@
             this.txtNam.Properties.Mask.EditMask = "d";
             this.txtNam.Size = new System.Drawing.Size(135, 20);
             this.txtNam.TabIndex = 2;
-            this.txtNam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNam_KeyPress);
             // 
             // txtNgay
             // 
@@ -111,7 +110,6 @@
             this.txtNgay.Properties.Mask.EditMask = "d";
             this.txtNgay.Size = new System.Drawing.Size(135, 20);
             this.txtNgay.TabIndex = 2;
-            this.txtNgay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNgay_KeyPress);
             // 
             // txtThang
             // 
@@ -120,7 +118,6 @@
             this.txtThang.Properties.Mask.EditMask = "d";
             this.txtThang.Size = new System.Drawing.Size(135, 20);
             this.txtThang.TabIndex = 2;
-            this.txtThang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtThang_KeyPress);
             // 
             // btnDongY
             // 
@@ -141,13 +138,9 @@
             this.Controls.Add(this.btnHuyBo);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.btnDongY);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmChonNgayThang";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chọn thời gian";
-            this.Load += new System.EventHandler(this.FrmChonNgayThang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();

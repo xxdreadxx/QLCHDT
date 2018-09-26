@@ -250,7 +250,8 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FrmChuongBai_Add";
-            this.Text = "FrmChuongBai_Add";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Thêm chương bài";
             ((System.ComponentModel.ISupportInitialize)(this.txtmaMon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaChuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoChuong.Properties)).EndInit();

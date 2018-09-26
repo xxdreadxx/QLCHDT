@@ -170,7 +170,7 @@
             this.txtMaChuongBai.Name = "txtMaChuongBai";
             this.txtMaChuongBai.Size = new System.Drawing.Size(62, 20);
             this.txtMaChuongBai.TabIndex = 1;
-            //this.txtMaChuongBai.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
+            this.txtMaChuongBai.Leave += new System.EventHandler(this.txtMaChuongBai_Leave);
             // 
             // txtmaMon
             // 
@@ -178,7 +178,7 @@
             this.txtmaMon.Name = "txtmaMon";
             this.txtmaMon.Size = new System.Drawing.Size(62, 20);
             this.txtmaMon.TabIndex = 1;
-            //this.txtmaMon.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
+            this.txtmaMon.Leave += new System.EventHandler(this.txtmaMon_Leave);
             // 
             // txtMaBaiHoc
             // 
@@ -186,7 +186,6 @@
             this.txtMaBaiHoc.Name = "txtMaBaiHoc";
             this.txtMaBaiHoc.Size = new System.Drawing.Size(174, 20);
             this.txtMaBaiHoc.TabIndex = 1;
-            //this.txtMaBaiHoc.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
             // 
             // txtKhoiLop
             // 
@@ -194,7 +193,6 @@
             this.txtKhoiLop.Name = "txtKhoiLop";
             this.txtKhoiLop.Size = new System.Drawing.Size(174, 20);
             this.txtKhoiLop.TabIndex = 1;
-            //this.txtKhoiLop.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
             // 
             // txtTenChuongBai
             // 
@@ -202,7 +200,6 @@
             this.txtTenChuongBai.Name = "txtTenChuongBai";
             this.txtTenChuongBai.Size = new System.Drawing.Size(227, 20);
             this.txtTenChuongBai.TabIndex = 1;
-            //this.txtTenChuongBai.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
             // 
             // txtTenMon
             // 
@@ -210,7 +207,6 @@
             this.txtTenMon.Name = "txtTenMon";
             this.txtTenMon.Size = new System.Drawing.Size(227, 20);
             this.txtTenMon.TabIndex = 1;
-            //this.txtTenMon.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
             // 
             // txtNoiDung
             // 
@@ -218,7 +214,6 @@
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.Size = new System.Drawing.Size(297, 20);
             this.txtNoiDung.TabIndex = 1;
-            //this.txtNoiDung.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
             // 
             // labelControl6
             // 
@@ -287,7 +282,8 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FrmBaiHoc_Add";
-            this.Text = "FrmBaiHoc_Add";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Thêm bài học";
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
