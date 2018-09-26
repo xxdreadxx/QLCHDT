@@ -27,5 +27,16 @@ namespace QLCH.Forms
                 this.Close();
             }
         }
+
+        private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnThemMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmBaiHoc_Add frmBHA = new FrmBaiHoc_Add();
+            frmBHA.ShowDialog();
+        }
     }
 }

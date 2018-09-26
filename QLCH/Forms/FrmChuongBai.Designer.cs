@@ -74,6 +74,8 @@
             this.btnThemMoi.Glyph = ((System.Drawing.Image)(resources.GetObject("btnThemMoi.Glyph")));
             this.btnThemMoi.Id = 0;
             this.btnThemMoi.Name = "btnThemMoi";
+            this.btnThemMoi.Size = new System.Drawing.Size(70, 20);
+            this.btnThemMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThemMoi_ItemClick);
             // 
             // btnSuaDoi
             // 
@@ -81,6 +83,7 @@
             this.btnSuaDoi.Glyph = ((System.Drawing.Image)(resources.GetObject("btnSuaDoi.Glyph")));
             this.btnSuaDoi.Id = 1;
             this.btnSuaDoi.Name = "btnSuaDoi";
+            this.btnSuaDoi.Size = new System.Drawing.Size(70, 20);
             // 
             // btnXoa
             // 
@@ -88,6 +91,7 @@
             this.btnXoa.Glyph = ((System.Drawing.Image)(resources.GetObject("btnXoa.Glyph")));
             this.btnXoa.Id = 2;
             this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(70, 20);
             // 
             // btnDong
             // 
@@ -95,6 +99,7 @@
             this.btnDong.Glyph = ((System.Drawing.Image)(resources.GetObject("btnDong.Glyph")));
             this.btnDong.Id = 3;
             this.btnDong.Name = "btnDong";
+            this.btnDong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDong_ItemClick);
             // 
             // barManager1
             // 
@@ -196,7 +201,7 @@
             // 
             // grdcolIDMonHoc
             // 
-            this.grdcolIDMonHoc.Caption = "IDChuong";
+            this.grdcolIDMonHoc.Caption = "IDMon";
             this.grdcolIDMonHoc.FieldName = "ID_MonHoc";
             this.grdcolIDMonHoc.Name = "grdcolIDMonHoc";
             // 
@@ -210,8 +215,12 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.KeyPreview = true;
             this.Name = "FrmChuongBai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmChuongBai";
+            this.Load += new System.EventHandler(this.FrmChuongBai_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmChuongBai_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).EndInit();

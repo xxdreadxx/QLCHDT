@@ -19,5 +19,15 @@ namespace BLL
         {
             cb.CreateChuongBai(idMonHoc, soChuong, tenChuong, maChuong, soBai);
         }
+        public string getTenChuongBaiByID(string idChuongbai)
+        {
+            string tenchuong = cb.getChuongBaiByID(idChuongbai).TenChuong;
+            return tenchuong;
+        }
+        public string getMaChuongBaiByID(string idChuongbai)
+        {
+            string maChuong = cb.getChuongBaiByID(idChuongbai).MaChuong;
+            return maChuong;
+        }
     }
 }

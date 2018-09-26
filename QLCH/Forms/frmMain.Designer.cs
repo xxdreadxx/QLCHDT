@@ -42,6 +42,7 @@
             this.btnLoaiDeThi = new DevExpress.XtraBars.BarButtonItem();
             this.btnLoaiCauHoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnBaiHoc = new DevExpress.XtraBars.BarButtonItem();
+            this.btnChuongBai = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnQLDeThi = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnQLCauHoi = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnQLMonHoc = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -51,7 +52,6 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnChuongBai = new DevExpress.XtraBars.BarLargeButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popHeThong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popDanhMuc)).BeginInit();
@@ -184,6 +184,14 @@
             this.btnBaiHoc.Caption = "Danh mục bài học";
             this.btnBaiHoc.Id = 12;
             this.btnBaiHoc.Name = "btnBaiHoc";
+            this.btnBaiHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBaiHoc_ItemClick);
+            // 
+            // btnChuongBai
+            // 
+            this.btnChuongBai.Caption = "Danh mục chương bài";
+            this.btnChuongBai.Id = 13;
+            this.btnChuongBai.Name = "btnChuongBai";
+            this.btnChuongBai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChuongBai_ItemClick);
             // 
             // btnQLDeThi
             // 
@@ -256,12 +264,6 @@
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.xtraTabbedMdiManager1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // btnChuongBai
-            // 
-            this.btnChuongBai.Caption = "Danh mục chương bài";
-            this.btnChuongBai.Id = 13;
-            this.btnChuongBai.Name = "btnChuongBai";
             // 
             // frmMain
             // 
