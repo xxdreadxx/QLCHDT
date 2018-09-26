@@ -30,7 +30,10 @@ namespace QLCH.Forms
         {
             FrmChonNgayThangNam frmNTN = new FrmChonNgayThangNam();
             frmNTN.ShowDialog();
-            if (frmNTN.tuNgay.ToString() == null && frmNTN.tuThang.ToString() == null && frmNTN.tuNam.ToString() == null)
+            int dteTuNgay = frmNTN.tuNgay;
+            int dteTuThang = frmNTN.tuThang;
+            int dteTuNam = frmNTN.tuNam;
+            if (dteTuNgay.ToString() == null && dteTuThang.ToString() == null && dteTuNam.ToString() == null)
             {
                 return;
             }

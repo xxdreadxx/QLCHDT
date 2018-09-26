@@ -31,17 +31,17 @@
             this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtNam = new DevExpress.XtraEditors.TextEdit();
+            this.txtNgay = new DevExpress.XtraEditors.TextEdit();
             this.txtThang = new DevExpress.XtraEditors.TextEdit();
             this.btnDongY = new DevExpress.XtraEditors.SimpleButton();
-            this.txtNgay = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThang.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHuyBo
@@ -77,6 +77,15 @@
             this.labelControl6.TabIndex = 1;
             this.labelControl6.Text = "Năm";
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(10, 18);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(25, 13);
+            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Text = "Ngày";
+            // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,16 +100,22 @@
             this.txtNam.Location = new System.Drawing.Point(52, 67);
             this.txtNam.Name = "txtNam";
             this.txtNam.Properties.Mask.EditMask = "d";
-            this.txtNam.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtNam.Size = new System.Drawing.Size(135, 20);
             this.txtNam.TabIndex = 2;
+            // 
+            // txtNgay
+            // 
+            this.txtNgay.Location = new System.Drawing.Point(52, 15);
+            this.txtNgay.Name = "txtNgay";
+            this.txtNgay.Properties.Mask.EditMask = "d";
+            this.txtNgay.Size = new System.Drawing.Size(135, 20);
+            this.txtNgay.TabIndex = 2;
             // 
             // txtThang
             // 
             this.txtThang.Location = new System.Drawing.Point(52, 41);
             this.txtThang.Name = "txtThang";
             this.txtThang.Properties.Mask.EditMask = "d";
-            this.txtThang.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtThang.Size = new System.Drawing.Size(135, 20);
             this.txtThang.TabIndex = 2;
             // 
@@ -115,24 +130,6 @@
             this.btnDongY.Text = "Đồng ý";
             this.btnDongY.Click += new System.EventHandler(this.btnDongY_Click);
             // 
-            // txtNgay
-            // 
-            this.txtNgay.Location = new System.Drawing.Point(52, 15);
-            this.txtNgay.Name = "txtNgay";
-            this.txtNgay.Properties.Mask.EditMask = "d";
-            this.txtNgay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.txtNgay.Size = new System.Drawing.Size(135, 20);
-            this.txtNgay.TabIndex = 2;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(10, 18);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(25, 13);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Ngày";
-            // 
             // FrmChonNgayThang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,13 +139,14 @@
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.btnDongY);
             this.Name = "FrmChonNgayThang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chọn thời gian";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtThang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThang.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

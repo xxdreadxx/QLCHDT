@@ -3,8 +3,4 @@ D:\My Work\New folder\QLCHDT\DTO\bin\Debug\DTO.dll
 D:\My Work\New folder\QLCHDT\DTO\bin\Debug\DTO.pdb
 D:\My Work\New folder\QLCHDT\DTO\obj\Debug\DTO.dll
 D:\My Work\New folder\QLCHDT\DTO\obj\Debug\DTO.pdb
-E:\Krystal_File\App\codeQLCH\QLCHDT\DTO\bin\Debug\DTO.dll.config
-E:\Krystal_File\App\codeQLCH\QLCHDT\DTO\bin\Debug\DTO.dll
-E:\Krystal_File\App\codeQLCH\QLCHDT\DTO\bin\Debug\DTO.pdb
-E:\Krystal_File\App\codeQLCH\QLCHDT\DTO\obj\Debug\DTO.dll
-E:\Krystal_File\App\codeQLCH\QLCHDT\DTO\obj\Debug\DTO.pdb
+D:\My Work\New folder\QLCHDT\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache

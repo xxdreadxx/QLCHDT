@@ -50,5 +50,15 @@ namespace BLL
         {
             monHoc.MonHoc_Change(ID);
         }
+        public string getTenMonHocByID(string idMonHoc)
+        {
+            string tenMon = monHoc.GetMonHocByID(idMonHoc).TenMonHoc;
+            return tenMon;
+        }
+        public string getMaMonHocByID(string idMonHoc)
+        {
+            string maMon = monHoc.GetMonHocByID(idMonHoc).MaMonHoc;
+            return maMon;
+        }
     }
 }

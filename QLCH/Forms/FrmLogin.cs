@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Publics;
 //using System.Threading;
 
 namespace QLCH.Forms
@@ -26,6 +27,9 @@ namespace QLCH.Forms
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+
+
+            AccountInfor.IdAccount = "acc01010";
             this.Hide();
             frmMain frm = new frmMain();
             frm.ShowDialog();

@@ -41,7 +41,16 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.grdData = new DevExpress.XtraGrid.GridControl();
+            this.grvData = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grdcolMaCauHoi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdcolTieuDe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdcolNoiDung = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdcolMonHoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdcolLop = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -130,7 +139,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 348);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 484);
             this.barDockControlBottom.Size = new System.Drawing.Size(709, 0);
             // 
             // barDockControlLeft
@@ -138,20 +147,93 @@
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 65);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 283);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 419);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(709, 65);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 283);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 419);
+            // 
+            // grdData
+            // 
+            this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdData.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.grdData.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.grdData.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.grdData.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.grdData.EmbeddedNavigator.Buttons.Remove.Visible = false;
+            this.grdData.EmbeddedNavigator.TextStringFormat = "Bản ghi thứ {0} của {1}";
+            this.grdData.Location = new System.Drawing.Point(0, 65);
+            this.grdData.MainView = this.grvData;
+            this.grdData.MenuManager = this.barManager1;
+            this.grdData.Name = "grdData";
+            this.grdData.Size = new System.Drawing.Size(709, 419);
+            this.grdData.TabIndex = 4;
+            this.grdData.UseEmbeddedNavigator = true;
+            this.grdData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvData});
+            // 
+            // grvData
+            // 
+            this.grvData.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grdcolMaCauHoi,
+            this.grdcolTieuDe,
+            this.grdcolNoiDung,
+            this.grdcolMonHoc,
+            this.grdcolLop});
+            this.grvData.GridControl = this.grdData;
+            this.grvData.Name = "grvData";
+            this.grvData.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.grvData.OptionsView.ShowGroupPanel = false;
+            // 
+            // grdcolMaCauHoi
+            // 
+            this.grdcolMaCauHoi.Caption = "Mã câu hỏi";
+            this.grdcolMaCauHoi.FieldName = "MaCauHoi";
+            this.grdcolMaCauHoi.Name = "grdcolMaCauHoi";
+            this.grdcolMaCauHoi.Visible = true;
+            this.grdcolMaCauHoi.VisibleIndex = 0;
+            // 
+            // grdcolTieuDe
+            // 
+            this.grdcolTieuDe.Caption = "Tiêu đề";
+            this.grdcolTieuDe.FieldName = "TieuDe";
+            this.grdcolTieuDe.Name = "grdcolTieuDe";
+            this.grdcolTieuDe.Visible = true;
+            this.grdcolTieuDe.VisibleIndex = 1;
+            // 
+            // grdcolNoiDung
+            // 
+            this.grdcolNoiDung.Caption = "Nội dung";
+            this.grdcolNoiDung.FieldName = "NoiDung";
+            this.grdcolNoiDung.Name = "grdcolNoiDung";
+            this.grdcolNoiDung.Visible = true;
+            this.grdcolNoiDung.VisibleIndex = 2;
+            // 
+            // grdcolMonHoc
+            // 
+            this.grdcolMonHoc.Caption = "Môn học";
+            this.grdcolMonHoc.FieldName = "MonHoc";
+            this.grdcolMonHoc.Name = "grdcolMonHoc";
+            this.grdcolMonHoc.Visible = true;
+            this.grdcolMonHoc.VisibleIndex = 3;
+            // 
+            // grdcolLop
+            // 
+            this.grdcolLop.Caption = "Lớp";
+            this.grdcolLop.FieldName = "Lop";
+            this.grdcolLop.Name = "grdcolLop";
+            this.grdcolLop.Visible = true;
+            this.grdcolLop.VisibleIndex = 4;
             // 
             // frmCauHoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 348);
+            this.ClientSize = new System.Drawing.Size(709, 484);
+            this.Controls.Add(this.grdData);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -162,6 +244,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý câu hỏi";
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +264,12 @@
         private DevExpress.XtraBars.BarLargeButtonItem btnClose;
         private DevExpress.XtraBars.BarLargeButtonItem btnEdit;
         private DevExpress.XtraBars.BarLargeButtonItem btnCopy;
+        private DevExpress.XtraGrid.GridControl grdData;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvData;
+        private DevExpress.XtraGrid.Columns.GridColumn grdcolMaCauHoi;
+        private DevExpress.XtraGrid.Columns.GridColumn grdcolTieuDe;
+        private DevExpress.XtraGrid.Columns.GridColumn grdcolNoiDung;
+        private DevExpress.XtraGrid.Columns.GridColumn grdcolMonHoc;
+        private DevExpress.XtraGrid.Columns.GridColumn grdcolLop;
     }
 }

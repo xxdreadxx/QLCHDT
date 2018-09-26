@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DTO;
 
 namespace DAL
 {
-  public class DeThiDAL
+    public class DeThiDAL
     {
         static dbQLCHDataContext db = new dbQLCHDataContext();
         //Lấy tất cả đề thi theo ngày tháng
@@ -49,11 +46,23 @@ namespace DAL
             lstDeThi = db.DeThi_ChiTiets.Where(p => p.ID_DeThi == idDeThi && p.InUsed==true).ToList();
             return lstDeThi;
         }
-        public void CreateAutoTest(string idLoaiBaiThi, string idMonHoc, string idAccount, string maDe, int tuBai, int denBai, int tongSoCau, int slCauDe, int slCauTB, int slCauKho, bool isCreateAuto, string tieuDeBaiThi, string nguoiTao, string nguoiKyDuyet, string gV1, string gV2, string ghiChu,int tuNgay, int tuThang, int tuNam)
+        public int CreateAutoTest(string idLoaiBaiThi, string idMonHoc, string idAccount, string maDe, int tuBai, int denBai, int tongSoCau, int slCauDe, int slCauTB, int slCauKho, bool isCreateAuto, string tieuDeBaiThi, string nguoiTao, string nguoiKyDuyet, string gV1, string gV2, string ghiChu,int tuNgay, int tuThang, int tuNam)
         {
-            db.TaoBaiThiNgauNhien(idLoaiBaiThi, idMonHoc, idAccount, maDe, tuBai, denBai, tongSoCau, slCauDe, slCauTB, slCauKho, isCreateAuto, tieuDeBaiThi, nguoiTao, nguoiKyDuyet, gV1, gV2, ghiChu,tuNgay,tuThang,tuNam);
+            int state;
+           state =  db.TaoBaiThiNgauNhien(idLoaiBaiThi, idMonHoc, idAccount, maDe, tuBai, denBai, tongSoCau, slCauDe, slCauTB, slCauKho, isCreateAuto, tieuDeBaiThi, nguoiTao, nguoiKyDuyet, gV1, gV2, ghiChu,tuNgay,tuThang,tuNam);
+            return state;
         }
-
+        public List<LoaiDeThi> GetAllLoaiDeThi()
+        {
+            List<LoaiDeThi> lstLoaiDeThi = new List<LoaiDeThi>();
+            lstLoaiDeThi = db.LoaiDeThis.Where(p => p.InUsed == true).ToList();
+            return lstLoaiDeThi;
+        }
+        public LoaiDeThi getLoaiDeThiByID(string idLoaiDeThi)
+        {
+            LoaiDeThi TenLDT = db.LoaiDeThis.SingleOrDefault(p => p.ID == idLoaiDeThi);
+            return TenLDT;
+        }
 
     }
 }

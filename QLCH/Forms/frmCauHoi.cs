@@ -19,11 +19,8 @@ namespace QLCH.Forms
 
         private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            this.Hide();
             frmCauHoi_Add frm = new frmCauHoi_Add();
-            frm.WindowState = FormWindowState.Maximized;
-            frm.Show();
-            this.Close();
+            frm.ShowDialog();
         }
 
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

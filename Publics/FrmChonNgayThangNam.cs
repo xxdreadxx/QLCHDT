@@ -66,76 +66,87 @@ namespace Publics
         {
             if (typeChon == 1)
             {
-                ckdChonTheoNgay.Enabled = true;// theo ngày
+               // ckdChonTheoNgay.Enabled = true;// theo ngày
                 txtTuNgay.Enabled = true;
                 txtDenNgay.Enabled = true;
                 txtTuThang1.Enabled = true;
                 txtTuNam1.Enabled = true;
                 txtDenNam1.Enabled = true;
                 txtDenThang1.Enabled = true;
-                ckdChonTheoThang.Enabled = false;//theo tháng
+                //ckdChonTheoThang.Enabled = false;//theo tháng
                 txtTuThang2.Enabled = false;
                 txtTuNam2.Enabled = false;
                 txtDenNam2.Enabled = false;
                 txtDenThang2.Enabled = false;
-                ckdChonTheoNam.Enabled = false;//theo năm
+               // ckdChonTheoNam.Enabled = false;//theo năm
                 txtTuNam3.Enabled = false;
                 txtDenNam3.Enabled = false;
             }
             if (typeChon == 2)
             {
-                ckdChonTheoNgay.Enabled = false;// theo ngày
+               // ckdChonTheoNgay.Enabled = false;// theo ngày
                 txtTuNgay.Enabled = false;
                 txtDenNgay.Enabled = false;
                 txtTuThang1.Enabled = false;
                 txtTuNam1.Enabled = false;
                 txtDenNam1.Enabled = false;
                 txtDenThang1.Enabled = false;
-                ckdChonTheoThang.Enabled = true;//theo tháng
+                //ckdChonTheoThang.Enabled = true;//theo tháng
                 txtTuThang2.Enabled = true;
                 txtTuNam2.Enabled = true;
                 txtDenNam2.Enabled = true;
                 txtDenThang2.Enabled = true;
-                ckdChonTheoNam.Enabled = false;//theo năm
+               // ckdChonTheoNam.Enabled = false;//theo năm
                 txtTuNam3.Enabled = false;
                 txtDenNam3.Enabled = false;
             }
             if (typeChon == 3)
             {
-                ckdChonTheoNgay.Enabled = false;// theo ngày
+                //ckdChonTheoNgay.Enabled = false;// theo ngày
                 txtTuNgay.Enabled = false;
                 txtDenNgay.Enabled = false;
                 txtTuThang1.Enabled = false;
                 txtTuNam1.Enabled = false;
                 txtDenNam1.Enabled = false;
                 txtDenThang1.Enabled = false;
-                ckdChonTheoThang.Enabled = false;//theo tháng
+                //ckdChonTheoThang.Enabled = false;//theo tháng
                 txtTuThang2.Enabled = false;
                 txtTuNam2.Enabled = false;
                 txtDenNam2.Enabled = false;
                 txtDenThang2.Enabled = false;
-                ckdChonTheoNam.Enabled = true;//theo năm
+               // ckdChonTheoNam.Enabled = true;//theo năm
                 txtTuNam3.Enabled = true;
                 txtDenNam3.Enabled = true;
             }
         }
 
-        private void ckdChonTheoNgay_Click(object sender, EventArgs e)
+ 
+
+        private void ckdChonTheoNgay_CheckedChanged(object sender, EventArgs e)
         {
+
             typeChon = 1;
+            ckdChonTheoNgay.Checked = true;
             ckdChonTheoNgay.CheckState = CheckState.Checked;
+            FrmChonNgayThangNam_Load(sender, e);
         }
 
-        private void ckdChonTheoThang_Click(object sender, EventArgs e)
+        private void ckdChonTheoThang_CheckedChanged(object sender, EventArgs e)
         {
+
             typeChon = 2;
+            ckdChonTheoThang.Checked = true;
             ckdChonTheoThang.CheckState = CheckState.Checked;
+            FrmChonNgayThangNam_Load(sender, e);
         }
 
-        private void ckdChonTheoNam_Click(object sender, EventArgs e)
+        private void ckdChonTheoNam_CheckedChanged(object sender, EventArgs e)
         {
             typeChon = 3;
+            ckdChonTheoNam.Checked = true;
             ckdChonTheoNam.CheckState = CheckState.Checked;
+            FrmChonNgayThangNam_Load(sender, e);
+
         }
     }
 }

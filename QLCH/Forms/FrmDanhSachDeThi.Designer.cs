@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDanhSachDeThi));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnTaoDeThi = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnSuaDoi = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnXoaBaiThi = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -56,6 +55,7 @@
             this.grdcolMonHoc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdcolInUsed = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grpPhimTat = new DevExpress.XtraEditors.GroupControl();
+            this.bar1 = new DevExpress.XtraBars.Bar();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popTieuChi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
@@ -67,7 +67,7 @@
             // barManager1
             // 
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar2});
+            this.bar1});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -84,27 +84,7 @@
             this.barLargeButtonItem1,
             this.barLargeButtonItem2,
             this.barButtonItem2});
-            this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 10;
-            // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockRow = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnTaoDeThi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSuaDoi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoaBaiThi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnTieuChi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnInBaiThi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDong, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.bar2.OptionsBar.AllowQuickCustomization = false;
-            this.bar2.OptionsBar.DrawDragBorder = false;
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
             // 
             // btnTaoDeThi
             // 
@@ -189,7 +169,7 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(842, 58);
+            this.barDockControlTop.Size = new System.Drawing.Size(842, 65);
             // 
             // barDockControlBottom
             // 
@@ -202,15 +182,15 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 58);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 475);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 65);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 468);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(842, 58);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 475);
+            this.barDockControlRight.Location = new System.Drawing.Point(842, 65);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 468);
             // 
             // barLargeButtonItem2
             // 
@@ -230,7 +210,7 @@
             this.grdData.MainView = this.grvData;
             this.grdData.MenuManager = this.barManager1;
             this.grdData.Name = "grdData";
-            this.grdData.Size = new System.Drawing.Size(838, 453);
+            this.grdData.Size = new System.Drawing.Size(838, 446);
             this.grdData.TabIndex = 4;
             this.grdData.UseEmbeddedNavigator = true;
             this.grdData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -304,11 +284,29 @@
             this.grpPhimTat.AppearanceCaption.Options.UseFont = true;
             this.grpPhimTat.Controls.Add(this.grdData);
             this.grpPhimTat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpPhimTat.Location = new System.Drawing.Point(0, 58);
+            this.grpPhimTat.Location = new System.Drawing.Point(0, 65);
             this.grpPhimTat.Name = "grpPhimTat";
-            this.grpPhimTat.Size = new System.Drawing.Size(842, 475);
+            this.grpPhimTat.Size = new System.Drawing.Size(842, 468);
             this.grpPhimTat.TabIndex = 5;
             this.grpPhimTat.Text = "Phím tắt";
+            // 
+            // bar1
+            // 
+            this.bar1.BarName = "Custom 3";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 1;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnTaoDeThi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSuaDoi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoaBaiThi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnTieuChi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnInBaiThi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDong, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar1.OptionsBar.AllowQuickCustomization = false;
+            this.bar1.OptionsBar.DrawDragBorder = false;
+            this.bar1.OptionsBar.UseWholeRow = true;
+            this.bar1.Text = "Custom 3";
             // 
             // FrmDanhSachDeThi
             // 
@@ -321,6 +319,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FrmDanhSachDeThi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách đề thi";
             this.Load += new System.EventHandler(this.FrmDanhSachDeThi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -337,7 +336,6 @@
         #endregion
 
         private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
@@ -362,5 +360,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn grdcolSoCau;
         private DevExpress.XtraGrid.Columns.GridColumn grdcolMonHoc;
         private DevExpress.XtraGrid.Columns.GridColumn grdcolInUsed;
+        private DevExpress.XtraBars.Bar bar1;
     }
 }

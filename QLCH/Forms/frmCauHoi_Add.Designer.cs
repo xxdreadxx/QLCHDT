@@ -414,6 +414,7 @@
             this.Name = "frmCauHoi_Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm câu hỏi";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.frmCauHoi_Add_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -241,7 +241,6 @@
             // 
             // txtTenMonHoc
             // 
-            this.txtTenMonHoc.Enabled = false;
             this.txtTenMonHoc.Location = new System.Drawing.Point(149, 85);
             this.txtTenMonHoc.Name = "txtTenMonHoc";
             this.txtTenMonHoc.Size = new System.Drawing.Size(197, 20);
@@ -253,10 +252,10 @@
             this.txtMonHoc.Name = "txtMonHoc";
             this.txtMonHoc.Size = new System.Drawing.Size(63, 20);
             this.txtMonHoc.TabIndex = 1;
+            this.txtMonHoc.Enter += new System.EventHandler(this.txtMonHoc_Enter);
             // 
             // txtTenLoaiBaiThi
             // 
-            this.txtTenLoaiBaiThi.Enabled = false;
             this.txtTenLoaiBaiThi.Location = new System.Drawing.Point(149, 59);
             this.txtTenLoaiBaiThi.Name = "txtTenLoaiBaiThi";
             this.txtTenLoaiBaiThi.Size = new System.Drawing.Size(197, 20);
@@ -269,6 +268,7 @@
             this.txtLoaiBaiThi.Name = "txtLoaiBaiThi";
             this.txtLoaiBaiThi.Size = new System.Drawing.Size(63, 20);
             this.txtLoaiBaiThi.TabIndex = 1;
+            this.txtLoaiBaiThi.Enter += new System.EventHandler(this.txtLoaiBaiThi_Enter);
             // 
             // barManager2
             // 
@@ -576,6 +576,7 @@
             this.Controls.Add(this.barDockControl2);
             this.Controls.Add(this.barDockControl1);
             this.Name = "FrmTaoDeThi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tạo đề thi";
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongCauTB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongCauKho.Properties)).EndInit();

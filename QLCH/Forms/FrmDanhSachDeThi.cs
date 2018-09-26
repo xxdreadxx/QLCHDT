@@ -35,16 +35,19 @@ namespace QLCH.Forms
         {
             FrmChonNgayThang frmTN = new FrmChonNgayThang();
             frmTN.ShowDialog();
-            if (frmTN.ngay.ToString() == null && frmTN.thang.ToString() == null && frmTN.nam.ToString() == null)
+            int dteNgay = frmTN.ngay;
+            int dteThang = frmTN.thang;
+            int dteNam = frmTN.nam;
+            if (dteNgay.ToString() == null && dteThang.ToString() == null && dteNam.ToString() == null)
             {
                 return;
             }
             else
             {
                 FrmTaoDeThi frm = new FrmTaoDeThi();
-                frm.ngay = tuNgay;
-                frm.thang = tuThang;
-                frm.nam = tuNam;
+                frm.ngay = dteNgay;
+                frm.thang = dteThang;
+                frm.nam = dteNam;
                 frm.ShowDialog();
             }
            

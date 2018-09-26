@@ -22,17 +22,18 @@ namespace QLCH.Forms
             InitializeComponent();
         }
         DeThiBLL bL = new DeThiBLL();
-        AccountInfor acc = new AccountInfor();
+        MonHocBLL mh = new MonHocBLL();
         private void btnLuuBaiThi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (ckdTuyChonNangCao.Checked  == true)
+            bool state;
+            if (ckdTuyChonNangCao.Checked  == false)
             {
-                bL.CreateAutoTest(txtLoaiBaiThi.Text, txtMonHoc.Text, acc.IdAccount, txtMaDe.Text, int.Parse(txtTuBai.Text), int.Parse(txtDenBai.Text),ngay, thang, nam);
-            }else
+                state =  bL.CreateAutoTest(txtLoaiBaiThi.Text, txtMonHoc.Text, AccountInfor.IdAccount, txtMaDe.Text, int.Parse(txtTuBai.Text), int.Parse(txtDenBai.Text),ngay, thang, nam);
+            } else
             {
-                bL.CreateTest(txtLoaiBaiThi.Text, 
+               state =  bL.CreateTest(txtLoaiBaiThi.Text, 
                     txtMonHoc.Text,
-                    acc.IdAccount, txtMaDe.Text, 
+                    AccountInfor.IdAccount, txtMaDe.Text, 
                     int.Parse(txtTuBai.Text),
                     int.Parse(txtDenBai.Text), 
                     int.Parse(txtTongSoCau.Text),
@@ -47,7 +48,35 @@ namespace QLCH.Forms
                     txtGhiChu.Text,
                     ngay, thang, nam);
             }
+            if (state == true)
+            {
+                MessageBox.Show("Tạo đề thi thành công");
+            }
 
+        }
+
+        private void txtLoaiBaiThi_Enter(object sender, EventArgs e)
+        {
+            FrmLoaiDeThi frmLDT = new FrmLoaiDeThi();
+            frmLDT.ShowDialog();
+            if (frmLDT.idLoaiDeThi != null)
+            {
+                txtLoaiBaiThi.Text = bL.getMaLoaiDeThiByID(frmLDT.idLoaiDeThi);
+                txtTenLoaiBaiThi.Text = bL.getTenLoaiDeThiByID(frmLDT.idLoaiDeThi);
+                txtLoaiBaiThi.Tag = frmLDT.idLoaiDeThi;
+            }
+        }
+
+        private void txtMonHoc_Enter(object sender, EventArgs e)
+        {
+            frmMonHoc frmMH = new frmMonHoc();
+            frmMH.ShowDialog();
+            if (frmMH.idMonHoc != null)
+            {
+                txtMonHoc.Text = mh.getMaMonHocByID(frmMH.idMonHoc);
+                txtTenMonHoc.Text = mh.getTenMonHocByID(frmMH.idMonHoc);
+                txtMonHoc.Tag = frmMH.idMonHoc;
+            }
         }
     }
 }

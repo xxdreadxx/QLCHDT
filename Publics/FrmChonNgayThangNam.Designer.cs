@@ -117,7 +117,6 @@
             this.txtDenNam3.Location = new System.Drawing.Point(268, 16);
             this.txtDenNam3.Name = "txtDenNam3";
             this.txtDenNam3.Properties.Mask.EditMask = "d";
-            this.txtDenNam3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtDenNam3.Size = new System.Drawing.Size(126, 20);
             this.txtDenNam3.TabIndex = 2;
             // 
@@ -126,7 +125,6 @@
             this.txtTuNam3.Location = new System.Drawing.Point(53, 16);
             this.txtTuNam3.Name = "txtTuNam3";
             this.txtTuNam3.Properties.Mask.EditMask = "d";
-            this.txtTuNam3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtTuNam3.Size = new System.Drawing.Size(135, 20);
             this.txtTuNam3.TabIndex = 2;
             // 
@@ -182,7 +180,6 @@
             this.txtDenNam2.Location = new System.Drawing.Point(331, 16);
             this.txtDenNam2.Name = "txtDenNam2";
             this.txtDenNam2.Properties.Mask.EditMask = "d";
-            this.txtDenNam2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtDenNam2.Size = new System.Drawing.Size(47, 20);
             this.txtDenNam2.TabIndex = 2;
             // 
@@ -191,7 +188,6 @@
             this.txtTuNam2.Location = new System.Drawing.Point(125, 16);
             this.txtTuNam2.Name = "txtTuNam2";
             this.txtTuNam2.Properties.Mask.EditMask = "d";
-            this.txtTuNam2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtTuNam2.Size = new System.Drawing.Size(47, 20);
             this.txtTuNam2.TabIndex = 2;
             // 
@@ -200,7 +196,6 @@
             this.txtDenThang2.Location = new System.Drawing.Point(268, 16);
             this.txtDenThang2.Name = "txtDenThang2";
             this.txtDenThang2.Properties.Mask.EditMask = "d";
-            this.txtDenThang2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtDenThang2.Size = new System.Drawing.Size(47, 20);
             this.txtDenThang2.TabIndex = 2;
             // 
@@ -209,7 +204,6 @@
             this.txtTuThang2.Location = new System.Drawing.Point(62, 16);
             this.txtTuThang2.Name = "txtTuThang2";
             this.txtTuThang2.Properties.Mask.EditMask = "d";
-            this.txtTuThang2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtTuThang2.Size = new System.Drawing.Size(47, 20);
             this.txtTuThang2.TabIndex = 2;
             // 
@@ -271,7 +265,6 @@
             this.txtDenNam1.Location = new System.Drawing.Point(352, 16);
             this.txtDenNam1.Name = "txtDenNam1";
             this.txtDenNam1.Properties.Mask.EditMask = "d";
-            this.txtDenNam1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtDenNam1.Size = new System.Drawing.Size(33, 20);
             this.txtDenNam1.TabIndex = 2;
             // 
@@ -280,7 +273,6 @@
             this.txtTuNam1.Location = new System.Drawing.Point(146, 16);
             this.txtTuNam1.Name = "txtTuNam1";
             this.txtTuNam1.Properties.Mask.EditMask = "d";
-            this.txtTuNam1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtTuNam1.Size = new System.Drawing.Size(33, 20);
             this.txtTuNam1.TabIndex = 2;
             // 
@@ -289,7 +281,6 @@
             this.txtDenThang1.Location = new System.Drawing.Point(308, 16);
             this.txtDenThang1.Name = "txtDenThang1";
             this.txtDenThang1.Properties.Mask.EditMask = "d";
-            this.txtDenThang1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtDenThang1.Size = new System.Drawing.Size(33, 20);
             this.txtDenThang1.TabIndex = 2;
             // 
@@ -298,7 +289,6 @@
             this.txtDenNgay.Location = new System.Drawing.Point(264, 16);
             this.txtDenNgay.Name = "txtDenNgay";
             this.txtDenNgay.Properties.Mask.EditMask = "d";
-            this.txtDenNgay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtDenNgay.Size = new System.Drawing.Size(33, 20);
             this.txtDenNgay.TabIndex = 2;
             // 
@@ -307,7 +297,6 @@
             this.txtTuThang1.Location = new System.Drawing.Point(102, 16);
             this.txtTuThang1.Name = "txtTuThang1";
             this.txtTuThang1.Properties.Mask.EditMask = "d";
-            this.txtTuThang1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtTuThang1.Size = new System.Drawing.Size(33, 20);
             this.txtTuThang1.TabIndex = 2;
             // 
@@ -320,7 +309,8 @@
             this.ckdChonTheoNam.Properties.Caption = "Chọn theo năm";
             this.ckdChonTheoNam.Size = new System.Drawing.Size(179, 19);
             this.ckdChonTheoNam.TabIndex = 5;
-            this.ckdChonTheoNam.Click += new System.EventHandler(this.ckdChonTheoNam_Click);
+            this.ckdChonTheoNam.CheckedChanged += new System.EventHandler(this.ckdChonTheoNam_CheckedChanged);
+            //this.ckdChonTheoNam.Click += new System.EventHandler(this.ckdChonTheoNam_Click);
             // 
             // labelControl12
             // 
@@ -373,7 +363,6 @@
             this.txtTuNgay.Location = new System.Drawing.Point(58, 16);
             this.txtTuNgay.Name = "txtTuNgay";
             this.txtTuNgay.Properties.Mask.EditMask = "d";
-            this.txtTuNgay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtTuNgay.Size = new System.Drawing.Size(33, 20);
             this.txtTuNgay.TabIndex = 2;
             // 
@@ -386,7 +375,8 @@
             this.ckdChonTheoThang.Properties.Caption = "Chọn theo tháng";
             this.ckdChonTheoThang.Size = new System.Drawing.Size(179, 19);
             this.ckdChonTheoThang.TabIndex = 6;
-            this.ckdChonTheoThang.Click += new System.EventHandler(this.ckdChonTheoThang_Click);
+            this.ckdChonTheoThang.CheckedChanged += new System.EventHandler(this.ckdChonTheoThang_CheckedChanged);
+            //this.ckdChonTheoThang.Click += new System.EventHandler(this.ckdChonTheoThang_Click);
             // 
             // ckdChonTheoNgay
             // 
@@ -397,7 +387,7 @@
             this.ckdChonTheoNgay.Properties.Caption = "Chọn theo ngày";
             this.ckdChonTheoNgay.Size = new System.Drawing.Size(179, 19);
             this.ckdChonTheoNgay.TabIndex = 7;
-            this.ckdChonTheoNgay.Click += new System.EventHandler(this.ckdChonTheoNgay_Click);
+            this.ckdChonTheoNgay.CheckedChanged += new System.EventHandler(this.ckdChonTheoNgay_CheckedChanged);
             // 
             // FrmChonNgayThangNam
             // 
@@ -413,6 +403,7 @@
             this.Controls.Add(this.ckdChonTheoThang);
             this.Controls.Add(this.ckdChonTheoNgay);
             this.Name = "FrmChonNgayThangNam";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chọn thời gian";
             this.Load += new System.EventHandler(this.FrmChonNgayThangNam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtDenNam3.Properties)).EndInit();

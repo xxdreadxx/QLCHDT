@@ -16,6 +16,7 @@ namespace QLCH.Forms
     {
         BindingSource bindSource = new BindingSource();
         MonHocBLL monHoc = new MonHocBLL();
+        public string idMonHoc;
         public frmMonHoc()
         {
             InitializeComponent();
@@ -90,6 +91,15 @@ namespace QLCH.Forms
             frm.mamon = mh.MaMonHoc;
             frm.ShowDialog();
             frmMonHoc_Load(sender, e);
+        }
+
+        private void frmMonHoc_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                idMonHoc = grvMonHoc.GetRowCellValue(grvMonHoc.FocusedRowHandle, grdcolID.FieldName).ToString();
+                this.Close();
+            }
         }
     }
 }

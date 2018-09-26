@@ -28,25 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
+            this.btnHeThong = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.popHeThong = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnQLNguoiDung = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.btnDangXuat = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.btnThoat = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.popDanhMuc = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnLoaiDeThi = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLoaiCauHoi = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBaiHoc = new DevExpress.XtraBars.BarButtonItem();
             this.btnQLDeThi = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnQLCauHoi = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnQLMonHoc = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.btnQLNguoiDung = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.btnHeThong = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.btnDangXuat = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.btnThoat = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
-            this.popHeThong = new DevExpress.XtraBars.PopupMenu();
+            this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popHeThong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popDanhMuc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -65,8 +73,13 @@
             this.btnQLNguoiDung,
             this.btnHeThong,
             this.btnDangXuat,
-            this.btnThoat});
-            this.barManager1.MaxItemId = 8;
+            this.btnThoat,
+            this.barLargeButtonItem1,
+            this.btnLoaiDeThi,
+            this.btnLoaiCauHoi,
+            this.barLargeButtonItem2,
+            this.btnBaiHoc});
+            this.barManager1.MaxItemId = 13;
             // 
             // bar1
             // 
@@ -76,6 +89,7 @@
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnHeThong, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barLargeButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnQLDeThi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnQLCauHoi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnQLMonHoc, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
@@ -83,6 +97,90 @@
             this.bar1.OptionsBar.DrawDragBorder = false;
             this.bar1.OptionsBar.UseWholeRow = true;
             this.bar1.Text = "Tools";
+            // 
+            // btnHeThong
+            // 
+            this.btnHeThong.ActAsDropDown = true;
+            this.btnHeThong.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
+            this.btnHeThong.Caption = "Hệ thống";
+            this.btnHeThong.DropDownControl = this.popHeThong;
+            this.btnHeThong.Glyph = ((System.Drawing.Image)(resources.GetObject("btnHeThong.Glyph")));
+            this.btnHeThong.Id = 4;
+            this.btnHeThong.MinSize = new System.Drawing.Size(85, 0);
+            this.btnHeThong.Name = "btnHeThong";
+            this.btnHeThong.Size = new System.Drawing.Size(60, 20);
+            // 
+            // popHeThong
+            // 
+            this.popHeThong.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnQLNguoiDung, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDangXuat),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.popHeThong.Manager = this.barManager1;
+            this.popHeThong.Name = "popHeThong";
+            // 
+            // btnQLNguoiDung
+            // 
+            this.btnQLNguoiDung.Caption = "QL người dùng";
+            this.btnQLNguoiDung.Glyph = ((System.Drawing.Image)(resources.GetObject("btnQLNguoiDung.Glyph")));
+            this.btnQLNguoiDung.Id = 3;
+            this.btnQLNguoiDung.MinSize = new System.Drawing.Size(85, 0);
+            this.btnQLNguoiDung.Name = "btnQLNguoiDung";
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Caption = "Đăng xuất";
+            this.btnDangXuat.Id = 6;
+            this.btnDangXuat.ImageUri.Uri = "Reset";
+            this.btnDangXuat.MinSize = new System.Drawing.Size(85, 0);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Caption = "Thoát";
+            this.btnThoat.Id = 7;
+            this.btnThoat.ImageUri.Uri = "Close";
+            this.btnThoat.MinSize = new System.Drawing.Size(85, 0);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
+            // 
+            // barLargeButtonItem1
+            // 
+            this.barLargeButtonItem1.ActAsDropDown = true;
+            this.barLargeButtonItem1.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
+            this.barLargeButtonItem1.Caption = "Danh mục";
+            this.barLargeButtonItem1.DropDownControl = this.popDanhMuc;
+            this.barLargeButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.Glyph")));
+            this.barLargeButtonItem1.Id = 8;
+            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
+            // 
+            // popDanhMuc
+            // 
+            this.popDanhMuc.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnLoaiDeThi),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnLoaiCauHoi),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBaiHoc)});
+            this.popDanhMuc.Manager = this.barManager1;
+            this.popDanhMuc.Name = "popDanhMuc";
+            // 
+            // btnLoaiDeThi
+            // 
+            this.btnLoaiDeThi.Caption = "Danh mục loại đề thi";
+            this.btnLoaiDeThi.Id = 9;
+            this.btnLoaiDeThi.Name = "btnLoaiDeThi";
+            // 
+            // btnLoaiCauHoi
+            // 
+            this.btnLoaiCauHoi.Caption = "Danh mục loại câu hỏi";
+            this.btnLoaiCauHoi.Id = 10;
+            this.btnLoaiCauHoi.Name = "btnLoaiCauHoi";
+            // 
+            // btnBaiHoc
+            // 
+            this.btnBaiHoc.Caption = "Danh mục bài học";
+            this.btnBaiHoc.Id = 12;
+            this.btnBaiHoc.Name = "btnBaiHoc";
             // 
             // btnQLDeThi
             // 
@@ -113,44 +211,6 @@
             this.btnQLMonHoc.Name = "btnQLMonHoc";
             this.btnQLMonHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQLMonHoc_ItemClick);
             // 
-            // btnQLNguoiDung
-            // 
-            this.btnQLNguoiDung.Caption = "QL người dùng";
-            this.btnQLNguoiDung.Glyph = ((System.Drawing.Image)(resources.GetObject("btnQLNguoiDung.Glyph")));
-            this.btnQLNguoiDung.Id = 3;
-            this.btnQLNguoiDung.MinSize = new System.Drawing.Size(85, 0);
-            this.btnQLNguoiDung.Name = "btnQLNguoiDung";
-            // 
-            // btnHeThong
-            // 
-            this.btnHeThong.ActAsDropDown = true;
-            this.btnHeThong.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
-            this.btnHeThong.Caption = "Hệ thống";
-            this.btnHeThong.DropDownControl = this.popHeThong;
-            this.btnHeThong.Glyph = ((System.Drawing.Image)(resources.GetObject("btnHeThong.Glyph")));
-            this.btnHeThong.Id = 4;
-            this.btnHeThong.MinSize = new System.Drawing.Size(85, 0);
-            this.btnHeThong.Name = "btnHeThong";
-            this.btnHeThong.Size = new System.Drawing.Size(60, 20);
-            // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.Caption = "Đăng xuất";
-            this.btnDangXuat.Id = 6;
-            this.btnDangXuat.ImageUri.Uri = "Reset";
-            this.btnDangXuat.MinSize = new System.Drawing.Size(85, 0);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Caption = "Thoát";
-            this.btnThoat.Id = 7;
-            this.btnThoat.ImageUri.Uri = "Close";
-            this.btnThoat.MinSize = new System.Drawing.Size(85, 0);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
-            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -179,6 +239,11 @@
             this.barDockControlRight.Location = new System.Drawing.Point(869, 65);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 503);
             // 
+            // barLargeButtonItem2
+            // 
+            this.barLargeButtonItem2.Id = 11;
+            this.barLargeButtonItem2.Name = "barLargeButtonItem2";
+            // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.AppearancePage.HeaderActive.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,15 +253,6 @@
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.xtraTabbedMdiManager1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // popHeThong
-            // 
-            this.popHeThong.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnQLNguoiDung, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnDangXuat),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.popHeThong.Manager = this.barManager1;
-            this.popHeThong.Name = "popHeThong";
             // 
             // frmMain
             // 
@@ -216,8 +272,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popHeThong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popDanhMuc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,5 +297,11 @@
         private DevExpress.XtraBars.BarLargeButtonItem btnDangXuat;
         private DevExpress.XtraBars.BarLargeButtonItem btnThoat;
         private DevExpress.XtraBars.PopupMenu popHeThong;
+        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem1;
+        private DevExpress.XtraBars.PopupMenu popDanhMuc;
+        private DevExpress.XtraBars.BarButtonItem btnLoaiDeThi;
+        private DevExpress.XtraBars.BarButtonItem btnLoaiCauHoi;
+        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btnBaiHoc;
     }
 }

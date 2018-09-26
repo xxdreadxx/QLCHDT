@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Publics
 {
-   public class AccountInfor
+   public static class AccountInfor
     {
-        private string idAccount;
-        private string nameAcount;
-        private string addressAcount;
-        private string phoneNumber;
+        private static string idAccount;
+        private static string nameAcount;
+        private static string addressAcount;
+        private static string phoneNumber;
 
-        public string AddressAcount
+        public static string AddressAcount
         {
             get
             {
@@ -26,7 +26,7 @@ namespace Publics
             }
         }
 
-        public string PhoneNumber
+        public static string PhoneNumber
         {
             get
             {
@@ -39,7 +39,7 @@ namespace Publics
             }
         }
 
-        public string NameAcount
+        public static string NameAcount
         {
             get
             {
@@ -52,7 +52,7 @@ namespace Publics
             }
         }
 
-        public string IdAccount
+        public static string IdAccount
         {
             get
             {

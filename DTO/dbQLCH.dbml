@@ -32,11 +32,32 @@
       <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.BaiHoc" Member="BaiHocs">
+    <Type Name="BaiHoc">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BaiSo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaBaiHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenBaiHoc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ID_Chuong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BienMoiTruong" Member="BienMoiTruongs">
+    <Type Name="BienMoiTruong">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenCauHinh" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GiaTriCauHinh" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.CauHoi" Member="CauHois">
     <Type Name="CauHoi">
       <Column Name="ID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ID_Mon" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="ID_LoaiCauHoi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="MucDo" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ID_Chuong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
@@ -166,5 +187,6 @@
     <Parameter Name="tuNgay" Type="System.Int32" DbType="Int" />
     <Parameter Name="tuThang" Type="System.Int32" DbType="Int" />
     <Parameter Name="tuNam" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

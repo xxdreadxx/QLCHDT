@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaiHocDAL.cs" />
     <Compile Include="CauHoiDAL.cs" />
     <Compile Include="DeThiDAL.cs" />
     <Compile Include="MonHocDAL.cs" />
