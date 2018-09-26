@@ -8,7 +8,7 @@ using DTO;
 
 namespace BLL
 {
-    class BaiHocBLL
+   public class BaiHocBLL
     {
         BaiHocDAL bh = new BaiHocDAL();
         public List<BaiHoc> getListAllBaiHoc()
@@ -20,6 +20,10 @@ namespace BLL
         {
             int maBaiHoc = bh.CreateAutoSubjectCode(idChuong, idMonHoc);
             return maBaiHoc;
+        }
+        public void CreateBaiHoc(string maBaiHoc, string tenBaiHoc, string idChuong, string noiDung, int khoi, string idMonHoc)
+        {
+            bh.CreateBaiHoc(maBaiHoc, tenBaiHoc, idChuong, noiDung, khoi, idMonHoc);
         }
     }
 }
