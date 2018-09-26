@@ -81,6 +81,18 @@
     <Compile Include="Forms\frmCauHoi_Add.Designer.cs">
       <DependentUpon>frmCauHoi_Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmChuongBai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmChuongBai.Designer.cs">
+      <DependentUpon>FrmChuongBai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmChuongBai_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmChuongBai_Add.Designer.cs">
+      <DependentUpon>FrmChuongBai_Add.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmDanhSachDeThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +148,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCauHoi_Add.resx">
       <DependentUpon>frmCauHoi_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmChuongBai.resx">
+      <DependentUpon>FrmChuongBai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmChuongBai_Add.resx">
+      <DependentUpon>FrmChuongBai_Add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDanhSachDeThi.resx">
       <DependentUpon>FrmDanhSachDeThi.cs</DependentUpon>

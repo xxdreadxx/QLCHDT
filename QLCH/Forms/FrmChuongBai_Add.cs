@@ -12,18 +12,17 @@ using DTO;
 
 namespace QLCH.Forms
 {
-    public partial class FrmBaiHoc_Add : Form
+    public partial class FrmChuongBai_Add : Form
     {
-        BaiHocBLL bh = new BaiHocBLL();
-        public FrmBaiHoc_Add()
+        ChuongBaiBLL cb = new ChuongBaiBLL();
+        public FrmChuongBai_Add()
         {
             InitializeComponent();
         }
 
-
         private void btnLuuThayDoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bh.CreateBaiHoc(txtMaBaiHoc.Text,txttenBaiHoc.Text,txtMaChuongBai.Text,txtNoiDung.Text,int.Parse(txtKhoiLop.Text),txtmaMon.Text);
+            cb.CreateChuongBai(txtmaMon.Text, int.Parse(txtSoChuong.Text), txtTenChuongBai.Text, txtMaChuong.Text, int.Parse(txtSobai.Text));
         }
     }
 }

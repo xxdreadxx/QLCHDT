@@ -51,6 +51,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnChuongBai = new DevExpress.XtraBars.BarLargeButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popHeThong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popDanhMuc)).BeginInit();
@@ -78,8 +79,9 @@
             this.btnLoaiDeThi,
             this.btnLoaiCauHoi,
             this.barLargeButtonItem2,
-            this.btnBaiHoc});
-            this.barManager1.MaxItemId = 13;
+            this.btnBaiHoc,
+            this.btnChuongBai});
+            this.barManager1.MaxItemId = 14;
             // 
             // bar1
             // 
@@ -160,7 +162,8 @@
             this.popDanhMuc.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnLoaiDeThi),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnLoaiCauHoi),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnBaiHoc)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBaiHoc),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnChuongBai)});
             this.popDanhMuc.Manager = this.barManager1;
             this.popDanhMuc.Name = "popDanhMuc";
             // 
@@ -254,6 +257,12 @@
             this.xtraTabbedMdiManager1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // btnChuongBai
+            // 
+            this.btnChuongBai.Caption = "Danh mục chương bài";
+            this.btnChuongBai.Id = 13;
+            this.btnChuongBai.Name = "btnChuongBai";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,5 +312,6 @@
         private DevExpress.XtraBars.BarButtonItem btnLoaiCauHoi;
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem2;
         private DevExpress.XtraBars.BarButtonItem btnBaiHoc;
+        private DevExpress.XtraBars.BarLargeButtonItem btnChuongBai;
     }
 }
