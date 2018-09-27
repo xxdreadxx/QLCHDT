@@ -1,7 +1,0 @@
-D:\My Work\New folder\QLCHDT\DAL\bin\Debug\DAL.dll
-D:\My Work\New folder\QLCHDT\DAL\bin\Debug\DAL.pdb
-D:\My Work\New folder\QLCHDT\DAL\bin\Debug\DTO.dll
-D:\My Work\New folder\QLCHDT\DAL\bin\Debug\DTO.pdb
-D:\My Work\New folder\QLCHDT\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-D:\My Work\New folder\QLCHDT\DAL\obj\Debug\DAL.dll
-D:\My Work\New folder\QLCHDT\DAL\obj\Debug\DAL.pdb

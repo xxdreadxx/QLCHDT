@@ -1,9 +1,0 @@
-D:\My Work\New folder\QLCHDT\BLL\bin\Debug\BLL.dll
-D:\My Work\New folder\QLCHDT\BLL\bin\Debug\BLL.pdb
-D:\My Work\New folder\QLCHDT\BLL\bin\Debug\DAL.dll
-D:\My Work\New folder\QLCHDT\BLL\bin\Debug\DTO.dll
-D:\My Work\New folder\QLCHDT\BLL\bin\Debug\DAL.pdb
-D:\My Work\New folder\QLCHDT\BLL\bin\Debug\DTO.pdb
-D:\My Work\New folder\QLCHDT\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
-D:\My Work\New folder\QLCHDT\BLL\obj\Debug\BLL.dll
-D:\My Work\New folder\QLCHDT\BLL\obj\Debug\BLL.pdb
