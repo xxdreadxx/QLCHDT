@@ -21,6 +21,7 @@ namespace QLCH.Forms
         private void frmCauHoi_Add_Load(object sender, EventArgs e)
         {
             rd1.Checked = true;
+            //aaa
         }
 
         private void rdDungSai_CheckedChanged(object sender, EventArgs e)
