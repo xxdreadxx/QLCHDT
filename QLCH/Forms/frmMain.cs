@@ -92,5 +92,12 @@ namespace QLCH.Forms
             frmCH.MdiParent = this;
             frmCH.Show();
         }
+
+        private void btnLoaiCauHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmLoaiCauHoi frmLoaiCH = new FrmLoaiCauHoi();
+            frmLoaiCH.MdiParent = this;
+            frmLoaiCH.Show();
+        }
     }
 }

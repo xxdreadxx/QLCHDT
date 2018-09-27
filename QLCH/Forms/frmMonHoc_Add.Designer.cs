@@ -59,6 +59,7 @@
             this.txtTenMonHoc.Name = "txtTenMonHoc";
             this.txtTenMonHoc.Size = new System.Drawing.Size(271, 20);
             this.txtTenMonHoc.TabIndex = 4;
+            this.txtTenMonHoc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTenMonHoc_KeyUp);
             // 
             // txtmaMon
             // 
@@ -66,6 +67,7 @@
             this.txtmaMon.Name = "txtmaMon";
             this.txtmaMon.Size = new System.Drawing.Size(174, 20);
             this.txtmaMon.TabIndex = 2;
+            this.txtmaMon.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtmaMon_KeyUp);
             // 
             // txtKhoiLop
             // 
@@ -73,6 +75,7 @@
             this.txtKhoiLop.Name = "txtKhoiLop";
             this.txtKhoiLop.Size = new System.Drawing.Size(174, 20);
             this.txtKhoiLop.TabIndex = 1;
+            this.txtKhoiLop.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtKhoiLop_KeyUp);
             // 
             // labelControl4
             // 
@@ -134,6 +137,7 @@
             this.btnDong.Glyph = ((System.Drawing.Image)(resources.GetObject("btnDong.Glyph")));
             this.btnDong.Id = 1;
             this.btnDong.Name = "btnDong";
+            this.btnDong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDong_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -204,6 +208,7 @@
             this.Name = "frmMonHoc_Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm môn học";
+            this.Load += new System.EventHandler(this.frmMonHoc_Add_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMonHoc_Add_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtTenMonHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmaMon.Properties)).EndInit();

@@ -81,7 +81,7 @@
             this.barLargeButtonItem2,
             this.btnBaiHoc,
             this.btnChuongBai});
-            this.barManager1.MaxItemId = 14;
+            this.barManager1.MaxItemId = 15;
             // 
             // bar1
             // 
@@ -176,6 +176,7 @@
             this.btnLoaiCauHoi.Caption = "Danh mục loại câu hỏi";
             this.btnLoaiCauHoi.Id = 10;
             this.btnLoaiCauHoi.Name = "btnLoaiCauHoi";
+            this.btnLoaiCauHoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoaiCauHoi_ItemClick);
             // 
             // btnBaiHoc
             // 

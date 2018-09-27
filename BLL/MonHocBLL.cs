@@ -21,7 +21,7 @@ namespace BLL
             return monHoc.GetMonHocByID_Khoi(Khoi);
         }
 
-        public List<MonHoc> GetMonHocByMaMon(string maMon)
+        public MonHoc GetMonHocByMaMon(string maMon)
         {
             return monHoc.GetMonHocByMaMon(maMon);
         }

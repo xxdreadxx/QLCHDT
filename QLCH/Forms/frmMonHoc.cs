@@ -18,6 +18,7 @@ namespace QLCH.Forms
         MonHocBLL monHoc = new MonHocBLL();
         public string idMonHoc;
         public int khoiLop;
+        public string tenMonHoc;
         public frmMonHoc()
         {
             InitializeComponent();
@@ -99,6 +100,7 @@ namespace QLCH.Forms
             frmMonHoc_Add frm = new frmMonHoc_Add();
             frm.khoi = (int)mh.Khoi;
             frm.mamon = mh.MaMonHoc;
+            frm.tenmon = mh.TenMonHoc;
             frm.ShowDialog();
             frmMonHoc_Load(sender, e);
         }
