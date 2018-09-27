@@ -76,7 +76,7 @@ namespace QLCH.Forms
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            //abc
         }
 
         private void btnBaiHoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
