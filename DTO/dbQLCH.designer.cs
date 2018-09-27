@@ -217,7 +217,7 @@ namespace DTO
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.TaoBaiThiNgauNhien")]
-		public int TaoBaiThiNgauNhien(
+		public ISingleResult<DeThi> TaoBaiThiNgauNhien(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_LoaiBaiThi", DbType="NVarChar(1)")] string iD_LoaiBaiThi, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_MonHoc", DbType="NVarChar(100)")] string iD_MonHoc, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_Acc", DbType="NVarChar(100)")] string iD_Acc, 
@@ -240,7 +240,7 @@ namespace DTO
 					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tuNam)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_LoaiBaiThi, iD_MonHoc, iD_Acc, maDe, tuIDBai, denIDBai, tongSoCau, sLCauDe, sLCauTB, sLCauKho, isCreateAuto, tieuDeBaiThi, nguoiTao, nguoikyDuyet, giaoVien1, giaoVien2, ghiChu, tuNgay, tuThang, tuNam);
-			return ((int)(result.ReturnValue));
+			return ((ISingleResult<DeThi>)(result.ReturnValue));
 		}
 	}
 	
@@ -2602,13 +2602,15 @@ namespace DTO
 		
 		private string _LoaiCauHoi1;
 		
+		private string _MaLoai;
+		
 		private System.Nullable<int> _SoLuong;
 		
 		private System.Nullable<bool> _InUsed;
 		
 		private System.Nullable<bool> _IsDeleted;
 		
-		private string _MaLoai;
+		private System.Nullable<System.DateTime> _CreatedDate;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2618,14 +2620,16 @@ namespace DTO
     partial void OnIDChanged();
     partial void OnLoaiCauHoi1Changing(string value);
     partial void OnLoaiCauHoi1Changed();
+    partial void OnMaLoaiChanging(string value);
+    partial void OnMaLoaiChanged();
     partial void OnSoLuongChanging(System.Nullable<int> value);
     partial void OnSoLuongChanged();
     partial void OnInUsedChanging(System.Nullable<bool> value);
     partial void OnInUsedChanged();
     partial void OnIsDeletedChanging(System.Nullable<bool> value);
     partial void OnIsDeletedChanged();
-    partial void OnMaLoaiChanging(string value);
-    partial void OnMaLoaiChanged();
+    partial void OnCreatedDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedDateChanged();
     #endregion
 		
 		public LoaiCauHoi()
@@ -2669,6 +2673,26 @@ namespace DTO
 					this._LoaiCauHoi1 = value;
 					this.SendPropertyChanged("LoaiCauHoi1");
 					this.OnLoaiCauHoi1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoai", DbType="NVarChar(100)")]
+		public string MaLoai
+		{
+			get
+			{
+				return this._MaLoai;
+			}
+			set
+			{
+				if ((this._MaLoai != value))
+				{
+					this.OnMaLoaiChanging(value);
+					this.SendPropertyChanging();
+					this._MaLoai = value;
+					this.SendPropertyChanged("MaLoai");
+					this.OnMaLoaiChanged();
 				}
 			}
 		}
@@ -2733,22 +2757,22 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoai", DbType="NVarChar(100)")]
-		public string MaLoai
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedDate", DbType="Date")]
+		public System.Nullable<System.DateTime> CreatedDate
 		{
 			get
 			{
-				return this._MaLoai;
+				return this._CreatedDate;
 			}
 			set
 			{
-				if ((this._MaLoai != value))
+				if ((this._CreatedDate != value))
 				{
-					this.OnMaLoaiChanging(value);
+					this.OnCreatedDateChanging(value);
 					this.SendPropertyChanging();
-					this._MaLoai = value;
-					this.SendPropertyChanged("MaLoai");
-					this.OnMaLoaiChanged();
+					this._CreatedDate = value;
+					this.SendPropertyChanged("CreatedDate");
+					this.OnCreatedDateChanged();
 				}
 			}
 		}

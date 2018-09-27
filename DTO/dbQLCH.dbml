@@ -92,7 +92,7 @@
     </Type>
   </Table>
   <Table Name="dbo.DeThi" Member="DeThis">
-    <Type Name="DeThi">
+    <Type Name="DeThi" Id="ID1">
       <Column Name="ID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TieuDe" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="ThoiGian" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -126,10 +126,11 @@
     <Type Name="LoaiCauHoi">
       <Column Name="ID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="LoaiCauHoi" Member="LoaiCauHoi1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="MaLoai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="InUsed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="MaLoai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.LoaiDeThi" Member="LoaiDeThis">
@@ -187,6 +188,6 @@
     <Parameter Name="tuNgay" Type="System.Int32" DbType="Int" />
     <Parameter Name="tuThang" Type="System.Int32" DbType="Int" />
     <Parameter Name="tuNam" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
+    <ElementType IdRef="ID1" />
   </Function>
 </Database>

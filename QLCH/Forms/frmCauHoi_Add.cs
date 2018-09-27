@@ -184,6 +184,7 @@ namespace QLCH.Forms
                 MucDo = 3;
             }
             ch.CreateCauHoi(txtmaMonHoc.Tag.ToString(), "", txtTieuDe.Text, rtbNoiDung.Text, MucDo, txtMaChuong.Tag.ToString(), txtMaBaiHoc.Tag.ToString(), txtMaCauHoi.Text, AccountInfor.IdAccount);
+            MessageBox.Show("Hoàn thành.");
         }
 
         private void txtmaMonHoc_Enter(object sender, EventArgs e)
@@ -196,7 +197,6 @@ namespace QLCH.Forms
                 txtmaMonHoc.Tag = frmMH.idMonHoc;
                 txtTenMonHoc.Text = mh.getTenMonHocByID(frmMH.idMonHoc);
             }
-            this.Close();
         }
 
         private void txtMaChuong_Enter(object sender, EventArgs e)
@@ -210,7 +210,6 @@ namespace QLCH.Forms
                 txtMaChuong.Tag = frmCB.idChuongBai;
                 txttenChuong.Text = cb.getTenChuongBaiByID(frmCB.idChuongBai);
             }
-            this.Close();
         }
 
         private void txtMaBaiHoc_Enter(object sender, EventArgs e)
@@ -224,7 +223,6 @@ namespace QLCH.Forms
                 txtMaBaiHoc.Tag = frmBH.idBaiHoc;
                 txtTenBaiHoc.Text = bh.getTenBaiHocByID(frmBH.idBaiHoc);
             }
-            this.Close();
         }
     }
 }

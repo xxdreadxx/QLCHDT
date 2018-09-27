@@ -46,7 +46,7 @@
             this.grdcolMaCauHoi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdcolTieuDe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdcolNoiDung = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.grdcolMonHoc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdcolMucDo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdcolLop = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
@@ -181,7 +181,7 @@
             this.grdcolMaCauHoi,
             this.grdcolTieuDe,
             this.grdcolNoiDung,
-            this.grdcolMonHoc,
+            this.grdcolMucDo,
             this.grdcolLop});
             this.grvData.GridControl = this.grdData;
             this.grvData.Name = "grvData";
@@ -212,21 +212,19 @@
             this.grdcolNoiDung.Visible = true;
             this.grdcolNoiDung.VisibleIndex = 2;
             // 
-            // grdcolMonHoc
+            // grdcolMucDo
             // 
-            this.grdcolMonHoc.Caption = "Môn học";
-            this.grdcolMonHoc.FieldName = "MonHoc";
-            this.grdcolMonHoc.Name = "grdcolMonHoc";
-            this.grdcolMonHoc.Visible = true;
-            this.grdcolMonHoc.VisibleIndex = 3;
+            this.grdcolMucDo.Caption = "Mức độ";
+            this.grdcolMucDo.FieldName = "MucDo";
+            this.grdcolMucDo.Name = "grdcolMucDo";
+            this.grdcolMucDo.Visible = true;
+            this.grdcolMucDo.VisibleIndex = 3;
             // 
             // grdcolLop
             // 
             this.grdcolLop.Caption = "Lớp";
             this.grdcolLop.FieldName = "Lop";
             this.grdcolLop.Name = "grdcolLop";
-            this.grdcolLop.Visible = true;
-            this.grdcolLop.VisibleIndex = 4;
             // 
             // frmCauHoi
             // 
@@ -243,6 +241,7 @@
             this.Name = "frmCauHoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý câu hỏi";
+            this.Load += new System.EventHandler(this.frmCauHoi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).EndInit();
@@ -269,7 +268,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn grdcolMaCauHoi;
         private DevExpress.XtraGrid.Columns.GridColumn grdcolTieuDe;
         private DevExpress.XtraGrid.Columns.GridColumn grdcolNoiDung;
-        private DevExpress.XtraGrid.Columns.GridColumn grdcolMonHoc;
+        private DevExpress.XtraGrid.Columns.GridColumn grdcolMucDo;
         private DevExpress.XtraGrid.Columns.GridColumn grdcolLop;
     }
 }
