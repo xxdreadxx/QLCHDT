@@ -120,6 +120,12 @@
     <Compile Include="Forms\FrmDanhSachDeThi.Designer.cs">
       <DependentUpon>FrmDanhSachDeThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmLoaiCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLoaiCauHoi.Designer.cs">
+      <DependentUpon>FrmLoaiCauHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmLoaiDeThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDanhSachDeThi.resx">
       <DependentUpon>FrmDanhSachDeThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLoaiCauHoi.resx">
+      <DependentUpon>FrmLoaiCauHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLoaiDeThi.resx">
       <DependentUpon>FrmLoaiDeThi.cs</DependentUpon>

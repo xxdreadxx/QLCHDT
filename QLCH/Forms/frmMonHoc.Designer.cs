@@ -178,6 +178,12 @@
             // grdMonHoc
             // 
             this.grdMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdMonHoc.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.grdMonHoc.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.grdMonHoc.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.grdMonHoc.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.grdMonHoc.EmbeddedNavigator.Buttons.First.Visible = false;
+            this.grdMonHoc.EmbeddedNavigator.Buttons.Remove.Visible = false;
             this.grdMonHoc.Location = new System.Drawing.Point(2, 20);
             this.grdMonHoc.MainView = this.grvMonHoc;
             this.grdMonHoc.MenuManager = this.barManager1;

@@ -23,10 +23,10 @@ namespace DAL
             return db.MonHocs.Where(x => x.IsDeleted == false && x.Khoi == ID_Khoi).ToList();
         }
 
-        //Lấy list môn học theo mã môn
-        public List<MonHoc> GetMonHocByMaMon(string MaMon)
+        //Lấy môn học theo mã môn
+        public MonHoc GetMonHocByMaMon(string MaMon)
         {
-            return db.MonHocs.Where(x => x.IsDeleted == false && x.MaMonHoc == MaMon).ToList();
+            return db.MonHocs.SingleOrDefault(x => x.IsDeleted == false && x.MaMonHoc == MaMon);
         }
 
         //Lấy list môn học theo khối, mã môn, inUsed=true
