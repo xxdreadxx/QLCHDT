@@ -16,6 +16,11 @@ namespace BLL
             List<BaiHoc> lstBaiHoc = bh.GetListAllBaiHoc();
             return lstBaiHoc;
         }
+        public List<BaiHoc> getListAllBaiHocByidChuong(string idChuong)
+        {
+            List<BaiHoc> lstBaiHoc = bh.GetListAllBaiHocByIDChuong(idChuong);
+            return lstBaiHoc;
+        }
         public int createAutoSubjectCode(string idChuong, string idMonHoc)
         {
             int maBaiHoc = bh.CreateAutoSubjectCode(idChuong, idMonHoc);
@@ -24,6 +29,16 @@ namespace BLL
         public void CreateBaiHoc(string maBaiHoc, string tenBaiHoc, string idChuong, string noiDung, int khoi, string idMonHoc)
         {
             bh.CreateBaiHoc(maBaiHoc, tenBaiHoc, idChuong, noiDung, khoi, idMonHoc);
+        }
+        public string getTenBaiHocByID(string idBaiHoc)
+        {
+            string tenBai = bh.getbaiHocByID(idBaiHoc).TenBaiHoc;
+            return tenBai;
+        }
+        public string getMaBaiHocByID(string idBaiHoc)
+        {
+            string maBai = bh.getbaiHocByID(idBaiHoc).MaBaiHoc;
+            return maBai;
         }
     }
 }

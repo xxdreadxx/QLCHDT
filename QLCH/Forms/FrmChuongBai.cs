@@ -15,6 +15,7 @@ namespace QLCH.Forms
     {
         ChuongBaiBLL cb = new ChuongBaiBLL();
         public string idChuongBai;
+        public string idMonHoc;
         public FrmChuongBai()
         {
             InitializeComponent();
@@ -22,7 +23,14 @@ namespace QLCH.Forms
 
         private void FrmChuongBai_Load(object sender, EventArgs e)
         {
-            grdData.DataSource = cb.GetAllListChuongBai();
+            if (idMonHoc != null)
+            {
+                grdData.DataSource = cb.GetAllListChuongBaiByIDMonHoc(idMonHoc);
+            }else
+            {
+                grdData.DataSource = cb.GetAllListChuongBai();
+            }
+          
         }
 
         private void FrmChuongBai_KeyDown(object sender, KeyEventArgs e)
@@ -41,8 +49,10 @@ namespace QLCH.Forms
 
         private void btnThemMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
             FrmChuongBai_Add frmCBA = new FrmChuongBai_Add();
             frmCBA.ShowDialog();
+            FrmChuongBai_Load(sender, e);
         }
     }
 }

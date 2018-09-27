@@ -66,14 +66,15 @@
             this.txtmaMon.Location = new System.Drawing.Point(94, 95);
             this.txtmaMon.Name = "txtmaMon";
             this.txtmaMon.Size = new System.Drawing.Size(62, 20);
-            this.txtmaMon.TabIndex = 1;
+            this.txtmaMon.TabIndex = 2;
+            this.txtmaMon.Enter += new System.EventHandler(this.txtmaMon_Enter);
             // 
             // txtMaChuong
             // 
             this.txtMaChuong.Location = new System.Drawing.Point(94, 32);
             this.txtMaChuong.Name = "txtMaChuong";
             this.txtMaChuong.Size = new System.Drawing.Size(174, 20);
-            this.txtMaChuong.TabIndex = 1;
+            this.txtMaChuong.TabIndex = 0;
             // 
             // txtSoChuong
             // 
@@ -87,14 +88,14 @@
             this.txtTenChuongBai.Location = new System.Drawing.Point(94, 124);
             this.txtTenChuongBai.Name = "txtTenChuongBai";
             this.txtTenChuongBai.Size = new System.Drawing.Size(297, 20);
-            this.txtTenChuongBai.TabIndex = 1;
+            this.txtTenChuongBai.TabIndex = 4;
             // 
             // txtTenMon
             // 
             this.txtTenMon.Location = new System.Drawing.Point(164, 95);
             this.txtTenMon.Name = "txtTenMon";
             this.txtTenMon.Size = new System.Drawing.Size(227, 20);
-            this.txtTenMon.TabIndex = 1;
+            this.txtTenMon.TabIndex = 3;
             // 
             // labelControl6
             // 
@@ -126,7 +127,7 @@
             this.txtSobai.MenuManager = this.barManager1;
             this.txtSobai.Name = "txtSobai";
             this.txtSobai.Size = new System.Drawing.Size(297, 20);
-            this.txtSobai.TabIndex = 1;
+            this.txtSobai.TabIndex = 5;
             // 
             // barManager1
             // 
@@ -249,9 +250,12 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.KeyPreview = true;
             this.Name = "FrmChuongBai_Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm chương bài";
+            this.Load += new System.EventHandler(this.FrmChuongBai_Add_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmChuongBai_Add_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtmaMon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaChuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoChuong.Properties)).EndInit();

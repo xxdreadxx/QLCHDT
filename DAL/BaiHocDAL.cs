@@ -16,6 +16,12 @@ namespace DAL
             lstBaiHoc = db.BaiHocs.Where(p => p.InUsed == true).ToList();
             return lstBaiHoc;
         }
+        public List<BaiHoc> GetListAllBaiHocByIDChuong(string idChuong)
+        {
+            List<BaiHoc> lstBaiHoc = new List<BaiHoc>();
+            lstBaiHoc = db.BaiHocs.Where(p => p.InUsed == true && p.ID_Chuong == idChuong).ToList();
+            return lstBaiHoc;
+        }
         public BaiHoc getbaiHocByID(string idBaiHoc)
         {
             BaiHoc bh = new BaiHoc();

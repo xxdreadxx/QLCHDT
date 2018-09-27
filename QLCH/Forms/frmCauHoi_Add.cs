@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DTO;
+using Publics;
 
 namespace QLCH.Forms
 {
@@ -16,12 +19,14 @@ namespace QLCH.Forms
         {
             InitializeComponent();
         }
-
+        CauHoiBLL ch = new CauHoiBLL();
+        MonHocBLL mh = new MonHocBLL();
+        ChuongBaiBLL cb = new ChuongBaiBLL();
+        BaiHocBLL bh = new BaiHocBLL();
 
         private void frmCauHoi_Add_Load(object sender, EventArgs e)
         {
             rd1.Checked = true;
-            //aaa
         }
 
         private void rdDungSai_CheckedChanged(object sender, EventArgs e)
@@ -160,6 +165,66 @@ namespace QLCH.Forms
                     chk3.Checked = false;
                 }
             }
+        }
+
+        private void btnAddClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string cMucDo = cbMucDo.SelectedItem.ToString();
+            int MucDo;
+            if (cMucDo == "Dễ")
+            {
+                MucDo = 1;
+            }
+            else if (cMucDo == "Trung bình")
+            {
+                MucDo = 2;
+            }
+            else
+            {
+                MucDo = 3;
+            }
+            ch.CreateCauHoi(txtmaMonHoc.Tag.ToString(), "", txtTieuDe.Text, rtbNoiDung.Text, MucDo, txtMaChuong.Tag.ToString(), txtMaBaiHoc.Tag.ToString(), txtMaCauHoi.Text, AccountInfor.IdAccount);
+        }
+
+        private void txtmaMonHoc_Enter(object sender, EventArgs e)
+        {
+            frmMonHoc frmMH = new frmMonHoc();
+            frmMH.ShowDialog();
+            if (frmMH.idMonHoc != null)
+            {
+                txtmaMonHoc.Text = mh.getMaMonHocByID(frmMH.idMonHoc);
+                txtmaMonHoc.Tag = frmMH.idMonHoc;
+                txtTenMonHoc.Text = mh.getTenMonHocByID(frmMH.idMonHoc);
+            }
+            this.Close();
+        }
+
+        private void txtMaChuong_Enter(object sender, EventArgs e)
+        {
+            FrmChuongBai frmCB = new FrmChuongBai();
+            frmCB.idMonHoc = txtmaMonHoc.Tag.ToString();
+            frmCB.ShowDialog();
+            if (frmCB.idChuongBai != null)
+            {
+                txtMaChuong.Text = cb.getMaChuongBaiByID(frmCB.idChuongBai);
+                txtMaChuong.Tag = frmCB.idChuongBai;
+                txttenChuong.Text = cb.getTenChuongBaiByID(frmCB.idChuongBai);
+            }
+            this.Close();
+        }
+
+        private void txtMaBaiHoc_Enter(object sender, EventArgs e)
+        {
+            FrmBaiHoc frmBH = new FrmBaiHoc();
+            frmBH.idChuongBai = txtMaChuong.Tag.ToString();
+            frmBH.ShowDialog();
+            if (frmBH.idBaiHoc !=null)
+            {
+                txtMaBaiHoc.Text = bh.getMaBaiHocByID(frmBH.idBaiHoc);
+                txtMaBaiHoc.Tag = frmBH.idBaiHoc;
+                txtTenBaiHoc.Text = bh.getTenBaiHocByID(frmBH.idBaiHoc);
+            }
+            this.Close();
         }
     }
 }

@@ -76,19 +76,21 @@ namespace QLCH.Forms
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //abc
+
         }
 
         private void btnBaiHoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmBaiHoc frmBH = new FrmBaiHoc();
-            frmBH.ShowDialog();
+            frmBH.MdiParent = this;
+            frmBH.Show();
         }
 
         private void btnChuongBai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmChuongBai frmCH = new FrmChuongBai();
-            frmCH.ShowDialog();
+            frmCH.MdiParent = this;
+            frmCH.Show();
         }
     }
 }

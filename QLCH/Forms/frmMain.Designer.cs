@@ -106,7 +106,6 @@
             this.btnHeThong.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
             this.btnHeThong.Caption = "Hệ thống";
             this.btnHeThong.DropDownControl = this.popHeThong;
-            this.btnHeThong.Glyph = ((System.Drawing.Image)(resources.GetObject("btnHeThong.Glyph")));
             this.btnHeThong.Id = 4;
             this.btnHeThong.MinSize = new System.Drawing.Size(85, 0);
             this.btnHeThong.Name = "btnHeThong";
@@ -153,7 +152,6 @@
             this.barLargeButtonItem1.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
             this.barLargeButtonItem1.Caption = "Danh mục";
             this.barLargeButtonItem1.DropDownControl = this.popDanhMuc;
-            this.barLargeButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.Glyph")));
             this.barLargeButtonItem1.Id = 8;
             this.barLargeButtonItem1.Name = "barLargeButtonItem1";
             // 
@@ -196,7 +194,6 @@
             // btnQLDeThi
             // 
             this.btnQLDeThi.Caption = "Đề thi";
-            this.btnQLDeThi.Glyph = ((System.Drawing.Image)(resources.GetObject("btnQLDeThi.Glyph")));
             this.btnQLDeThi.Id = 0;
             this.btnQLDeThi.MinSize = new System.Drawing.Size(85, 0);
             this.btnQLDeThi.Name = "btnQLDeThi";
@@ -206,7 +203,6 @@
             // btnQLCauHoi
             // 
             this.btnQLCauHoi.Caption = "Bộ câu hỏi";
-            this.btnQLCauHoi.Glyph = ((System.Drawing.Image)(resources.GetObject("btnQLCauHoi.Glyph")));
             this.btnQLCauHoi.Id = 1;
             this.btnQLCauHoi.MinSize = new System.Drawing.Size(85, 0);
             this.btnQLCauHoi.Name = "btnQLCauHoi";
@@ -216,7 +212,6 @@
             // btnQLMonHoc
             // 
             this.btnQLMonHoc.Caption = "Môn học";
-            this.btnQLMonHoc.Glyph = ((System.Drawing.Image)(resources.GetObject("btnQLMonHoc.Glyph")));
             this.btnQLMonHoc.Id = 2;
             this.btnQLMonHoc.MinSize = new System.Drawing.Size(85, 0);
             this.btnQLMonHoc.Name = "btnQLMonHoc";
@@ -227,7 +222,7 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(869, 65);
+            this.barDockControlTop.Size = new System.Drawing.Size(869, 31);
             // 
             // barDockControlBottom
             // 
@@ -240,15 +235,15 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 65);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 503);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 31);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 537);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(869, 65);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 503);
+            this.barDockControlRight.Location = new System.Drawing.Point(869, 31);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 537);
             // 
             // barLargeButtonItem2
             // 

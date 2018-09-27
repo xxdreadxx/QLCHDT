@@ -27,32 +27,21 @@ namespace QLCH.Forms
             this.Close();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnLuuThayDoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            string tenMon = "";
-            khoi = int.Parse(cbKhoi.SelectedItem.ToString());
-            mamon = cbMon.SelectedItem.ToString();
-            if (mamon == "TOAN") { tenMon = "Toán"; }
-            if (mamon == "VAN") { tenMon = "Ngữ văn"; }
-            if (mamon == "VATLY") { tenMon = "Vật lý"; }
-            if (mamon == "HOA") { tenMon = "Hóa học"; }
-            if (mamon == "GDCD") { tenMon = "Giáo dục công dân"; }
-            if (mamon == "SINH") { tenMon = "Sinh học"; }
-            if (mamon == "DIA") { tenMon = "Địa"; }
-            if (mamon == "SU") { tenMon = "Lịch sử"; }
-            if (mamon == "TIENGANH") { tenMon = "Tiếng anh"; }
-            monHoc.MonHoc_Add(mamon, khoi, tenMon);
-            this.Close();
+            monHoc.MonHoc_Add(txtmaMon.Text, int.Parse(txtKhoiLop.Text), txtTenMonHoc.Text);
+            MessageBox.Show("Hoàn thành");
         }
 
-        private void frmMonHoc_Add_Load(object sender, EventArgs e)
+        private void frmMonHoc_Add_KeyDown(object sender, KeyEventArgs e)
         {
-            cbMon.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbKhoi.DropDownStyle = ComboBoxStyle.DropDownList;
-            if(mamon!=null)
+            if (e.KeyCode == Keys.F2)
             {
-                cbKhoi.Text = khoi.ToString();
-                cbMon.Text = mamon;
+                btnLuuThayDoi_ItemClick(null,null);
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
             }
         }
     }

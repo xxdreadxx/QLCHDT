@@ -13,7 +13,9 @@ namespace QLCH.Forms
 {
     public partial class FrmBaiHoc : Form
     {
+        BaiHocBLL bh = new BaiHocBLL();
         public string idBaiHoc;
+        public string idChuongBai;
         public FrmBaiHoc()
         {
             InitializeComponent();
@@ -37,6 +39,21 @@ namespace QLCH.Forms
         {
             FrmBaiHoc_Add frmBHA = new FrmBaiHoc_Add();
             frmBHA.ShowDialog();
+            FrmBaiHoc_Load(sender, e);
+            
+        }
+
+        private void FrmBaiHoc_Load(object sender, EventArgs e)
+        {
+            if (idChuongBai != null)
+            {
+                grdData.DataSource = bh.getListAllBaiHocByidChuong(idChuongBai);
+            }
+            else
+            {
+                grdData.DataSource = bh.getListAllBaiHoc();
+            }
+            
         }
     }
 }

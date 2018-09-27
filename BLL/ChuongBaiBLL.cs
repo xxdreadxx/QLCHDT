@@ -15,6 +15,11 @@ namespace BLL
             List<ChuongBai> lstChuongbai = cb.getListAllChuongBai();
             return lstChuongbai;
         }
+        public List<ChuongBai> GetAllListChuongBaiByIDMonHoc(string idMonHoc)
+        {
+            List<ChuongBai> lstChuongbai = cb.getListAllChuongBaiByIDMonHoc(idMonHoc);
+            return lstChuongbai;
+        }
         public void CreateChuongBai(string idMonHoc, int soChuong, string tenChuong, string maChuong, int soBai)
         {
             cb.CreateChuongBai(idMonHoc, soChuong, tenChuong, maChuong, soBai);

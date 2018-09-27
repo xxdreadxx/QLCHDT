@@ -77,10 +77,10 @@
             this.bar1.DockRow = 0;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnAdd),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnAdd, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEdit, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnCopy, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnDelete, true),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDelete, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnClose, true)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DrawDragBorder = false;
@@ -90,8 +90,8 @@
             // btnAdd
             // 
             this.btnAdd.Caption = "Thêm mới";
+            this.btnAdd.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdd.Glyph")));
             this.btnAdd.Id = 0;
-            this.btnAdd.ImageUri.Uri = "Add";
             this.btnAdd.MinSize = new System.Drawing.Size(65, 0);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdd_ItemClick);
@@ -114,8 +114,8 @@
             // btnDelete
             // 
             this.btnDelete.Caption = "Xóa";
+            this.btnDelete.Glyph = ((System.Drawing.Image)(resources.GetObject("btnDelete.Glyph")));
             this.btnDelete.Id = 1;
-            this.btnDelete.ImageUri.Uri = "Delete";
             this.btnDelete.MinSize = new System.Drawing.Size(65, 0);
             this.btnDelete.Name = "btnDelete";
             // 

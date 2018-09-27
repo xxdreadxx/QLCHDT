@@ -169,7 +169,7 @@
             this.txtMaChuongBai.Location = new System.Drawing.Point(94, 124);
             this.txtMaChuongBai.Name = "txtMaChuongBai";
             this.txtMaChuongBai.Size = new System.Drawing.Size(62, 20);
-            this.txtMaChuongBai.TabIndex = 1;
+            this.txtMaChuongBai.TabIndex = 4;
             this.txtMaChuongBai.Leave += new System.EventHandler(this.txtMaChuongBai_Leave);
             // 
             // txtmaMon
@@ -177,7 +177,7 @@
             this.txtmaMon.Location = new System.Drawing.Point(94, 95);
             this.txtmaMon.Name = "txtmaMon";
             this.txtmaMon.Size = new System.Drawing.Size(62, 20);
-            this.txtmaMon.TabIndex = 1;
+            this.txtmaMon.TabIndex = 2;
             this.txtmaMon.Leave += new System.EventHandler(this.txtmaMon_Leave);
             // 
             // txtMaBaiHoc
@@ -185,7 +185,7 @@
             this.txtMaBaiHoc.Location = new System.Drawing.Point(94, 32);
             this.txtMaBaiHoc.Name = "txtMaBaiHoc";
             this.txtMaBaiHoc.Size = new System.Drawing.Size(174, 20);
-            this.txtMaBaiHoc.TabIndex = 1;
+            this.txtMaBaiHoc.TabIndex = 0;
             // 
             // txtKhoiLop
             // 
@@ -199,21 +199,21 @@
             this.txtTenChuongBai.Location = new System.Drawing.Point(164, 124);
             this.txtTenChuongBai.Name = "txtTenChuongBai";
             this.txtTenChuongBai.Size = new System.Drawing.Size(227, 20);
-            this.txtTenChuongBai.TabIndex = 1;
+            this.txtTenChuongBai.TabIndex = 5;
             // 
             // txtTenMon
             // 
             this.txtTenMon.Location = new System.Drawing.Point(164, 95);
             this.txtTenMon.Name = "txtTenMon";
             this.txtTenMon.Size = new System.Drawing.Size(227, 20);
-            this.txtTenMon.TabIndex = 1;
+            this.txtTenMon.TabIndex = 3;
             // 
             // txtNoiDung
             // 
             this.txtNoiDung.Location = new System.Drawing.Point(94, 181);
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.Size = new System.Drawing.Size(297, 20);
-            this.txtNoiDung.TabIndex = 1;
+            this.txtNoiDung.TabIndex = 7;
             // 
             // labelControl6
             // 
@@ -245,7 +245,7 @@
             this.txttenBaiHoc.MenuManager = this.barManager1;
             this.txttenBaiHoc.Name = "txttenBaiHoc";
             this.txttenBaiHoc.Size = new System.Drawing.Size(297, 20);
-            this.txttenBaiHoc.TabIndex = 1;
+            this.txttenBaiHoc.TabIndex = 6;
             // 
             // labelControl3
             // 
@@ -281,9 +281,11 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.KeyPreview = true;
             this.Name = "FrmBaiHoc_Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm bài học";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmBaiHoc_Add_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

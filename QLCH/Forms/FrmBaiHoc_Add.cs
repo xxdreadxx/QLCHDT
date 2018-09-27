@@ -25,12 +25,14 @@ namespace QLCH.Forms
 
         private void btnLuuThayDoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bh.CreateBaiHoc(txtMaBaiHoc.Text,txttenBaiHoc.Text,txtMaChuongBai.Text,txtNoiDung.Text,int.Parse(txtKhoiLop.Text),txtmaMon.Text);
+            bh.CreateBaiHoc(txtMaBaiHoc.Text,txttenBaiHoc.Text,txtMaChuongBai.Tag.ToString(),txtNoiDung.Text,int.Parse(txtKhoiLop.Text),txtmaMon.Tag.ToString());
+            MessageBox.Show("Hoàn thành");
         }
 
         private void txtmaMon_Leave(object sender, EventArgs e)
         {
             frmMonHoc frmMH = new frmMonHoc();
+            frmMH.khoiLop = int.Parse(txtKhoiLop.Text);
             frmMH.ShowDialog();
             if (frmMH.idMonHoc != null)
             {
@@ -43,12 +45,25 @@ namespace QLCH.Forms
         private void txtMaChuongBai_Leave(object sender, EventArgs e)
         {
             FrmChuongBai frmCB = new FrmChuongBai();
+            frmCB.idMonHoc = txtmaMon.Tag.ToString();
             frmCB.ShowDialog();
             if (frmCB.idChuongBai != null)
             {
                 txtMaChuongBai.Text = cb.getMaChuongBaiByID(frmCB.idChuongBai);
                 txtTenChuongBai.Text = cb.getTenChuongBaiByID(frmCB.idChuongBai);
                 txtMaChuongBai.Tag = frmCB.idChuongBai;
+            }
+        }
+
+        private void FrmBaiHoc_Add_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                btnLuuThayDoi_ItemClick(null, null);
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
             }
         }
     }

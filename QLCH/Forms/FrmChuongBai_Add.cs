@@ -15,6 +15,7 @@ namespace QLCH.Forms
     public partial class FrmChuongBai_Add : Form
     {
         ChuongBaiBLL cb = new ChuongBaiBLL();
+        MonHocBLL mh = new MonHocBLL();
         public FrmChuongBai_Add()
         {
             InitializeComponent();
@@ -22,7 +23,37 @@ namespace QLCH.Forms
 
         private void btnLuuThayDoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            cb.CreateChuongBai(txtmaMon.Text, int.Parse(txtSoChuong.Text), txtTenChuongBai.Text, txtMaChuong.Text, int.Parse(txtSobai.Text));
+            cb.CreateChuongBai(txtmaMon.Tag.ToString(), int.Parse(txtSoChuong.Text), txtTenChuongBai.Text, txtMaChuong.Text, int.Parse(txtSobai.Text));
+            MessageBox.Show("Hoàn thành.");
+        }
+
+        private void txtmaMon_Enter(object sender, EventArgs e)
+        {
+            frmMonHoc frmMH = new frmMonHoc();
+            frmMH.ShowDialog();
+            if (frmMH.idMonHoc != null)
+            {
+                txtmaMon.Text = mh.getMaMonHocByID(frmMH.idMonHoc);
+                txtmaMon.Tag = frmMH.idMonHoc;
+                txtTenMon.Text = mh.getTenMonHocByID(frmMH.idMonHoc);
+            }
+        }
+
+        private void FrmChuongBai_Add_Load(object sender, EventArgs e)
+        {
+            txtMaChuong.Focus();
+        }
+
+        private void FrmChuongBai_Add_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                btnLuuThayDoi_ItemClick(null, null);
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

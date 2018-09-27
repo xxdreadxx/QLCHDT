@@ -15,6 +15,11 @@ namespace DAL
             List<ChuongBai> lstChuongBai = db.ChuongBais.Where(p => p.InUsed == true).ToList();
             return lstChuongBai;
         }
+        public List<ChuongBai> getListAllChuongBaiByIDMonHoc(string idMonHoc)
+        {
+            List<ChuongBai> lstChuongBai = db.ChuongBais.Where(p => p.InUsed == true && p.ID_MonHoc == idMonHoc).ToList();
+            return lstChuongBai;
+        }
         public ChuongBai getChuongBaiByID(string idChuongBai)
         {
             ChuongBai cb = db.ChuongBais.SingleOrDefault(p => p.ID == idChuongBai);

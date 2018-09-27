@@ -17,6 +17,7 @@ namespace QLCH.Forms
         BindingSource bindSource = new BindingSource();
         MonHocBLL monHoc = new MonHocBLL();
         public string idMonHoc;
+        public int khoiLop;
         public frmMonHoc()
         {
             InitializeComponent();
@@ -32,7 +33,16 @@ namespace QLCH.Forms
         private void frmMonHoc_Load(object sender, EventArgs e)
         {
             List<clsMonHoc> listAllMonHoc = new List<clsMonHoc>();
-            List<MonHoc> lstMonHoc = monHoc.GetAllMonHoc();
+            List<MonHoc> lstMonHoc = new List<MonHoc>();
+            if (khoiLop == 0)
+            {
+                lstMonHoc = monHoc.GetAllMonHoc();
+            }
+            else
+            {
+                lstMonHoc = monHoc.GetMonHocByID_Khoi(khoiLop);
+            }
+              
             if (lstMonHoc.Count != 0)
             {
                 foreach(var item in lstMonHoc)

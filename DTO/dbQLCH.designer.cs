@@ -1222,7 +1222,7 @@ namespace DTO
 		
 		private string _ID_Chuong;
 		
-		private System.Nullable<int> _Bai;
+		private string _ID_Bai;
 		
 		private string _MaCauHoi;
 		
@@ -1250,8 +1250,8 @@ namespace DTO
     partial void OnMucDoChanged();
     partial void OnID_ChuongChanging(string value);
     partial void OnID_ChuongChanged();
-    partial void OnBaiChanging(System.Nullable<int> value);
-    partial void OnBaiChanged();
+    partial void OnID_BaiChanging(string value);
+    partial void OnID_BaiChanged();
     partial void OnMaCauHoiChanging(string value);
     partial void OnMaCauHoiChanged();
     partial void OnID_AccountChanging(string value);
@@ -1407,22 +1407,22 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Bai", DbType="Int")]
-		public System.Nullable<int> Bai
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Bai", DbType="NVarChar(100)")]
+		public string ID_Bai
 		{
 			get
 			{
-				return this._Bai;
+				return this._ID_Bai;
 			}
 			set
 			{
-				if ((this._Bai != value))
+				if ((this._ID_Bai != value))
 				{
-					this.OnBaiChanging(value);
+					this.OnID_BaiChanging(value);
 					this.SendPropertyChanging();
-					this._Bai = value;
-					this.SendPropertyChanged("Bai");
-					this.OnBaiChanged();
+					this._ID_Bai = value;
+					this.SendPropertyChanged("ID_Bai");
+					this.OnID_BaiChanged();
 				}
 			}
 		}
