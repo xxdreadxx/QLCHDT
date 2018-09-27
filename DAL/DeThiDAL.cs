@@ -48,9 +48,11 @@ namespace DAL
         }
         public int CreateAutoTest(string idLoaiBaiThi, string idMonHoc, string idAccount, string maDe, int tuBai, int denBai, int tongSoCau, int slCauDe, int slCauTB, int slCauKho, bool isCreateAuto, string tieuDeBaiThi, string nguoiTao, string nguoiKyDuyet, string gV1, string gV2, string ghiChu,int tuNgay, int tuThang, int tuNam)
         {
-            int state;
-           state =  db.TaoBaiThiNgauNhien(idLoaiBaiThi, idMonHoc, idAccount, maDe, tuBai, denBai, tongSoCau, slCauDe, slCauTB, slCauKho, isCreateAuto, tieuDeBaiThi, nguoiTao, nguoiKyDuyet, gV1, gV2, ghiChu,tuNgay,tuThang,tuNam);
-            return state;
+
+            //lstDeThi =  db.TaoBaiThiNgauNhien(idLoaiBaiThi, idMonHoc, idAccount, maDe, tuBai, denBai, tongSoCau, slCauDe, slCauTB, slCauKho, isCreateAuto, tieuDeBaiThi, nguoiTao, nguoiKyDuyet, gV1, gV2, ghiChu,tuNgay,tuThang,tuNam);
+            int dethi = 1;
+
+            return dethi;
         }
         public List<LoaiDeThi> GetAllLoaiDeThi()
         {

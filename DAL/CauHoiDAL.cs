@@ -19,6 +19,7 @@ namespace DAL
         {
             CauHoi ch = new CauHoi();
             ch.ID = Guid.NewGuid().ToString();
+            ch.ID_Mon = idMon;
             ch.ID_LoaiCauHoi = idLoaiCauHoi;
             ch.TieuDe = tieuDe;
             ch.NoiDung = NoiDung;

@@ -52,6 +52,7 @@ namespace QLCH.Forms
             {
                 MessageBox.Show("Tạo đề thi thành công");
             }
+            Reports.rptDeThi rpt = new Reports.rptDeThi();
 
         }
 
