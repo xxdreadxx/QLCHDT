@@ -183,8 +183,9 @@ namespace QLCH.Forms
             {
                 MucDo = 3;
             }
-            ch.CreateCauHoi(txtmaMonHoc.Tag.ToString(), "", txtTieuDe.Text, rtbNoiDung.Text, MucDo, txtMaChuong.Tag.ToString(), txtMaBaiHoc.Tag.ToString(), txtMaCauHoi.Text, AccountInfor.IdAccount);
-            MessageBox.Show("Hoàn thành.");
+            //ch.CreateCauHoi(txtmaMonHoc.Tag.ToString(), "", txtTieuDe.Text, rtbNoiDung.Text, MucDo, txtMaChuong.Tag.ToString(), txtMaBaiHoc.Tag.ToString(), txtMaCauHoi.Text, AccountInfor.IdAccount);
+            ch.CreateCauHoi1(recNoiDung.RtfText, MucDo, txtMaCauHoi.Text);
+            this.Close();
         }
 
         private void txtmaMonHoc_Enter(object sender, EventArgs e)

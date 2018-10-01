@@ -55,41 +55,49 @@
             // 
             // txtTenMonHoc
             // 
-            this.txtTenMonHoc.Location = new System.Drawing.Point(95, 97);
+            this.txtTenMonHoc.Location = new System.Drawing.Point(102, 96);
             this.txtTenMonHoc.Name = "txtTenMonHoc";
-            this.txtTenMonHoc.Size = new System.Drawing.Size(271, 20);
+            this.txtTenMonHoc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenMonHoc.Properties.Appearance.Options.UseFont = true;
+            this.txtTenMonHoc.Size = new System.Drawing.Size(271, 22);
             this.txtTenMonHoc.TabIndex = 4;
             this.txtTenMonHoc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTenMonHoc_KeyUp);
             // 
             // txtmaMon
             // 
-            this.txtmaMon.Location = new System.Drawing.Point(95, 68);
+            this.txtmaMon.Location = new System.Drawing.Point(102, 68);
             this.txtmaMon.Name = "txtmaMon";
-            this.txtmaMon.Size = new System.Drawing.Size(174, 20);
+            this.txtmaMon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmaMon.Properties.Appearance.Options.UseFont = true;
+            this.txtmaMon.Size = new System.Drawing.Size(174, 22);
             this.txtmaMon.TabIndex = 2;
             this.txtmaMon.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtmaMon_KeyUp);
             // 
             // txtKhoiLop
             // 
-            this.txtKhoiLop.Location = new System.Drawing.Point(95, 34);
+            this.txtKhoiLop.Location = new System.Drawing.Point(102, 34);
             this.txtKhoiLop.Name = "txtKhoiLop";
-            this.txtKhoiLop.Size = new System.Drawing.Size(174, 20);
+            this.txtKhoiLop.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhoiLop.Properties.Appearance.Options.UseFont = true;
+            this.txtKhoiLop.Size = new System.Drawing.Size(174, 22);
             this.txtKhoiLop.TabIndex = 1;
             this.txtKhoiLop.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtKhoiLop_KeyUp);
             // 
             // labelControl4
             // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Location = new System.Drawing.Point(22, 100);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(61, 13);
+            this.labelControl4.Size = new System.Drawing.Size(75, 16);
             this.labelControl4.TabIndex = 0;
             this.labelControl4.Text = "Tên môn học";
             // 
             // labelControl5
             // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Location = new System.Drawing.Point(22, 37);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(37, 13);
+            this.labelControl5.Size = new System.Drawing.Size(45, 16);
             this.labelControl5.TabIndex = 0;
             this.labelControl5.Text = "Khối lớp";
             // 
@@ -169,9 +177,10 @@
             // 
             // labelControl3
             // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Location = new System.Drawing.Point(22, 71);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(57, 13);
+            this.labelControl3.Size = new System.Drawing.Size(70, 16);
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "Mã môn học";
             // 

@@ -49,7 +49,7 @@ namespace DAL
         public int CreateAutoTest(string idLoaiBaiThi, string idMonHoc, string idAccount, string maDe, int tuBai, int denBai, int tongSoCau, int slCauDe, int slCauTB, int slCauKho, bool isCreateAuto, string tieuDeBaiThi, string nguoiTao, string nguoiKyDuyet, string gV1, string gV2, string ghiChu,int tuNgay, int tuThang, int tuNam)
         {
 
-            //lstDeThi =  db.TaoBaiThiNgauNhien(idLoaiBaiThi, idMonHoc, idAccount, maDe, tuBai, denBai, tongSoCau, slCauDe, slCauTB, slCauKho, isCreateAuto, tieuDeBaiThi, nguoiTao, nguoiKyDuyet, gV1, gV2, ghiChu,tuNgay,tuThang,tuNam);
+            List<DeThi> listDeThi = (from ds in db.TaoBaiThiNgauNhien(idLoaiBaiThi, idMonHoc, idAccount, maDe, tuBai, denBai, tongSoCau, slCauDe, slCauTB, slCauKho, isCreateAuto, tieuDeBaiThi, nguoiTao, nguoiKyDuyet, gV1, gV2, ghiChu,tuNgay,tuThang,tuNam) select ds).ToList();
             int dethi = 1;
 
             return dethi;

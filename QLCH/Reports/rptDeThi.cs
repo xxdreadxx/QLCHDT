@@ -16,5 +16,9 @@ namespace QLCH.Reports
             InitializeComponent();
         }
 
+        private void rptDeThi_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            //xrRichText1.Rtf= ""
+        }
     }
 }

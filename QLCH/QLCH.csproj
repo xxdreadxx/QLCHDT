@@ -133,6 +133,12 @@
     <Compile Include="Forms\FrmLoaiCauHoi.Designer.cs">
       <DependentUpon>FrmLoaiCauHoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmLoaiCauHoi_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLoaiCauHoi_Add.Designer.cs">
+      <DependentUpon>FrmLoaiCauHoi_Add.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmLoaiDeThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     <EmbeddedResource Include="Forms\FrmLoaiCauHoi.resx">
       <DependentUpon>FrmLoaiCauHoi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLoaiCauHoi_Add.resx">
+      <DependentUpon>FrmLoaiCauHoi_Add.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLoaiDeThi.resx">
       <DependentUpon>FrmLoaiDeThi.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +228,7 @@
     <EmbeddedResource Include="Forms\FrmTaoDeThi.resx">
       <DependentUpon>FrmTaoDeThi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

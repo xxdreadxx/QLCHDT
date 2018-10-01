@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoaiCauHoi));
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnAdd = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnCopy = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -42,8 +43,8 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.grdLoaiMonHoc = new DevExpress.XtraGrid.GridControl();
-            this.grvLoaiMonHoc = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grdLoaiCauHoi = new DevExpress.XtraGrid.GridControl();
+            this.grvLoaiCauHoi = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grdcolMaLoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdcolLoaiCH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdcolSL = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,8 +54,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdLoaiMonHoc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvLoaiMonHoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdLoaiCauHoi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvLoaiCauHoi)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -100,6 +101,7 @@
             this.btnAdd.Id = 0;
             this.btnAdd.MinSize = new System.Drawing.Size(65, 0);
             this.btnAdd.Name = "btnAdd";
+            this.btnAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdd_ItemClick);
             // 
             // btnCopy
             // 
@@ -124,6 +126,7 @@
             this.btnDuyet.Id = 3;
             this.btnDuyet.MinSize = new System.Drawing.Size(65, 0);
             this.btnDuyet.Name = "btnDuyet";
+            this.btnDuyet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDuyet_ItemClick);
             // 
             // btnDel
             // 
@@ -132,6 +135,7 @@
             this.btnDel.Id = 4;
             this.btnDel.MinSize = new System.Drawing.Size(65, 0);
             this.btnDel.Name = "btnDel";
+            this.btnDel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDel_ItemClick);
             // 
             // btnClose
             // 
@@ -140,6 +144,7 @@
             this.btnClose.Id = 5;
             this.btnClose.MinSize = new System.Drawing.Size(65, 0);
             this.btnClose.Name = "btnClose";
+            this.btnClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClose_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -173,66 +178,66 @@
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.Controls.Add(this.grdLoaiMonHoc);
+            this.groupControl1.Controls.Add(this.grdLoaiCauHoi);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 65);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(752, 328);
             this.groupControl1.TabIndex = 10;
             // 
-            // grdLoaiMonHoc
+            // grdLoaiCauHoi
             // 
-            this.grdLoaiMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdLoaiMonHoc.EmbeddedNavigator.Buttons.Append.Visible = false;
-            this.grdLoaiMonHoc.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
-            this.grdLoaiMonHoc.EmbeddedNavigator.Buttons.Edit.Visible = false;
-            this.grdLoaiMonHoc.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
-            this.grdLoaiMonHoc.EmbeddedNavigator.Buttons.First.Visible = false;
-            this.grdLoaiMonHoc.EmbeddedNavigator.Buttons.Remove.Visible = false;
-            this.grdLoaiMonHoc.Location = new System.Drawing.Point(2, 20);
-            this.grdLoaiMonHoc.MainView = this.grvLoaiMonHoc;
-            this.grdLoaiMonHoc.MenuManager = this.barManager1;
-            this.grdLoaiMonHoc.Name = "grdLoaiMonHoc";
-            this.grdLoaiMonHoc.Size = new System.Drawing.Size(748, 306);
-            this.grdLoaiMonHoc.TabIndex = 0;
-            this.grdLoaiMonHoc.UseEmbeddedNavigator = true;
-            this.grdLoaiMonHoc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.grvLoaiMonHoc});
+            this.grdLoaiCauHoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdLoaiCauHoi.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.grdLoaiCauHoi.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.grdLoaiCauHoi.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.grdLoaiCauHoi.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.grdLoaiCauHoi.EmbeddedNavigator.Buttons.First.Visible = false;
+            this.grdLoaiCauHoi.EmbeddedNavigator.Buttons.Remove.Visible = false;
+            this.grdLoaiCauHoi.Location = new System.Drawing.Point(2, 20);
+            this.grdLoaiCauHoi.MainView = this.grvLoaiCauHoi;
+            this.grdLoaiCauHoi.MenuManager = this.barManager1;
+            this.grdLoaiCauHoi.Name = "grdLoaiCauHoi";
+            this.grdLoaiCauHoi.Size = new System.Drawing.Size(748, 306);
+            this.grdLoaiCauHoi.TabIndex = 0;
+            this.grdLoaiCauHoi.UseEmbeddedNavigator = true;
+            this.grdLoaiCauHoi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvLoaiCauHoi});
             // 
-            // grvLoaiMonHoc
+            // grvLoaiCauHoi
             // 
-            this.grvLoaiMonHoc.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grvLoaiCauHoi.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.grdcolMaLoai,
             this.grdcolLoaiCH,
             this.grdcolSL,
             this.grdcolNgayTao,
             this.grdcolTrangThai,
             this.grdcolID});
-            this.grvLoaiMonHoc.GridControl = this.grdLoaiMonHoc;
-            this.grvLoaiMonHoc.Name = "grvLoaiMonHoc";
-            this.grvLoaiMonHoc.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
+            this.grvLoaiCauHoi.GridControl = this.grdLoaiCauHoi;
+            this.grvLoaiCauHoi.Name = "grvLoaiCauHoi";
+            this.grvLoaiCauHoi.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
             // 
             // grdcolMaLoai
             // 
             this.grdcolMaLoai.AppearanceCell.Options.UseTextOptions = true;
             this.grdcolMaLoai.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdcolMaLoai.Caption = "Mã loại câu hỏi";
-            this.grdcolMaLoai.FieldName = "MaLoai";
+            this.grdcolMaLoai.FieldName = "MaLoaiCauHoi";
             this.grdcolMaLoai.Name = "grdcolMaLoai";
             this.grdcolMaLoai.OptionsColumn.AllowEdit = false;
             this.grdcolMaLoai.Visible = true;
             this.grdcolMaLoai.VisibleIndex = 0;
-            this.grdcolMaLoai.Width = 35;
+            this.grdcolMaLoai.Width = 150;
             // 
             // grdcolLoaiCH
             // 
             this.grdcolLoaiCH.Caption = "Loại câu hỏi";
-            this.grdcolLoaiCH.FieldName = "LoaiCauHoi";
+            this.grdcolLoaiCH.FieldName = "LoaiCH";
             this.grdcolLoaiCH.Name = "grdcolLoaiCH";
             this.grdcolLoaiCH.OptionsColumn.AllowEdit = false;
             this.grdcolLoaiCH.Visible = true;
             this.grdcolLoaiCH.VisibleIndex = 1;
-            this.grdcolLoaiCH.Width = 137;
+            this.grdcolLoaiCH.Width = 140;
             // 
             // grdcolSL
             // 
@@ -242,7 +247,7 @@
             this.grdcolSL.OptionsColumn.AllowEdit = false;
             this.grdcolSL.Visible = true;
             this.grdcolSL.VisibleIndex = 2;
-            this.grdcolSL.Width = 137;
+            this.grdcolSL.Width = 86;
             // 
             // grdcolNgayTao
             // 
@@ -252,7 +257,7 @@
             this.grdcolNgayTao.OptionsColumn.AllowEdit = false;
             this.grdcolNgayTao.Visible = true;
             this.grdcolNgayTao.VisibleIndex = 3;
-            this.grdcolNgayTao.Width = 137;
+            this.grdcolNgayTao.Width = 100;
             // 
             // grdcolTrangThai
             // 
@@ -262,7 +267,7 @@
             this.grdcolTrangThai.OptionsColumn.AllowEdit = false;
             this.grdcolTrangThai.Visible = true;
             this.grdcolTrangThai.VisibleIndex = 4;
-            this.grdcolTrangThai.Width = 147;
+            this.grdcolTrangThai.Width = 100;
             // 
             // grdcolID
             // 
@@ -291,8 +296,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdLoaiMonHoc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvLoaiMonHoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdLoaiCauHoi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvLoaiCauHoi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,8 +318,8 @@
         private DevExpress.XtraBars.BarLargeButtonItem btnDel;
         private DevExpress.XtraBars.BarLargeButtonItem btnClose;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraGrid.GridControl grdLoaiMonHoc;
-        private DevExpress.XtraGrid.Views.Grid.GridView grvLoaiMonHoc;
+        private DevExpress.XtraGrid.GridControl grdLoaiCauHoi;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvLoaiCauHoi;
         private DevExpress.XtraGrid.Columns.GridColumn grdcolMaLoai;
         private DevExpress.XtraGrid.Columns.GridColumn grdcolLoaiCH;
         private DevExpress.XtraGrid.Columns.GridColumn grdcolSL;

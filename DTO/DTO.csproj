@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsLoaiCauHoi.cs" />
     <Compile Include="clsMonHoc.cs" />
     <Compile Include="dbQLCH.designer.cs">
       <AutoGen>True</AutoGen>

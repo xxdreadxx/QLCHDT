@@ -48,6 +48,8 @@
             this.grdcolNoiDung = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdcolMucDo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdcolLop = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rteND = new DevExpress.XtraRichEdit.RichEditControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvData)).BeginInit();
@@ -103,6 +105,7 @@
             this.btnEdit.ImageUri.Uri = "Edit";
             this.btnEdit.MinSize = new System.Drawing.Size(65, 0);
             this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEdit_ItemClick);
             // 
             // btnCopy
             // 
@@ -158,7 +161,7 @@
             // 
             // grdData
             // 
-            this.grdData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdData.Dock = System.Windows.Forms.DockStyle.Top;
             this.grdData.EmbeddedNavigator.Buttons.Append.Visible = false;
             this.grdData.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
             this.grdData.EmbeddedNavigator.Buttons.Edit.Visible = false;
@@ -169,7 +172,7 @@
             this.grdData.MainView = this.grvData;
             this.grdData.MenuManager = this.barManager1;
             this.grdData.Name = "grdData";
-            this.grdData.Size = new System.Drawing.Size(709, 419);
+            this.grdData.Size = new System.Drawing.Size(709, 283);
             this.grdData.TabIndex = 4;
             this.grdData.UseEmbeddedNavigator = true;
             this.grdData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -182,7 +185,8 @@
             this.grdcolTieuDe,
             this.grdcolNoiDung,
             this.grdcolMucDo,
-            this.grdcolLop});
+            this.grdcolLop,
+            this.grdID});
             this.grvData.GridControl = this.grdData;
             this.grvData.Name = "grvData";
             this.grvData.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Default;
@@ -226,11 +230,27 @@
             this.grdcolLop.FieldName = "Lop";
             this.grdcolLop.Name = "grdcolLop";
             // 
+            // grdID
+            // 
+            this.grdID.Caption = "ID";
+            this.grdID.FieldName = "ID";
+            this.grdID.Name = "grdID";
+            // 
+            // rteND
+            // 
+            this.rteND.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rteND.Location = new System.Drawing.Point(0, 348);
+            this.rteND.MenuManager = this.barManager1;
+            this.rteND.Name = "rteND";
+            this.rteND.Size = new System.Drawing.Size(709, 136);
+            this.rteND.TabIndex = 9;
+            // 
             // frmCauHoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 484);
+            this.Controls.Add(this.rteND);
             this.Controls.Add(this.grdData);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -270,5 +290,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn grdcolNoiDung;
         private DevExpress.XtraGrid.Columns.GridColumn grdcolMucDo;
         private DevExpress.XtraGrid.Columns.GridColumn grdcolLop;
+        private DevExpress.XtraGrid.Columns.GridColumn grdID;
+        private DevExpress.XtraRichEdit.RichEditControl rteND;
     }
 }

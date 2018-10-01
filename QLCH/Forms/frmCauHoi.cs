@@ -24,6 +24,7 @@ namespace QLCH.Forms
         {
             frmCauHoi_Add frm = new frmCauHoi_Add();
             frm.ShowDialog();
+            grdData.DataSource = ch.GetAllListCauHoi();
         }
 
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -34,6 +35,17 @@ namespace QLCH.Forms
         private void frmCauHoi_Load(object sender, EventArgs e)
         {
             grdData.DataSource = ch.GetAllListCauHoi();
+        }
+
+        private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int focus = grvData.FocusedRowHandle;
+            string ID = grvData.GetRowCellValue(focus, grdID).ToString();
+            CauHoi cauHoi = ch.GetByID(ID);
+            string s = cauHoi.NoiDung;
+            rteND.RtfText = s;
+            //MessageBox.Show(text); 
+            
         }
     }
 }

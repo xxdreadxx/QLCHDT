@@ -64,6 +64,7 @@
             this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
             this.changeFontSizeItem1 = new DevExpress.XtraRichEdit.UI.ChangeFontSizeItem();
             this.repositoryItemRichEditFontSizeEdit1 = new DevExpress.XtraRichEdit.Design.RepositoryItemRichEditFontSizeEdit();
+            this.recNoiDung = new DevExpress.XtraRichEdit.RichEditControl();
             this.fontSizeIncreaseItem1 = new DevExpress.XtraRichEdit.UI.FontSizeIncreaseItem();
             this.fontSizeDecreaseItem1 = new DevExpress.XtraRichEdit.UI.FontSizeDecreaseItem();
             this.toggleFontBoldItem1 = new DevExpress.XtraRichEdit.UI.ToggleFontBoldItem();
@@ -124,15 +125,14 @@
             this.rdn = new System.Windows.Forms.RadioButton();
             this.txtmaMonHoc = new DevExpress.XtraEditors.TextEdit();
             this.txtTenMonHoc = new DevExpress.XtraEditors.TextEdit();
-            this.cbMucDo = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.rtbNoiDung = new System.Windows.Forms.RichTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTieuDe = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.cbMucDo = new System.Windows.Forms.ComboBox();
             this.txtMaCauHoi = new DevExpress.XtraEditors.TextEdit();
             this.txtTenBaiHoc = new DevExpress.XtraEditors.TextEdit();
             this.txttenChuong = new DevExpress.XtraEditors.TextEdit();
@@ -153,7 +153,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditStyleEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmaMonHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenMonHoc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbMucDo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -494,36 +493,27 @@
             // 
             // pasteItem1
             // 
-            this.pasteItem1.Caption = "Paste";
-            this.pasteItem1.Enabled = false;
             this.pasteItem1.Id = 3;
             this.pasteItem1.Name = "pasteItem1";
             // 
             // cutItem1
             // 
-            this.cutItem1.Caption = "Cut";
-            this.cutItem1.Enabled = false;
             this.cutItem1.Id = 4;
             this.cutItem1.Name = "cutItem1";
             // 
             // copyItem1
             // 
-            this.copyItem1.Caption = "Copy";
-            this.copyItem1.Enabled = false;
             this.copyItem1.Id = 5;
             this.copyItem1.Name = "copyItem1";
             // 
             // pasteSpecialItem1
             // 
-            this.pasteSpecialItem1.Caption = "Paste Special";
-            this.pasteSpecialItem1.Enabled = false;
             this.pasteSpecialItem1.Id = 6;
             this.pasteSpecialItem1.Name = "pasteSpecialItem1";
             // 
             // changeFontNameItem1
             // 
             this.changeFontNameItem1.Edit = this.repositoryItemFontEdit1;
-            this.changeFontNameItem1.Enabled = false;
             this.changeFontNameItem1.Id = 7;
             this.changeFontNameItem1.Name = "changeFontNameItem1";
             // 
@@ -537,7 +527,6 @@
             // changeFontSizeItem1
             // 
             this.changeFontSizeItem1.Edit = this.repositoryItemRichEditFontSizeEdit1;
-            this.changeFontSizeItem1.Enabled = false;
             this.changeFontSizeItem1.Id = 8;
             this.changeFontSizeItem1.Name = "changeFontSizeItem1";
             // 
@@ -546,97 +535,80 @@
             this.repositoryItemRichEditFontSizeEdit1.AutoHeight = false;
             this.repositoryItemRichEditFontSizeEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemRichEditFontSizeEdit1.Control = null;
+            this.repositoryItemRichEditFontSizeEdit1.Control = this.recNoiDung;
             this.repositoryItemRichEditFontSizeEdit1.Name = "repositoryItemRichEditFontSizeEdit1";
+            // 
+            // recNoiDung
+            // 
+            this.recNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.recNoiDung.Location = new System.Drawing.Point(2, 20);
+            this.recNoiDung.MenuManager = this.barManager1;
+            this.recNoiDung.Name = "recNoiDung";
+            this.recNoiDung.Size = new System.Drawing.Size(622, 184);
+            this.recNoiDung.TabIndex = 2;
             // 
             // fontSizeIncreaseItem1
             // 
-            this.fontSizeIncreaseItem1.Caption = "Grow Font";
-            this.fontSizeIncreaseItem1.Enabled = false;
             this.fontSizeIncreaseItem1.Id = 9;
             this.fontSizeIncreaseItem1.Name = "fontSizeIncreaseItem1";
             // 
             // fontSizeDecreaseItem1
             // 
-            this.fontSizeDecreaseItem1.Caption = "Shrink Font";
-            this.fontSizeDecreaseItem1.Enabled = false;
             this.fontSizeDecreaseItem1.Id = 10;
             this.fontSizeDecreaseItem1.Name = "fontSizeDecreaseItem1";
             // 
             // toggleFontBoldItem1
             // 
-            this.toggleFontBoldItem1.Caption = "Bold";
-            this.toggleFontBoldItem1.Enabled = false;
             this.toggleFontBoldItem1.Id = 11;
             this.toggleFontBoldItem1.Name = "toggleFontBoldItem1";
             // 
             // toggleFontItalicItem1
             // 
-            this.toggleFontItalicItem1.Caption = "Italic";
-            this.toggleFontItalicItem1.Enabled = false;
             this.toggleFontItalicItem1.Id = 12;
             this.toggleFontItalicItem1.Name = "toggleFontItalicItem1";
             // 
             // toggleFontUnderlineItem1
             // 
-            this.toggleFontUnderlineItem1.Caption = "Underline";
-            this.toggleFontUnderlineItem1.Enabled = false;
             this.toggleFontUnderlineItem1.Id = 13;
             this.toggleFontUnderlineItem1.Name = "toggleFontUnderlineItem1";
             // 
             // toggleFontDoubleUnderlineItem1
             // 
-            this.toggleFontDoubleUnderlineItem1.Caption = "Double Underline";
-            this.toggleFontDoubleUnderlineItem1.Enabled = false;
             this.toggleFontDoubleUnderlineItem1.Id = 14;
             this.toggleFontDoubleUnderlineItem1.Name = "toggleFontDoubleUnderlineItem1";
             // 
             // toggleFontStrikeoutItem1
             // 
-            this.toggleFontStrikeoutItem1.Caption = "Strikethrough";
-            this.toggleFontStrikeoutItem1.Enabled = false;
             this.toggleFontStrikeoutItem1.Id = 15;
             this.toggleFontStrikeoutItem1.Name = "toggleFontStrikeoutItem1";
             // 
             // toggleFontDoubleStrikeoutItem1
             // 
-            this.toggleFontDoubleStrikeoutItem1.Caption = "Double Strikethrough";
-            this.toggleFontDoubleStrikeoutItem1.Enabled = false;
             this.toggleFontDoubleStrikeoutItem1.Id = 16;
             this.toggleFontDoubleStrikeoutItem1.Name = "toggleFontDoubleStrikeoutItem1";
             // 
             // toggleFontSuperscriptItem1
             // 
-            this.toggleFontSuperscriptItem1.Caption = "Superscript";
-            this.toggleFontSuperscriptItem1.Enabled = false;
             this.toggleFontSuperscriptItem1.Id = 17;
             this.toggleFontSuperscriptItem1.Name = "toggleFontSuperscriptItem1";
             // 
             // toggleFontSubscriptItem1
             // 
-            this.toggleFontSubscriptItem1.Caption = "Subscript";
-            this.toggleFontSubscriptItem1.Enabled = false;
             this.toggleFontSubscriptItem1.Id = 18;
             this.toggleFontSubscriptItem1.Name = "toggleFontSubscriptItem1";
             // 
             // changeFontColorItem1
             // 
-            this.changeFontColorItem1.Caption = "Font Color";
-            this.changeFontColorItem1.Enabled = false;
             this.changeFontColorItem1.Id = 19;
             this.changeFontColorItem1.Name = "changeFontColorItem1";
             // 
             // changeFontBackColorItem1
             // 
-            this.changeFontBackColorItem1.Caption = "Text Highlight Color";
-            this.changeFontBackColorItem1.Enabled = false;
             this.changeFontBackColorItem1.Id = 20;
             this.changeFontBackColorItem1.Name = "changeFontBackColorItem1";
             // 
             // changeTextCaseItem1
             // 
-            this.changeTextCaseItem1.Caption = "Change Case";
-            this.changeTextCaseItem1.Enabled = false;
             this.changeTextCaseItem1.Id = 21;
             this.changeTextCaseItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.makeTextUpperCaseItem1),
@@ -647,120 +619,86 @@
             // 
             // makeTextUpperCaseItem1
             // 
-            this.makeTextUpperCaseItem1.Caption = "UPPERCASE";
-            this.makeTextUpperCaseItem1.Enabled = false;
             this.makeTextUpperCaseItem1.Id = 22;
             this.makeTextUpperCaseItem1.Name = "makeTextUpperCaseItem1";
             // 
             // makeTextLowerCaseItem1
             // 
-            this.makeTextLowerCaseItem1.Caption = "lowercase";
-            this.makeTextLowerCaseItem1.Enabled = false;
             this.makeTextLowerCaseItem1.Id = 23;
             this.makeTextLowerCaseItem1.Name = "makeTextLowerCaseItem1";
             // 
             // capitalizeEachWordCaseItem1
             // 
-            this.capitalizeEachWordCaseItem1.Caption = "Capitalize Each Word";
-            this.capitalizeEachWordCaseItem1.Enabled = false;
             this.capitalizeEachWordCaseItem1.Id = 24;
             this.capitalizeEachWordCaseItem1.Name = "capitalizeEachWordCaseItem1";
             // 
             // toggleTextCaseItem1
             // 
-            this.toggleTextCaseItem1.Caption = "tOGGLE cASE";
-            this.toggleTextCaseItem1.Enabled = false;
             this.toggleTextCaseItem1.Id = 25;
             this.toggleTextCaseItem1.Name = "toggleTextCaseItem1";
             // 
             // clearFormattingItem1
             // 
-            this.clearFormattingItem1.Caption = "Clear Formatting";
-            this.clearFormattingItem1.Enabled = false;
             this.clearFormattingItem1.Id = 26;
             this.clearFormattingItem1.Name = "clearFormattingItem1";
             // 
             // showFontFormItem1
             // 
-            this.showFontFormItem1.Caption = "Font...";
-            this.showFontFormItem1.Enabled = false;
             this.showFontFormItem1.Id = 27;
             this.showFontFormItem1.Name = "showFontFormItem1";
             // 
             // toggleBulletedListItem1
             // 
-            this.toggleBulletedListItem1.Caption = "Bullets";
-            this.toggleBulletedListItem1.Enabled = false;
             this.toggleBulletedListItem1.Id = 28;
             this.toggleBulletedListItem1.Name = "toggleBulletedListItem1";
             // 
             // toggleNumberingListItem1
             // 
-            this.toggleNumberingListItem1.Caption = "Numbering";
-            this.toggleNumberingListItem1.Enabled = false;
             this.toggleNumberingListItem1.Id = 29;
             this.toggleNumberingListItem1.Name = "toggleNumberingListItem1";
             // 
             // toggleMultiLevelListItem1
             // 
-            this.toggleMultiLevelListItem1.Caption = "Multilevel list";
-            this.toggleMultiLevelListItem1.Enabled = false;
             this.toggleMultiLevelListItem1.Id = 30;
             this.toggleMultiLevelListItem1.Name = "toggleMultiLevelListItem1";
             // 
             // decreaseIndentItem1
             // 
-            this.decreaseIndentItem1.Caption = "Decrease Indent";
-            this.decreaseIndentItem1.Enabled = false;
             this.decreaseIndentItem1.Id = 31;
             this.decreaseIndentItem1.Name = "decreaseIndentItem1";
             // 
             // increaseIndentItem1
             // 
-            this.increaseIndentItem1.Caption = "Increase Indent";
-            this.increaseIndentItem1.Enabled = false;
             this.increaseIndentItem1.Id = 32;
             this.increaseIndentItem1.Name = "increaseIndentItem1";
             // 
             // toggleParagraphAlignmentLeftItem1
             // 
-            this.toggleParagraphAlignmentLeftItem1.Caption = "Align Text Left";
-            this.toggleParagraphAlignmentLeftItem1.Enabled = false;
             this.toggleParagraphAlignmentLeftItem1.Id = 33;
             this.toggleParagraphAlignmentLeftItem1.Name = "toggleParagraphAlignmentLeftItem1";
             // 
             // toggleParagraphAlignmentCenterItem1
             // 
-            this.toggleParagraphAlignmentCenterItem1.Caption = "Center";
-            this.toggleParagraphAlignmentCenterItem1.Enabled = false;
             this.toggleParagraphAlignmentCenterItem1.Id = 34;
             this.toggleParagraphAlignmentCenterItem1.Name = "toggleParagraphAlignmentCenterItem1";
             // 
             // toggleParagraphAlignmentRightItem1
             // 
-            this.toggleParagraphAlignmentRightItem1.Caption = "Align Text Right";
-            this.toggleParagraphAlignmentRightItem1.Enabled = false;
             this.toggleParagraphAlignmentRightItem1.Id = 35;
             this.toggleParagraphAlignmentRightItem1.Name = "toggleParagraphAlignmentRightItem1";
             // 
             // toggleParagraphAlignmentJustifyItem1
             // 
-            this.toggleParagraphAlignmentJustifyItem1.Caption = "Justify";
-            this.toggleParagraphAlignmentJustifyItem1.Enabled = false;
             this.toggleParagraphAlignmentJustifyItem1.Id = 36;
             this.toggleParagraphAlignmentJustifyItem1.Name = "toggleParagraphAlignmentJustifyItem1";
             // 
             // toggleShowWhitespaceItem1
             // 
-            this.toggleShowWhitespaceItem1.Caption = "Show/Hide ¶";
-            this.toggleShowWhitespaceItem1.Enabled = false;
             this.toggleShowWhitespaceItem1.Id = 37;
             this.toggleShowWhitespaceItem1.Name = "toggleShowWhitespaceItem1";
             // 
             // changeParagraphLineSpacingItem1
             // 
-            this.changeParagraphLineSpacingItem1.Caption = "Line Spacing";
-            this.changeParagraphLineSpacingItem1.Enabled = false;
             this.changeParagraphLineSpacingItem1.Id = 38;
             this.changeParagraphLineSpacingItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.setSingleParagraphSpacingItem1),
@@ -775,78 +713,57 @@
             // 
             // setSingleParagraphSpacingItem1
             // 
-            this.setSingleParagraphSpacingItem1.Caption = "1.0";
-            this.setSingleParagraphSpacingItem1.Enabled = false;
             this.setSingleParagraphSpacingItem1.Id = 39;
             this.setSingleParagraphSpacingItem1.Name = "setSingleParagraphSpacingItem1";
             // 
             // setSesquialteralParagraphSpacingItem1
             // 
-            this.setSesquialteralParagraphSpacingItem1.Caption = "1.5";
-            this.setSesquialteralParagraphSpacingItem1.Enabled = false;
             this.setSesquialteralParagraphSpacingItem1.Id = 40;
             this.setSesquialteralParagraphSpacingItem1.Name = "setSesquialteralParagraphSpacingItem1";
             // 
             // setDoubleParagraphSpacingItem1
             // 
-            this.setDoubleParagraphSpacingItem1.Caption = "2.0";
-            this.setDoubleParagraphSpacingItem1.Enabled = false;
             this.setDoubleParagraphSpacingItem1.Id = 41;
             this.setDoubleParagraphSpacingItem1.Name = "setDoubleParagraphSpacingItem1";
             // 
             // showLineSpacingFormItem1
             // 
-            this.showLineSpacingFormItem1.Caption = "Line Spacing Options...";
-            this.showLineSpacingFormItem1.Enabled = false;
             this.showLineSpacingFormItem1.Id = 42;
             this.showLineSpacingFormItem1.Name = "showLineSpacingFormItem1";
             // 
             // addSpacingBeforeParagraphItem1
             // 
-            this.addSpacingBeforeParagraphItem1.Caption = "Add Space &Before Paragraph";
-            this.addSpacingBeforeParagraphItem1.Enabled = false;
             this.addSpacingBeforeParagraphItem1.Id = 43;
             this.addSpacingBeforeParagraphItem1.Name = "addSpacingBeforeParagraphItem1";
             // 
             // removeSpacingBeforeParagraphItem1
             // 
-            this.removeSpacingBeforeParagraphItem1.Caption = "Remove Space &Before Paragraph";
-            this.removeSpacingBeforeParagraphItem1.Enabled = false;
             this.removeSpacingBeforeParagraphItem1.Id = 44;
             this.removeSpacingBeforeParagraphItem1.Name = "removeSpacingBeforeParagraphItem1";
             // 
             // addSpacingAfterParagraphItem1
             // 
-            this.addSpacingAfterParagraphItem1.Caption = "Add Space &After Paragraph";
-            this.addSpacingAfterParagraphItem1.Enabled = false;
             this.addSpacingAfterParagraphItem1.Id = 45;
             this.addSpacingAfterParagraphItem1.Name = "addSpacingAfterParagraphItem1";
             // 
             // removeSpacingAfterParagraphItem1
             // 
-            this.removeSpacingAfterParagraphItem1.Caption = "Remove Space &After Paragraph";
-            this.removeSpacingAfterParagraphItem1.Enabled = false;
             this.removeSpacingAfterParagraphItem1.Id = 46;
             this.removeSpacingAfterParagraphItem1.Name = "removeSpacingAfterParagraphItem1";
             // 
             // changeParagraphBackColorItem1
             // 
-            this.changeParagraphBackColorItem1.Caption = "Shading";
-            this.changeParagraphBackColorItem1.Enabled = false;
             this.changeParagraphBackColorItem1.Id = 47;
             this.changeParagraphBackColorItem1.Name = "changeParagraphBackColorItem1";
             // 
             // showParagraphFormItem1
             // 
-            this.showParagraphFormItem1.Caption = "Paragraph...";
-            this.showParagraphFormItem1.Enabled = false;
             this.showParagraphFormItem1.Id = 48;
             this.showParagraphFormItem1.Name = "showParagraphFormItem1";
             // 
             // changeStyleItem1
             // 
             this.changeStyleItem1.Edit = this.repositoryItemRichEditStyleEdit1;
-            this.changeStyleItem1.Enabled = false;
             this.changeStyleItem1.Id = 49;
             this.changeStyleItem1.Name = "changeStyleItem1";
             // 
@@ -855,97 +772,71 @@
             this.repositoryItemRichEditStyleEdit1.AutoHeight = false;
             this.repositoryItemRichEditStyleEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemRichEditStyleEdit1.Control = null;
+            this.repositoryItemRichEditStyleEdit1.Control = this.recNoiDung;
             this.repositoryItemRichEditStyleEdit1.Name = "repositoryItemRichEditStyleEdit1";
             // 
             // showEditStyleFormItem1
             // 
-            this.showEditStyleFormItem1.Caption = "Modify Style...";
-            this.showEditStyleFormItem1.Enabled = false;
             this.showEditStyleFormItem1.Id = 50;
             this.showEditStyleFormItem1.Name = "showEditStyleFormItem1";
             // 
             // findItem1
             // 
-            this.findItem1.Caption = "Find";
-            this.findItem1.Enabled = false;
             this.findItem1.Id = 51;
             this.findItem1.Name = "findItem1";
             // 
             // replaceItem1
             // 
-            this.replaceItem1.Caption = "Replace";
-            this.replaceItem1.Enabled = false;
             this.replaceItem1.Id = 52;
             this.replaceItem1.Name = "replaceItem1";
             // 
             // undoItem1
             // 
-            this.undoItem1.Caption = "Undo";
-            this.undoItem1.Enabled = false;
             this.undoItem1.Id = 53;
             this.undoItem1.Name = "undoItem1";
             // 
             // redoItem1
             // 
-            this.redoItem1.Caption = "Redo";
-            this.redoItem1.Enabled = false;
             this.redoItem1.Id = 54;
             this.redoItem1.Name = "redoItem1";
             // 
             // fileNewItem1
             // 
-            this.fileNewItem1.Caption = "New";
-            this.fileNewItem1.Enabled = false;
             this.fileNewItem1.Id = 55;
             this.fileNewItem1.Name = "fileNewItem1";
             // 
             // fileOpenItem1
             // 
-            this.fileOpenItem1.Caption = "Open";
-            this.fileOpenItem1.Enabled = false;
             this.fileOpenItem1.Id = 56;
             this.fileOpenItem1.Name = "fileOpenItem1";
             // 
             // fileSaveItem1
             // 
-            this.fileSaveItem1.Caption = "Save";
-            this.fileSaveItem1.Enabled = false;
             this.fileSaveItem1.Id = 57;
             this.fileSaveItem1.Name = "fileSaveItem1";
             // 
             // fileSaveAsItem1
             // 
-            this.fileSaveAsItem1.Caption = "Save As";
-            this.fileSaveAsItem1.Enabled = false;
             this.fileSaveAsItem1.Id = 58;
             this.fileSaveAsItem1.Name = "fileSaveAsItem1";
             // 
             // quickPrintItem1
             // 
-            this.quickPrintItem1.Caption = "&Quick Print";
-            this.quickPrintItem1.Enabled = false;
             this.quickPrintItem1.Id = 59;
             this.quickPrintItem1.Name = "quickPrintItem1";
             // 
             // printItem1
             // 
-            this.printItem1.Caption = "&Print";
-            this.printItem1.Enabled = false;
             this.printItem1.Id = 60;
             this.printItem1.Name = "printItem1";
             // 
             // printPreviewItem1
             // 
-            this.printPreviewItem1.Caption = "Print Pre&view";
-            this.printPreviewItem1.Enabled = false;
             this.printPreviewItem1.Id = 61;
             this.printPreviewItem1.Name = "printPreviewItem1";
             // 
             // showDocumentPropertiesFormItem1
             // 
-            this.showDocumentPropertiesFormItem1.Caption = "Document Properties";
-            this.showDocumentPropertiesFormItem1.Enabled = false;
             this.showDocumentPropertiesFormItem1.Id = 62;
             this.showDocumentPropertiesFormItem1.Name = "showDocumentPropertiesFormItem1";
             // 
@@ -1000,20 +891,6 @@
             this.txtTenMonHoc.Name = "txtTenMonHoc";
             this.txtTenMonHoc.Size = new System.Drawing.Size(201, 20);
             this.txtTenMonHoc.TabIndex = 33;
-            // 
-            // cbMucDo
-            // 
-            this.cbMucDo.Location = new System.Drawing.Point(14, 91);
-            this.cbMucDo.MenuManager = this.barManager1;
-            this.cbMucDo.Name = "cbMucDo";
-            this.cbMucDo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbMucDo.Properties.Items.AddRange(new object[] {
-            "Dễ",
-            "Trung bình",
-            "Khó"});
-            this.cbMucDo.Size = new System.Drawing.Size(79, 20);
-            this.cbMucDo.TabIndex = 34;
             // 
             // label1
             // 
@@ -1087,27 +964,19 @@
             this.richEditBarController1.BarItems.Add(this.printItem1);
             this.richEditBarController1.BarItems.Add(this.printPreviewItem1);
             this.richEditBarController1.BarItems.Add(this.showDocumentPropertiesFormItem1);
+            this.richEditBarController1.Control = this.recNoiDung;
             // 
             // groupControl1
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.Controls.Add(this.rtbNoiDung);
+            this.groupControl1.Controls.Add(this.recNoiDung);
             this.groupControl1.Controls.Add(this.label16);
             this.groupControl1.Location = new System.Drawing.Point(0, 324);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(626, 206);
             this.groupControl1.TabIndex = 40;
             this.groupControl1.Text = "Nội dung câu hỏi";
-            // 
-            // rtbNoiDung
-            // 
-            this.rtbNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbNoiDung.Location = new System.Drawing.Point(2, 20);
-            this.rtbNoiDung.Name = "rtbNoiDung";
-            this.rtbNoiDung.Size = new System.Drawing.Size(622, 184);
-            this.rtbNoiDung.TabIndex = 0;
-            this.rtbNoiDung.Text = "";
             // 
             // label16
             // 
@@ -1132,15 +1001,16 @@
             // 
             // txtTieuDe
             // 
-            this.txtTieuDe.Location = new System.Drawing.Point(17, 133);
+            this.txtTieuDe.Location = new System.Drawing.Point(14, 133);
             this.txtTieuDe.Name = "txtTieuDe";
-            this.txtTieuDe.Size = new System.Drawing.Size(570, 20);
+            this.txtTieuDe.Size = new System.Drawing.Size(573, 20);
             this.txtTieuDe.TabIndex = 33;
             // 
             // groupControl2
             // 
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
+            this.groupControl2.Controls.Add(this.cbMucDo);
             this.groupControl2.Controls.Add(this.txtMaCauHoi);
             this.groupControl2.Controls.Add(this.txtTenBaiHoc);
             this.groupControl2.Controls.Add(this.txttenChuong);
@@ -1155,7 +1025,6 @@
             this.groupControl2.Controls.Add(this.label12);
             this.groupControl2.Controls.Add(this.label2);
             this.groupControl2.Controls.Add(this.label18);
-            this.groupControl2.Controls.Add(this.cbMucDo);
             this.groupControl2.Controls.Add(this.label9);
             this.groupControl2.Controls.Add(this.label3);
             this.groupControl2.Controls.Add(this.txtMaBaiHoc);
@@ -1173,6 +1042,19 @@
             this.groupControl2.Size = new System.Drawing.Size(626, 529);
             this.groupControl2.TabIndex = 41;
             this.groupControl2.Text = "Phím tắt";
+            // 
+            // cbMucDo
+            // 
+            this.cbMucDo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMucDo.FormattingEnabled = true;
+            this.cbMucDo.Items.AddRange(new object[] {
+            "Dễ",
+            "Trung bình",
+            "Khó"});
+            this.cbMucDo.Location = new System.Drawing.Point(14, 88);
+            this.cbMucDo.Name = "cbMucDo";
+            this.cbMucDo.Size = new System.Drawing.Size(63, 21);
+            this.cbMucDo.TabIndex = 41;
             // 
             // txtMaCauHoi
             // 
@@ -1320,7 +1202,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditStyleEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmaMonHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenMonHoc.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbMucDo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -1368,7 +1249,6 @@
         private System.Windows.Forms.RadioButton rdn;
         private System.Windows.Forms.RadioButton rd1;
         private System.Windows.Forms.RadioButton rdDungSai;
-        private DevExpress.XtraEditors.ComboBoxEdit cbMucDo;
         private DevExpress.XtraEditors.TextEdit txtTenMonHoc;
         private DevExpress.XtraEditors.TextEdit txtmaMonHoc;
         private System.Windows.Forms.Label label1;
@@ -1428,7 +1308,6 @@
         private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.RichTextBox rtbNoiDung;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.TextEdit txtTieuDe;
         private DevExpress.XtraRichEdit.UI.UndoItem undoItem1;
@@ -1456,5 +1335,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private DevExpress.XtraEditors.TextEdit txtMaCauHoi;
+        private DevExpress.XtraRichEdit.RichEditControl recNoiDung;
+        private System.Windows.Forms.ComboBox cbMucDo;
     }
 }
