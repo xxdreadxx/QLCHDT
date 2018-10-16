@@ -23,6 +23,8 @@ namespace QLCH.Forms
         }
         DeThiBLL bL = new DeThiBLL();
         MonHocBLL mh = new MonHocBLL();
+        ChuongBaiBLL cb = new ChuongBaiBLL();
+        BaiHocBLL bh = new BaiHocBLL();
         private void btnLuuBaiThi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bool state;
@@ -78,6 +80,57 @@ namespace QLCH.Forms
                 txtTenMonHoc.Text = mh.getTenMonHocByID(frmMH.idMonHoc);
                 txtMonHoc.Tag = frmMH.idMonHoc;
             }
+        }
+
+        private void txtmaChuong_Leave(object sender, EventArgs e)
+        {
+            FrmChuongBai frmCH = new FrmChuongBai();
+            frmCH.idMonHoc = txtMonHoc.Tag.ToString();
+            frmCH.ShowDialog();
+            if (frmCH.idChuongBai !=null)
+            {
+                txtmaChuong.Text = cb.getMaChuongBaiByID(frmCH.idChuongBai);
+                txtmaChuong.Tag = frmCH.idChuongBai;
+                txttenChuong.Text = cb.getTenChuongBaiByID(frmCH.idChuongBai);
+            }
+        }
+
+        private void txtTuBai_Leave(object sender, EventArgs e)
+        {
+            FrmBaiHoc frmBH = new FrmBaiHoc();
+            frmBH.idChuongBai = txtmaChuong.Tag.ToString();
+            frmBH.ShowDialog();
+            if (frmBH.idBaiHoc !=null)
+            {
+                txtTuBai.Text = bh.getMaBaiHocByID(frmBH.idBaiHoc);
+                txtTuBai.Tag = frmBH.idBaiHoc;
+                txtTenBai.Text = bh.getTenBaiHocByID(frmBH.idBaiHoc);
+            }
+        }
+
+        private void txtDenBai_Leave(object sender, EventArgs e)
+        {
+            FrmBaiHoc frmBH = new FrmBaiHoc();
+            frmBH.idChuongBai = txtmaChuong.Tag.ToString();
+            frmBH.ShowDialog();
+            if (frmBH.idBaiHoc != null)
+            {
+                txtDenBai.Text = bh.getMaBaiHocByID(frmBH.idBaiHoc);
+                txtDenBai.Tag = frmBH.idBaiHoc;
+                txtTenBaiDen.Text = bh.getTenBaiHocByID(frmBH.idBaiHoc);
+            }
+        }
+
+        private void ckdTuyChonNangCao_CheckedChanged(object sender, EventArgs e)
+        {
+            grpChinhSuaTT.Enabled = true;
+            grpTiLecauHoi.Enabled = true;
+        }
+
+        private void FrmTaoDeThi_Load(object sender, EventArgs e)
+        {
+            grpChinhSuaTT.Enabled = false;
+            grpTiLecauHoi.Enabled = false;
         }
     }
 }
